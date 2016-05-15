@@ -141,6 +141,7 @@ board_saved_files := lib/libwebviewchromium.so
 # The default value is Nexus-5_Unofficial.
 # You should configure the property according to your device and your ID with replace the "Nexus-5_Unofficial".
 override_property += \
+    ro.product.device=OnePlus \
     ro.flyme.romer=shumxin \
     ro.product.model_romer=ONE E1001_shumxin
 
