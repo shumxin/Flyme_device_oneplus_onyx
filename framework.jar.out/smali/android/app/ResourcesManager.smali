@@ -245,31 +245,26 @@
 
     if-eqz v10, :cond_4
 
-    .line 276
     invoke-static {v0}, Landroid/app/OpThemeHelper;->handleExtraConfigurationChanges(I)V
 
-    .line 279
     :cond_4
     iget-object v10, p1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
     if-eqz v10, :cond_5
 
-    .line 280
     iget-object v10, p1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
     invoke-static {v10}, Ljava/util/Locale;->setDefault(Ljava/util/Locale;)V
 
-    .line 283
     :cond_5
     invoke-static {p1, v1, p2}, Landroid/content/res/Resources;->updateSystemConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;Landroid/content/res/CompatibilityInfo;)V
 
-    .line 285
+    invoke-direct {p0, v0}, Landroid/app/ResourcesManager;->flymeFreeCaches(I)V
+
     invoke-static {}, Landroid/app/ApplicationPackageManager;->configurationChanged()V
 
-    .line 288
     const/4 v9, 0x0
 
-    .line 290
     .local v9, "tmpConfig":Landroid/content/res/Configuration;
     iget-object v10, p0, Landroid/app/ResourcesManager;->mActiveResources:Landroid/util/ArrayMap;
 
@@ -1241,4 +1236,34 @@
     move-object v14, v7
 
     goto/16 :goto_1
+.end method
+
+.method private flymeFreeCaches(I)V
+    .locals 1
+    .param p1, "changes"    # I
+
+    .prologue
+    and-int/lit16 v0, p1, 0x4000
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Landroid/graphics/Canvas;->freeCaches()V
+
+    invoke-static {}, Landroid/graphics/Canvas;->freeTextLayoutCaches()V
+
+    :cond_0
+    const v0, 0x8000
+
+    and-int/2addr v0, p1
+
+    if-eqz v0, :cond_1
+
+    invoke-static {}, Landroid/graphics/Canvas;->freeCaches()V
+
+    invoke-static {}, Landroid/graphics/Canvas;->freeTextLayoutCaches()V
+
+    invoke-static {}, Landroid/content/res/flymetheme/FlymeFontsHelper;->cleanflymeTypeface()V
+
+    :cond_1
+    return-void
 .end method

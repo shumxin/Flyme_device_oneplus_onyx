@@ -101,64 +101,50 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 88
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 69
     new-instance v0, Landroid/util/TypedValue;
 
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/AssetManager;->mValue:Landroid/util/TypedValue;
 
-    .line 70
     const/4 v0, 0x2
 
     new-array v0, v0, [J
 
     iput-object v0, p0, Landroid/content/res/AssetManager;->mOffsets:[J
 
-    .line 75
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/content/res/AssetManager;->mStringBlocks:[Landroid/content/res/StringBlock;
 
-    .line 77
     iput v1, p0, Landroid/content/res/AssetManager;->mNumRefs:I
 
-    .line 78
     iput-boolean v1, p0, Landroid/content/res/AssetManager;->mOpen:Z
 
-    .line 89
     monitor-enter p0
 
-    .line 94
     const/4 v0, 0x0
 
     :try_start_0
     invoke-direct {p0, v0}, Landroid/content/res/AssetManager;->init(Z)V
 
-    .line 96
     invoke-static {}, Landroid/content/res/AssetManager;->ensureSystemAssets()V
 
-    .line 98
     invoke-static {}, Landroid/util/OpFeatures;->isH2()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 99
     invoke-static {p0}, Landroid/content/res/OpResourceHelper;->addExtraAssetPaths(Landroid/content/res/AssetManager;)V
 
-    .line 101
     :cond_0
     monitor-exit p0
 
-    .line 102
     return-void
 
-    .line 101
     :catchall_0
     move-exception v0
 
@@ -176,48 +162,38 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 114
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 69
     new-instance v0, Landroid/util/TypedValue;
 
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/AssetManager;->mValue:Landroid/util/TypedValue;
 
-    .line 70
     const/4 v0, 0x2
 
     new-array v0, v0, [J
 
     iput-object v0, p0, Landroid/content/res/AssetManager;->mOffsets:[J
 
-    .line 75
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/content/res/AssetManager;->mStringBlocks:[Landroid/content/res/StringBlock;
 
-    .line 77
     iput v1, p0, Landroid/content/res/AssetManager;->mNumRefs:I
 
-    .line 78
     iput-boolean v1, p0, Landroid/content/res/AssetManager;->mOpen:Z
 
-    .line 121
     invoke-direct {p0, v1}, Landroid/content/res/AssetManager;->init(Z)V
 
-    .line 123
     invoke-static {}, Landroid/util/OpFeatures;->isH2()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 124
     invoke-static {p0}, Landroid/content/res/OpResourceHelper;->addExtraAssetPaths(Landroid/content/res/AssetManager;)V
 
-    .line 126
     :cond_0
     return-void
 .end method
@@ -2154,4 +2130,15 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
+.end method
+
+.method private addFlymeAssetPath()V
+    .locals 1
+
+    .prologue
+    const-string v0, "/system/framework/flyme-res/flyme-res.apk"
+
+    invoke-virtual {p0, v0}, Landroid/content/res/AssetManager;->addAssetPath(Ljava/lang/String;)I
+
+    return-void
 .end method

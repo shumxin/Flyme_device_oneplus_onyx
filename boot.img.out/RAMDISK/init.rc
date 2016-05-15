@@ -325,6 +325,13 @@ on post-fs-data
     #NFC
     mkdir /data/nfc
 
+    mkdir /data/misc/samba 0775 system system
+    mkdir /data/misc/samba/remote 0775 system system
+    mkdir /data/misc/samba/lib 0775 system system
+    mkdir /data/misc/samba/private 0775 system system
+    mkdir /data/misc/samba/tmp 0775 system system
+    mkdir /data/misc/samba/var 0775 system system
+
 on boot
     # basic network init
     ifup lo

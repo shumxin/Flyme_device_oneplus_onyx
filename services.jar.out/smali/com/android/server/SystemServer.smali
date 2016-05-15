@@ -1168,7 +1168,7 @@
 
     move-result-object v5
 
-    const v6, 0x1120097
+    const v6, #android:bool@config_digitalPenCapable#t
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1399,7 +1399,7 @@
 
     if-eqz v54, :cond_2d
 
-    const v5, 0x1030128
+    const v5, #android:style@Theme.DeviceDefault#t
 
     :goto_3
     invoke-virtual {v6, v5}, Landroid/content/Context;->setTheme(I)V
@@ -1642,50 +1642,39 @@
     .restart local v72    # "inputManager":Lcom/android/server/input/InputManagerService;
     move-object/from16 v107, v108
 
-    .line 559
     .end local v108    # "vibrator":Lcom/android/server/VibratorService;
     .end local v112    # "watchdog":Lcom/android/server/Watchdog;
     .restart local v107    # "vibrator":Lcom/android/server/VibratorService;
     :goto_7
     const/16 v100, 0x0
 
-    .line 560
     .local v100, "statusBar":Lcom/android/server/statusbar/StatusBarManagerService;
     const/16 v95, 0x0
 
-    .line 561
     .local v95, "notification":Landroid/app/INotificationManager;
     const/16 v70, 0x0
 
-    .line 562
     .local v70, "imm":Lcom/android/server/InputMethodManagerService;
     const/16 v110, 0x0
 
-    .line 563
     .local v110, "wallpaper":Lcom/android/server/wallpaper/WallpaperManagerService;
     const/16 v76, 0x0
 
-    .line 564
     .local v76, "location":Lcom/android/server/LocationManagerService;
     const/16 v51, 0x0
 
-    .line 565
     .local v51, "countryDetector":Lcom/android/server/CountryDetectorService;
     const/16 v104, 0x0
 
-    .line 566
     .local v104, "tsms":Lcom/android/server/TextServicesManagerService;
     const/16 v78, 0x0
 
-    .line 567
     .local v78, "lockSettings":Lcom/android/server/LockSettingsService;
     const/16 v37, 0x0
 
-    .line 568
     .local v37, "atlas":Lcom/android/server/AssetAtlasService;
     const/16 v83, 0x0
 
-    .line 571
     .local v83, "mediaRouter":Lcom/android/server/media/MediaRouterService;
     move-object/from16 v0, p0
 
@@ -1841,7 +1830,7 @@
 
     move-result-object v6
 
-    const v9, 0x10404ae
+    const v9, #android:string@android_upgrading_starting_apps#t
 
     invoke-virtual {v6, v9}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -1971,14 +1960,12 @@
 
     move-object/from16 v100, v101
 
-    .line 658
     .end local v101    # "statusBar":Lcom/android/server/statusbar/StatusBarManagerService;
     .restart local v100    # "statusBar":Lcom/android/server/statusbar/StatusBarManagerService;
     :cond_5
     :goto_f
     if-nez v65, :cond_6
 
-    .line 660
     :try_start_16
     const-string v5, "SystemServer"
 
@@ -2298,7 +2285,6 @@
     :try_end_22
     .catch Ljava/lang/Throwable; {:try_start_22 .. :try_end_22} :catch_11
 
-    .line 747
     :goto_17
     :try_start_23
     const-string v5, "SystemServer"
@@ -2566,7 +2552,7 @@
 
     move-result-object v5
 
-    const v6, 0x1120048
+    const v6, #android:bool@config_enableWallpaperService#t
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -3564,24 +3550,20 @@
     .end local v86    # "mmsService":Lcom/android/server/MmsServiceBroker;
     check-cast v86, Lcom/android/server/MmsServiceBroker;
 
-    .line 1101
     .restart local v86    # "mmsService":Lcom/android/server/MmsServiceBroker;
     :try_start_42
     invoke-virtual/range {v107 .. v107}, Lcom/android/server/VibratorService;->systemReady()V
     :try_end_42
     .catch Ljava/lang/Throwable; {:try_start_42 .. :try_end_42} :catch_29
 
-    .line 1106
     :goto_30
     if-eqz v78, :cond_28
 
-    .line 1108
     :try_start_43
     invoke-virtual/range {v78 .. v78}, Lcom/android/server/LockSettingsService;->systemReady()V
     :try_end_43
     .catch Ljava/lang/Throwable; {:try_start_43 .. :try_end_43} :catch_2a
 
-    .line 1115
     :cond_28
     :goto_31
     move-object/from16 v0, p0
@@ -3930,14 +3912,12 @@
 
     goto/16 :goto_2
 
-    .line 497
     .restart local v54    # "dark":Z
     :cond_2d
-    const v5, 0x103013f
+    const v5, #android:style@Theme.DeviceDefault.Light.DarkActionBar#t
 
     goto/16 :goto_3
 
-    .line 500
     .end local v54    # "dark":Z
     .end local v82    # "materialThemeService":Lcom/android/server/theme/MaterialThemeService;
     .restart local v81    # "materialThemeService":Lcom/android/server/theme/MaterialThemeService;
@@ -3954,7 +3934,7 @@
 
     iget-object v5, v0, Lcom/android/server/SystemServer;->mSystemContext:Landroid/content/Context;
 
-    const v6, 0x10302dd
+    const v6, #android:style@OP.Theme.DeviceDefault.Light.DarkActionBar#t
 
     invoke-virtual {v5, v6}, Landroid/content/Context;->setTheme(I)V
     :try_end_49
@@ -5319,4 +5299,22 @@
 
     .line 1344
     return-void
+.end method
+
+.method flymeGetFieldPackageManagerService()Lcom/android/server/pm/PackageManagerService;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/SystemServer;->mPackageManagerService:Lcom/android/server/pm/PackageManagerService;
+
+    return-object v0
+.end method
+
+.method flymeGetFieldSystemContext()Landroid/content/Context;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/SystemServer;->mSystemContext:Landroid/content/Context;
+
+    return-object v0
 .end method

@@ -140,7 +140,7 @@
 
     .line 3954
     .local v3, "topPadding":I
-    const v1, 0x1020346
+    const v1, #android:id@line1#t
 
     move-object v0, p1
 
@@ -220,11 +220,11 @@
     .param p1, "layoutId"    # I
 
     .prologue
-    const v9, 0x1020346
+    const v9, #android:id@line1#t
 
-    const v8, 0x102033b
+    const v8, #android:id@overflow_divider#t
 
-    const v7, 0x1020068
+    const v7, #android:id@text#t
 
     const/16 v6, 0x8
 
@@ -311,26 +311,21 @@
 
     invoke-virtual {v0, v7, v3}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
-    .line 3932
     invoke-virtual {v0, v8, v5}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
-    .line 3933
-    const v3, 0x1020348
+    const v3, #android:id@line3#t
 
     invoke-virtual {v0, v3, v5}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
-    .line 3941
     :goto_2
     return-object v0
 
-    .line 3923
     .end local v2    # "overflowText":Ljava/lang/CharSequence;
     :cond_1
     invoke-virtual {v0, v9, v5}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
     goto :goto_0
 
-    .line 3927
     :cond_2
     iget-object v3, p0, Landroid/app/Notification$Style;->mBuilder:Landroid/app/Notification$Builder;
 
@@ -341,18 +336,15 @@
 
     goto :goto_1
 
-    .line 3936
     .restart local v2    # "overflowText":Ljava/lang/CharSequence;
     :cond_3
     const-string v3, ""
 
     invoke-virtual {v0, v7, v3}, Landroid/widget/RemoteViews;->setTextViewText(ILjava/lang/CharSequence;)V
 
-    .line 3937
     invoke-virtual {v0, v8, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
-    .line 3938
-    const v3, 0x1020348
+    const v3, #android:id@line3#t
 
     invoke-virtual {v0, v3, v6}, Landroid/widget/RemoteViews;->setViewVisibility(II)V
 
