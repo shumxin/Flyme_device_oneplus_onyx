@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emailAddressTypes">
+        <item>主要信箱</item>
+        <item>公司信箱</item>
+        <item>其他信箱</item>
+        <item>自訂</item>
+    </string-array>
+    <string-array name="imProtocols">
+        <item>AIM</item>
+        <item>Windows Live</item>
+        <item>Yahoo</item>
+        <item>Skype</item>
+        <item>QQ</item>
+        <item>Google Talk</item>
+        <item>ICQ</item>
+        <item>Jabber</item>
+    </string-array>
+    <string-array name="organizationTypes">
+        <item>工作</item>
+        <item>其他</item>
+        <item>自訂</item>
+    </string-array>
+    <string-array name="phoneTypes">
+        <item>住家電話</item>
+        <item>行動電話</item>
+        <item>公司電話</item>
+        <item>公司傳真</item>
+        <item>住家傳真</item>
+        <item>呼叫器</item>
+        <item>其他</item>
+        <item>自訂</item>
+    </string-array>
+    <string-array name="postalAddressTypes">
+        <item>住家</item>
+        <item>公司</item>
+        <item>其他</item>
+        <item>自訂</item>
+    </string-array>
+    <integer-array name="maps_starting_lat_lng">
+        <item>25022112</item>
+        <item>121478019</item>
+    </integer-array>
+    <integer-array name="maps_starting_zoom">
+        <item>3</item>
+    </integer-array>
+    <string-array name="imAddressTypes">
+        <item>住家</item>
+        <item>工作</item>
+        <item>其他</item>
+        <item>自訂</item>
+    </string-array>
+    <string-array name="app_ops_labels">
+        <item>試圖獲取位置資訊</item>
+        <item>試圖獲取位置資訊</item>
+        <item>試圖獲取位置資訊</item>
+        <item>試圖使用震動器</item>
+        <item>試圖讀取連絡人</item>
+        <item>試圖寫連絡人</item>
+        <item>試圖讀取通話記錄</item>
+        <item>試圖寫通話記錄</item>
+        <item>試圖讀取行事曆</item>
+        <item>試圖修改行事曆</item>
+        <item>試圖獲取位置資訊</item>
+        <item>試圖寄送通知</item>
+        <item>試圖獲取位置資訊</item>
+        <item>試圖撥打電話</item>
+        <item>試圖讀取簡訊</item>
+        <item>試圖寫簡訊</item>
+        <item>試圖收取簡訊</item>
+        <item>試圖收取簡訊</item>
+        <item>試圖收取多媒體訊息</item>
+        <item>試圖收取簡訊</item>
+        <item>試圖傳送簡訊</item>
+        <item>試圖讀取簡訊</item>
+        <item>試圖寫簡訊</item>
+        <item>試圖修改設定</item>
+        <item>試圖在頂層繪圖</item>
+        <item>試圖獲取通知</item>
+        <item>試圖使用照相機</item>
+        <item>試圖錄音</item>
+        <item>試圖放音</item>
+        <item>試圖讀取剪貼簿</item>
+        <item>試圖修改剪貼簿</item>
+        <item>試圖控制多媒體按鈕</item>
+        <item>試圖控制音訊焦點</item>
+        <item>試圖控制主音量</item>
+        <item>試圖控制語音音量</item>
+        <item>試圖控制鈴聲音量</item>
+        <item>試圖控制多媒體音量</item>
+        <item>試圖控制鬧鐘音量</item>
+        <item>試圖控制通知音量</item>
+        <item>試圖控制藍牙音量</item>
+        <item>試圖阻止手機休眠</item>
+        <item>試圖獲取位置資訊</item>
+        <item>試圖獲取位置資訊</item>
+        <item>試圖獲取使用方式統計資訊</item>
+        <item>試圖使麥克風靜音</item>
+        <item>試圖彈出提示視窗</item>
+        <item>試圖投影媒體</item>
+        <item>試圖啟動VPN</item>
+        <item>試圖開關WLAN</item>
+        <item>試圖開關藍牙</item>
+        <item>試圖傳送多媒體簡訊</item>
+        <item>試圖讀取多媒體簡訊</item>
+        <item>試圖寫多媒體簡訊</item>
+        <item>試圖自啟動</item>
+        <item>試圖開關NFC</item>
+        <item>試圖刪除簡訊</item>
+        <item>試圖刪除多媒體簡訊</item>
+        <item>試圖刪除連絡人</item>
+        <item>試圖刪除通話記錄</item>
+        <item>試圖打開行動資料</item>
+    </string-array>
+</resources>
