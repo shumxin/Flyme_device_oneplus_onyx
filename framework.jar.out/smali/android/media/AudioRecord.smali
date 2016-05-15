@@ -1716,7 +1716,7 @@
     const/4 v3, 0x0
 
     :try_start_0
-    invoke-direct {p0, v1, v3}, Landroid/media/AudioRecord;->native_start(II)I
+    invoke-direct {p0, v1, v3}, Landroid/media/AudioRecord;->hook_native_start(II)I
 
     move-result v1
 

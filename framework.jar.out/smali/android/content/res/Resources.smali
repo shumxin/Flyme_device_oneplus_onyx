@@ -468,6 +468,8 @@
 
     invoke-virtual {v0}, Landroid/content/res/AssetManager;->ensureStringBlocks()V
 
+    invoke-static/range {p0 .. p0}, Landroid/content/res/Resources$FlymeInjector;->initFlymeExtraFields(Landroid/content/res/Resources;)V
+
     invoke-static {}, Landroid/util/OpFeatures;->isH2()Z
 
     move-result v0
@@ -7318,6 +7320,15 @@
 
     invoke-virtual {p0, p1, p2, v3}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
 
+    invoke-static/range {p0 .. p2}, Landroid/content/res/Resources$FlymeInjector;->openFlymeThemeRawResource(Landroid/content/res/Resources;ILandroid/util/TypedValue;)Ljava/io/InputStream;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_flyme_0
+
+    return-object v3
+
+    :cond_flyme_0
     invoke-static {}, Landroid/util/OpFeatures;->isH2()Z
 
     move-result v3

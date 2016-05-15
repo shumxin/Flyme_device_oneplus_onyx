@@ -132,6 +132,8 @@
 
     invoke-static {}, Landroid/content/res/AssetManager;->ensureSystemAssets()V
 
+    invoke-direct/range {p0 .. p0}, Landroid/content/res/AssetManager;->addFlymeAssetPath()V
+
     invoke-static {}, Landroid/util/OpFeatures;->isH2()Z
 
     move-result v0
@@ -185,6 +187,8 @@
     iput-boolean v1, p0, Landroid/content/res/AssetManager;->mOpen:Z
 
     invoke-direct {p0, v1}, Landroid/content/res/AssetManager;->init(Z)V
+
+    invoke-direct/range {p0 .. p0}, Landroid/content/res/AssetManager;->addFlymeAssetPath()V
 
     invoke-static {}, Landroid/util/OpFeatures;->isH2()Z
 

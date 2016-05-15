@@ -87,6 +87,10 @@
 # instance fields
 .field private final IS_H2_OS:Z
 
+.field mFlymeAccessControlManager:Lmeizu/security/AccessControlManager;
+
+.field mRealPm:Lcom/android/server/pm/PackageManagerService;
+
 .field inResumeTopActivity:Z
 
 .field public lBoostCpuBoost:I

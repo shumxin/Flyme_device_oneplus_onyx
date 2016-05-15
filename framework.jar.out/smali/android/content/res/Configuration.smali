@@ -971,6 +971,12 @@
 
     or-int/2addr v2, v3
 
+    or-int/lit16 v0, v0, 0x4000
+
+    const v1, 0x8000
+
+    or-int/2addr v0, v1
+
     and-int/2addr v2, p0
 
     if-nez v2, :cond_0
@@ -978,6 +984,8 @@
     invoke-static {p0}, Landroid/content/res/OpExtraConfiguration;->needNewResources(I)Z
 
     move-result v2
+
+    const/4 v2, 0x0
 
     if-eqz v2, :cond_1
 
@@ -991,6 +999,12 @@
 
     :cond_2
     or-int v2, p1, v3
+
+    or-int/lit16 v0, v0, 0x4000
+
+    const v1, 0x8000
+
+    or-int/2addr v0, v1
 
     and-int/2addr v2, p0
 
@@ -2634,6 +2648,10 @@
 
     move-result v2
 
+    invoke-static {p0, p1, v2}, Landroid/content/res/Configuration$FlymeInjector;->compareTo(Landroid/content/res/Configuration;Landroid/content/res/Configuration;I)I
+
+    move-result v2
+
     goto/16 :goto_0
 .end method
 
@@ -2979,6 +2997,10 @@
 
     .line 1091
     :cond_12
+    invoke-static {p0, p1, v0}, Landroid/content/res/Configuration$FlymeInjector;->diff(Landroid/content/res/Configuration;Landroid/content/res/Configuration;I)I
+
+    move-result v0
+
     invoke-static {}, Landroid/util/OpFeatures;->isH2()Z
 
     move-result v2
@@ -3231,6 +3253,10 @@
 
     .end local v0    # "result":I
     :cond_0
+    invoke-static {p0, v0}, Landroid/content/res/Configuration$FlymeInjector;->hashCode(Landroid/content/res/Configuration;I)I
+
+    move-result v0
+
     return v0
 
     .restart local v0    # "result":I
@@ -3506,6 +3532,8 @@
 
     iput v0, p0, Landroid/content/res/Configuration;->seq:I
 
+    invoke-static/range {p0 .. p1}, Landroid/content/res/Configuration$FlymeInjector;->readFromParcel(Landroid/content/res/Configuration;Landroid/os/Parcel;)V
+
     invoke-static {}, Landroid/util/OpFeatures;->isH2()Z
 
     move-result v0
@@ -3684,6 +3712,8 @@
 
     iput v0, p0, Landroid/content/res/Configuration;->seq:I
 
+    invoke-static/range {p0 .. p1}, Landroid/content/res/Configuration$FlymeInjector;->initFlymeExtraFields(Landroid/content/res/Configuration;Landroid/content/res/Configuration;)V
+
     invoke-static {}, Landroid/util/OpFeatures;->isH2()Z
 
     move-result v0
@@ -3753,6 +3783,8 @@
     iput v1, p0, Landroid/content/res/Configuration;->densityDpi:I
 
     iput v1, p0, Landroid/content/res/Configuration;->seq:I
+
+    invoke-static/range {p0 .. p0}, Landroid/content/res/Configuration$FlymeInjector;->initFlymeExtraFields(Landroid/content/res/Configuration;)V
 
     invoke-static {}, Landroid/util/OpFeatures;->isH2()Z
 
@@ -5233,6 +5265,8 @@
 
     .line 977
     :cond_19
+    invoke-static {p0, p1, v0}, Landroid/content/res/Configuration$FlymeInjector;->updateFrom(Landroid/content/res/Configuration;Landroid/content/res/Configuration;I)I
+
     invoke-static {}, Landroid/util/OpFeatures;->isH2()Z
 
     move-result v2
@@ -5371,6 +5405,8 @@
     iget v0, p0, Landroid/content/res/Configuration;->seq:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-static/range {p0 .. p2}, Landroid/content/res/Configuration$FlymeInjector;->writeToParcel(Landroid/content/res/Configuration;Landroid/os/Parcel;I)V
 
     invoke-static {}, Landroid/util/OpFeatures;->isH2()Z
 

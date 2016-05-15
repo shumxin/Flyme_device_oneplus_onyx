@@ -3047,6 +3047,23 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
+    invoke-direct/range {p0 .. p2}, Landroid/media/AudioService;->flymeCheckResumeRingerModeNormal(II)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_flyme_0
+
+    move-object/from16 v0, p0
+
+    move/from16 v1, p1
+
+    move-object/from16 v2, p4
+
+    invoke-direct {v0, v1, v2}, Landroid/media/AudioService;->flymeSetStreamVolume(ILjava/lang/String;)V
+
+    return-void
+
+    :cond_flyme_0
     move-object/from16 v0, p0
 
     move/from16 v1, p2

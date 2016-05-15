@@ -925,6 +925,8 @@
 
     iput v1, p0, Landroid/app/Notification;->color:I
 
+    invoke-static/range {p0 .. p1}, Landroid/app/Notification$FlymeInjector;->readFromParcelFlyme(Landroid/app/Notification;Landroid/os/Parcel;)V
+
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -1947,6 +1949,8 @@
 
     .line 1583
     :cond_b
+    invoke-static/range {p0 .. p1}, Landroid/app/Notification$FlymeInjector;->cloneIntoFlyme(Landroid/app/Notification;Landroid/app/Notification;)V
+
     invoke-static {}, Landroid/util/OpFeatures;->isH2()Z
 
     move-result v5
@@ -2927,6 +2931,8 @@
     iget v0, p0, Landroid/app/Notification;->color:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-static/range {p0 .. p2}, Landroid/app/Notification$FlymeInjector;->writeToParcelFlyme(Landroid/app/Notification;Landroid/os/Parcel;I)V
 
     iget-boolean v0, p0, Landroid/app/Notification;->isDefaultColor:Z
 

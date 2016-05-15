@@ -2629,6 +2629,8 @@
 
     :cond_a
     :goto_8
+    invoke-static/range {p0 .. p0}, Lcom/android/server/BatteryService$FlymeInjector;->onBatteryLow(Lcom/android/server/BatteryService;)V
+
     iget-object v0, p0, Lcom/android/server/BatteryService;->mLed:Lcom/android/server/BatteryService$Led;
 
     invoke-virtual {v0}, Lcom/android/server/BatteryService$Led;->updateLightsLocked()V
@@ -3174,6 +3176,8 @@
 
     if-le v0, v1, :cond_0
 
+    invoke-static/range {p0 .. p0}, Lcom/android/server/BatteryService$FlymeInjector;->writeMessageToFileIfOverTempLocked(Lcom/android/server/BatteryService;)V
+
     sget-object v0, Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
 
     const-string v1, "******OverTemp******"
@@ -3422,6 +3426,8 @@
     invoke-virtual {v4, v5, v7, v3, v8}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
     invoke-direct {p0}, Lcom/android/server/BatteryService;->updateBatteryWarningLevelLocked()V
+
+    invoke-static {}, Lcom/android/server/BatteryService$FlymeInjector;->onBootPhase()V
 
     invoke-static {}, Landroid/util/OpFeatures;->isH2()Z
 

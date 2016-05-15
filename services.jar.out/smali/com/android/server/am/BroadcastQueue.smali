@@ -5945,6 +5945,8 @@
     .line 1060
     .end local v17    # "e":Landroid/os/RemoteException;
     :cond_21
+    invoke-static/range {v33 .. v33}, Lcom/android/server/am/BroadcastQueue$FlymeBroadcastQueueInjector;->setCurrentBroadcastRecord(Lcom/android/server/am/BroadcastRecord;)V
+
     move-object/from16 v0, p0
 
     move-object/from16 v1, v21

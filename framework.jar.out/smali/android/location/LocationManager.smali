@@ -2258,7 +2258,7 @@
     move-result-object v1
 
     .local v1, "request":Landroid/location/LocationRequest;
-    invoke-direct {p0, v1, v4, v4, p5}, Landroid/location/LocationManager;->requestLocationUpdates(Landroid/location/LocationRequest;Landroid/location/LocationListener;Landroid/os/Looper;Landroid/app/PendingIntent;)V
+    invoke-direct {p0, v1, v4, v4, p5}, Landroid/location/LocationManager;->hook_requestLocationUpdates(Landroid/location/LocationRequest;Landroid/location/LocationListener;Landroid/os/Looper;Landroid/app/PendingIntent;)V
 
     return-void
 .end method
@@ -2307,7 +2307,7 @@
     .local v1, "request":Landroid/location/LocationRequest;
     const/4 v2, 0x0
 
-    invoke-direct {p0, v1, p5, p6, v2}, Landroid/location/LocationManager;->requestLocationUpdates(Landroid/location/LocationRequest;Landroid/location/LocationListener;Landroid/os/Looper;Landroid/app/PendingIntent;)V
+    invoke-direct {p0, v1, p5, p6, v2}, Landroid/location/LocationManager;->hook_requestLocationUpdates(Landroid/location/LocationRequest;Landroid/location/LocationListener;Landroid/os/Looper;Landroid/app/PendingIntent;)V
 
     return-void
 .end method
@@ -2468,7 +2468,7 @@
     move-result-object v1
 
     .local v1, "request":Landroid/location/LocationRequest;
-    invoke-direct {p0, v1, v4, v4, p5}, Landroid/location/LocationManager;->requestLocationUpdates(Landroid/location/LocationRequest;Landroid/location/LocationListener;Landroid/os/Looper;Landroid/app/PendingIntent;)V
+    invoke-direct {p0, v1, v4, v4, p5}, Landroid/location/LocationManager;->hook_requestLocationUpdates(Landroid/location/LocationRequest;Landroid/location/LocationListener;Landroid/os/Looper;Landroid/app/PendingIntent;)V
 
     return-void
 
@@ -2550,7 +2550,7 @@
     move-result-object v1
 
     .local v1, "request":Landroid/location/LocationRequest;
-    invoke-direct {p0, v1, p5, v4, v4}, Landroid/location/LocationManager;->requestLocationUpdates(Landroid/location/LocationRequest;Landroid/location/LocationListener;Landroid/os/Looper;Landroid/app/PendingIntent;)V
+    invoke-direct {p0, v1, p5, v4, v4}, Landroid/location/LocationManager;->hook_requestLocationUpdates(Landroid/location/LocationRequest;Landroid/location/LocationListener;Landroid/os/Looper;Landroid/app/PendingIntent;)V
 
     return-void
 
@@ -2633,7 +2633,7 @@
     .local v1, "request":Landroid/location/LocationRequest;
     const/4 v2, 0x0
 
-    invoke-direct {p0, v1, p5, p6, v2}, Landroid/location/LocationManager;->requestLocationUpdates(Landroid/location/LocationRequest;Landroid/location/LocationListener;Landroid/os/Looper;Landroid/app/PendingIntent;)V
+    invoke-direct {p0, v1, p5, p6, v2}, Landroid/location/LocationManager;->hook_requestLocationUpdates(Landroid/location/LocationRequest;Landroid/location/LocationListener;Landroid/os/Looper;Landroid/app/PendingIntent;)V
 
     return-void
 

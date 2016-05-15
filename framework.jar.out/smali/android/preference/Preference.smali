@@ -2020,6 +2020,8 @@
 
     .line 599
     :cond_b
+    invoke-virtual/range {p0 .. p1}, Landroid/preference/Preference;->setPreferenceView(Landroid/view/View;)V
+
     return-void
 
     .line 548

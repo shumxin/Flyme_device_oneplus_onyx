@@ -9919,6 +9919,16 @@
     .param p2, "keyguardShowingMedia"    # Z
 
     .prologue
+    if-nez p1, :cond_flyme_0
+
+    invoke-static/range {p0 .. p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector;->getForceHideWallpaperExitAnimation(Lcom/android/internal/policy/impl/PhoneWindowManager;)Landroid/view/animation/Animation;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_flyme_0
+
     const v1, #android:anim@lock_screen_wallpaper_exit#t
 
     .line 2565
@@ -14466,6 +14476,8 @@
     invoke-virtual {p0, v4}, Lcom/android/internal/policy/impl/PhoneWindowManager;->goingToSleep(I)V
 
     :cond_3
+    invoke-static/range {p0 .. p1}, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector;->initFlymeExtraFields(Lcom/android/internal/policy/impl/PhoneWindowManager;Landroid/content/Context;)V
+
     return-void
 
     .end local v0    # "filter":Landroid/content/IntentFilter;
@@ -24546,6 +24558,8 @@
 
     move-result v1
 
+    const/4 v1, 0x0
+
     if-eqz v1, :cond_1
 
     invoke-virtual {p0}, Lcom/android/internal/policy/impl/PhoneWindowManager;->showUcGlobalActionsInternal()V
@@ -24555,6 +24569,16 @@
     return-void
 
     :cond_1
+    invoke-static/range {p0 .. p0}, Lcom/android/internal/policy/impl/PhoneWindowManager$FlymeInjector;->showFlymeGlobalActions(Lcom/android/internal/policy/impl/PhoneWindowManager;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_flyme_0
+
+    return-void
+
+    :cond_flyme_0
+
     const-string v1, "globalactions"
 
     invoke-virtual {p0, v1}, Lcom/android/internal/policy/impl/PhoneWindowManager;->sendCloseSystemWindows(Ljava/lang/String;)V

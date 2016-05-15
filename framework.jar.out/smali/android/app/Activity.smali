@@ -4869,6 +4869,8 @@
     .end local v1    # "hasDarkTheme":Z
     .end local v4    # "theme":I
     :cond_5
+    invoke-static/range {p0 .. p0}, Landroid/app/Activity$FlymeInjector;->initFlymeExtraFields(Landroid/app/Activity;)V
+
     return-void
 
     :cond_6

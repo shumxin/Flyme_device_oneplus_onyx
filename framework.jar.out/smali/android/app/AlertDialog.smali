@@ -10,7 +10,8 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/app/AlertDialog$1;,
-        Landroid/app/AlertDialog$Builder;
+        Landroid/app/AlertDialog$Builder;,
+	Landroid/app/AlertDialog$FlymeInjector;
     }
 .end annotation
 

@@ -688,3 +688,19 @@ on property:ro.prj_name=14001
 on property:ro.prj_name=15055
      setprop persist.radio.multisim.config dsds
 #endif
+
+service smbd /system/bin/smbd -D
+    user root
+    group bluetooth net_bt_admin
+    disabled
+    oneshot
+
+service nmbd /system/bin/nmbd -D
+    user root
+    group bluetooth net_bt_admin
+    disabled
+    oneshot
+
+service flymed /system/bin/flymed
+    class main
+    socket flymed stream 0660 root system

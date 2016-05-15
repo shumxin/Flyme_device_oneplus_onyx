@@ -6,7 +6,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/android/server/SystemServer$AdbPortObserver;
+        Lcom/android/server/SystemServer$AdbPortObserver;,
+        Lcom/android/server/SystemServer$FlymeInjector;
     }
 .end annotation
 
@@ -1693,13 +1694,13 @@
     invoke-static {v5, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 576
-    new-instance v71, Lcom/android/server/InputMethodManagerService;
+    new-instance v71, Lcom/android/server/MzInputMethodManagerService;
 
     move-object/from16 v0, v71
 
     move-object/from16 v1, v116
 
-    invoke-direct {v0, v4, v1}, Lcom/android/server/InputMethodManagerService;-><init>(Landroid/content/Context;Lcom/android/server/wm/WindowManagerService;)V
+    invoke-direct {v0, v4, v1}, Lcom/android/server/MzInputMethodManagerService;-><init>(Landroid/content/Context;Lcom/android/server/wm/WindowManagerService;)V
     :try_end_a
     .catch Ljava/lang/Throwable; {:try_start_a .. :try_end_a} :catch_3
 
@@ -1955,6 +1956,8 @@
     move-object/from16 v0, v101
 
     invoke-static {v5, v0}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
+    invoke-static {}, Lcom/android/server/SystemServer$FlymeInjector;->addFlymeStatusBarManagerService()V
+
     :try_end_15
     .catch Ljava/lang/Throwable; {:try_start_15 .. :try_end_15} :catch_3c
 
@@ -2006,6 +2009,9 @@
     const-string v5, "network_management"
 
     invoke-static {v5, v8}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
+
+    invoke-static/range {p0 .. p0}, Lcom/android/server/SystemServer$FlymeInjector;->addNetworkManagementServiceFlyme(Lcom/android/server/SystemServer;)V
+
     :try_end_17
     .catch Ljava/lang/Throwable; {:try_start_17 .. :try_end_17} :catch_b
 
@@ -2264,6 +2270,8 @@
     .end local v47    # "connectivity":Lcom/android/server/ConnectivityService;
     .restart local v46    # "connectivity":Lcom/android/server/ConnectivityService;
     :goto_16
+    invoke-static/range {p0 .. p0}, Lcom/android/server/SystemServer$FlymeInjector;->addSambaService(Lcom/android/server/SystemServer;)V
+
     :try_start_22
     const-string v5, "SystemServer"
 
@@ -3028,6 +3036,8 @@
 
     .line 975
     :cond_1f
+    goto/16 :goto_flyme_0
+
     if-nez v65, :cond_20
 
     if-nez v59, :cond_20
@@ -3067,6 +3077,7 @@
     .end local v38    # "atlas":Lcom/android/server/AssetAtlasService;
     .restart local v37    # "atlas":Lcom/android/server/AssetAtlasService;
     :cond_20
+    :goto_flyme_0
     :goto_2a
     new-instance v80, Lcom/android/server/OemExService;
 
@@ -3551,6 +3562,14 @@
     check-cast v86, Lcom/android/server/MmsServiceBroker;
 
     .restart local v86    # "mmsService":Lcom/android/server/MmsServiceBroker;
+    move-object/from16 v0, p0
+
+    move-object/from16 v5, v116
+
+    move-object/from16 v6, v110
+
+    invoke-static {v0, v5, v6}, Lcom/android/server/SystemServer$FlymeInjector;->addFlymeServices(Lcom/android/server/SystemServer;Lcom/android/server/wm/WindowManagerService;Lcom/android/server/wallpaper/WallpaperManagerService;)V
+
     :try_start_42
     invoke-virtual/range {v107 .. v107}, Lcom/android/server/VibratorService;->systemReady()V
     :try_end_42

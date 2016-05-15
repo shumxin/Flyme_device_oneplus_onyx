@@ -25,7 +25,7 @@
 
     const/4 v2, 0x1
 
-    const v1, #android:style@Theme.Dialog.AppError#t
+    sget v1, Lcom/flyme/internal/R$style;->Theme_Flyme_Light_Dialog_Alert:I
 
     invoke-direct {p0, p1, v2, v1}, Landroid/app/AlertDialog;-><init>(Landroid/content/Context;ZI)V
 

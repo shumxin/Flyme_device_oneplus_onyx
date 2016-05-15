@@ -90,6 +90,10 @@
 
 .field private mFlags:I
 
+.field public mFlymeNotificationBuilder:Landroid/app/NotificationBuilderExt;
+
+.field private mFlymeSnoozeIntent:Landroid/app/PendingIntent;
+
 .field private mFullScreenIntent:Landroid/app/PendingIntent;
 
 .field private mGroupKey:Ljava/lang/String;
@@ -3407,6 +3411,8 @@
     invoke-static {v1, v2}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
     :cond_3
+    invoke-direct/range {p0 .. p1}, Landroid/app/Notification$Builder;->restoreSnoozeIntentFromNotification(Landroid/app/Notification;)V
+
     return-void
 .end method
 
@@ -4312,6 +4318,8 @@
     invoke-virtual {v2, v4, v3}, Landroid/app/Notification;->cloneInto(Landroid/app/Notification;Z)V
 
     :cond_7
+    invoke-direct {p0, v1}, Landroid/app/Notification$Builder;->buildUnstyledFlyme(Landroid/app/Notification;)V
+
     invoke-static {}, Landroid/util/OpFeatures;->isH2()Z
 
     move-result v2

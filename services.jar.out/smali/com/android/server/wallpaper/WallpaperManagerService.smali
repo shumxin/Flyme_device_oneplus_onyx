@@ -64,6 +64,10 @@
     .end annotation
 .end field
 
+.field private mFlymeRestoredWallpaperComponent:Landroid/content/ComponentName;
+
+.field mFlymeWallpaperService:Lcom/android/server/wallpaper/FlymeWallpaperService;
+
 .field final mContext:Landroid/content/Context;
 
 .field public mCurrentUserId:I
@@ -5670,6 +5674,8 @@
     .local v1, "keyguardWallpaperInfoFile":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
+    invoke-direct/range {p0 .. p1}, Lcom/android/server/wallpaper/WallpaperManagerService;->flymeOnRemoveUser(I)V
+
     monitor-exit v5
 
     goto :goto_0
@@ -7362,6 +7368,8 @@
     const/4 v7, 0x1
 
     iput-boolean v7, v6, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;->imageWallpaperPending:Z
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/wallpaper/WallpaperManagerService;->flymeSetWallpaperSimultaneously()V
+
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 

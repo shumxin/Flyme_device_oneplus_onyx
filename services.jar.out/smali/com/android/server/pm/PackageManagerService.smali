@@ -223,6 +223,14 @@
     .end annotation
 .end field
 
+.field mAccessActivity:Landroid/content/pm/ActivityInfo;
+
+.field mAccessComponentName:Landroid/content/ComponentName;
+
+.field mAccessInfo:Landroid/content/pm/ResolveInfo;
+
+.field mFlymePackageDOS:Lcom/android/server/pm/PackageDefaultOpService;
+
 .field final mActivities:Lcom/android/server/pm/PackageManagerService$ActivityIntentResolver;
 
 .field mAndroidApplication:Landroid/content/pm/ApplicationInfo;
@@ -2416,6 +2424,8 @@
     move-object/from16 v0, v26
 
     invoke-virtual {v0, v4}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
+
+    invoke-static/range {v26 .. v26}, Lcom/android/server/pm/PackageManagerService$FlymePackageManagerServiceInjector;->addFlymeAlreadyDexOpted(Landroid/util/ArraySet;)V
 
     .line 1552
     invoke-virtual/range {v49 .. v49}, Ljava/io/File;->list()[Ljava/lang/String;
@@ -16232,6 +16242,10 @@
     .line 7455
     .local v0, "allowed":Z
     :goto_0
+    invoke-static {p2, p3, v0}, Lcom/android/server/pm/PackageManagerService$FlymePackageManagerServiceInjector;->grantExternalSystemPackagePermission(Landroid/content/pm/PackageParser$Package;Lcom/android/server/pm/BasePermission;Z)Z
+
+    move-result v0
+
     if-nez v0, :cond_3
 
     iget v5, p3, Lcom/android/server/pm/BasePermission;->protectionLevel:I
@@ -20612,6 +20626,16 @@
 
     .prologue
     const/4 v7, 0x1
+
+    invoke-static/range {p0 .. p3}, Lcom/android/server/pm/PackageManagerService$FlymePackageManagerServiceInjector;->performFlymeBootDexOpt(Lcom/android/server/pm/PackageManagerService;Landroid/content/pm/PackageParser$Package;II)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_flyme_0
+
+    return-void
+
+    :cond_flyme_0
 
     .line 4900
     sget-boolean v0, Lcom/android/server/pm/PackageManagerService;->DEBUG_DEXOPT:Z
@@ -49031,6 +49055,10 @@
 
     move-object v0, v8
 
+    invoke-static/range {p0 .. p1}, Lcom/android/server/pm/PackageManagerService$FlymePackageManagerServiceInjector;->getAccessActivityInfo(Lcom/android/server/pm/PackageManagerService;Landroid/content/ComponentName;)Landroid/content/pm/ActivityInfo;
+
+    move-result-object v0
+
     goto/16 :goto_0
 .end method
 
@@ -55968,6 +55996,8 @@
     .end local v16    # "pkg":Landroid/content/pm/PackageParser$Package;
     .end local v24    # "usableSpace":J
     :cond_19
+    invoke-static/range {p0 .. p0}, Lcom/android/server/pm/PackageManagerService$FlymePackageManagerServiceInjector;->setComponentEnabledSetting(Lcom/android/server/pm/PackageManagerService;)V
+
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/pm/PackageManagerService;->mOnePlusAppDexOptManager:Lcom/android/server/pm/OnePlusAppDexOptManager;

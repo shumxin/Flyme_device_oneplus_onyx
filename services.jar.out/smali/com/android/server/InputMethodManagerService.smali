@@ -3515,6 +3515,10 @@
     invoke-direct {v0, v9, v1}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
     .local v25, "settingsContext":Landroid/content/Context;
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/InputMethodManagerService;->getFlymeLightContext()Landroid/content/Context;
+
+    move-result-object v25
+
     new-instance v28, Landroid/app/AlertDialog$Builder;
 
     const/16 v30, 0x1
@@ -3538,7 +3542,7 @@
     :goto_3
     move-object/from16 v0, p0
 
-    move-object/from16 v1, v24
+    move-object/from16 v1, v25
 
     invoke-direct {v0, v1}, Lcom/android/server/InputMethodManagerService;->getFlymeLightAlertDialogBuilder(Landroid/content/Context;)V
 

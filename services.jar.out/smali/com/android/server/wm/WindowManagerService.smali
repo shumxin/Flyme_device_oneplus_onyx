@@ -196,6 +196,8 @@
 # instance fields
 .field private final IS_O2_OS:Z
 
+.field mMoveWindowService:Lcom/android/server/wm/MoveWindowService;
+
 .field mAccessibilityController:Lcom/android/server/wm/AccessibilityController;
 
 .field final mActivityManager:Landroid/app/IActivityManager;
@@ -35906,6 +35908,14 @@
     .restart local v20    # "origId":J
     .restart local v31    # "win":Lcom/android/server/wm/WindowState;
     :cond_1
+    move-object/from16 v0, p0
+
+    move/from16 v1, p7
+
+    move-object/from16 v2, v31
+
+    invoke-static {v0, v1, v2}, Lcom/android/server/wm/WindowManagerService$FlymeInjector;->resetOnWindowChanged(Lcom/android/server/wm/WindowManagerService;ILcom/android/server/wm/WindowState;)V
+
     move-object/from16 v0, v31
 
     iget-object v0, v0, Lcom/android/server/wm/WindowState;->mWinAnimator:Lcom/android/server/wm/WindowStateAnimator;
@@ -36141,6 +36151,14 @@
     .restart local v12    # "flagChanges":I
     :cond_8
     :try_start_1
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p4
+
+    move-object/from16 v2, v31
+
+    invoke-static {v0, v1, v2}, Lcom/android/server/wm/WindowManagerService$FlymeInjector;->adjustBackupWindowFlag(Lcom/android/server/wm/WindowManagerService;Landroid/view/WindowManager$LayoutParams;Lcom/android/server/wm/WindowState;)V
+
     move-object/from16 v0, v31
 
     iget-object v0, v0, Lcom/android/server/wm/WindowState;->mAttrs:Landroid/view/WindowManager$LayoutParams;
@@ -37074,6 +37092,14 @@
     .line 3319
     .end local v10    # "displayInfo":Landroid/view/DisplayInfo;
     :cond_1e
+    move-object/from16 v0, p0
+
+    move/from16 v1, p7
+
+    move-object/from16 v2, v31
+
+    invoke-static {v0, v1, v2}, Lcom/android/server/wm/WindowManagerService$FlymeInjector;->adjustInputWindow(Lcom/android/server/wm/WindowManagerService;ILcom/android/server/wm/WindowState;)V
+
     move-object/from16 v0, v31
 
     iget-object v0, v0, Lcom/android/server/wm/WindowState;->mAppToken:Lcom/android/server/wm/AppWindowToken;

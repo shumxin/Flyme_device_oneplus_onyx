@@ -20,6 +20,19 @@
 
 .field private mDisabledAlpha:F
 
+.field mFlymeDragTouchDownX:F
+
+.field mFlymeDragTouchDownY:F
+
+.field mFlymeHalfThumbWidth:I
+
+.field mFlymeInDragoning:Z
+
+.field mFlymeTouchDownProgress:I
+
+.field mFlymeTouchSlopSquare:I
+
+
 .field private mHasThumbTint:Z
 
 .field private mHasThumbTintMode:Z
@@ -47,6 +60,8 @@
 .field private mTouchDownX:F
 
 .field mTouchProgressOffset:F
+
+.field protected mTouchScrollMode:I
 
 
 # direct methods
