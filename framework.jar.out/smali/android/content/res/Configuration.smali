@@ -946,7 +946,7 @@
 .end method
 
 .method public static needNewResources(II)Z
-    .locals 4
+    .locals 5
     .param p0, "configChanges"    # I
     .param p1, "interestingChanges"    # I
 
@@ -971,11 +971,11 @@
 
     or-int/2addr v2, v3
 
-    or-int/lit16 v0, v0, 0x4000
+    or-int/lit16 v3, v3, 0x4000
 
-    const v1, 0x8000
+    const v4, 0x8000
 
-    or-int/2addr v0, v1
+    or-int/2addr v3, v4
 
     and-int/2addr v2, p0
 
@@ -1000,11 +1000,11 @@
     :cond_2
     or-int v2, p1, v3
 
-    or-int/lit16 v0, v0, 0x4000
+    or-int/lit16 v3, v3, 0x4000
 
-    const v1, 0x8000
+    const v4, 0x8000
 
-    or-int/2addr v0, v1
+    or-int/2addr v3, v4
 
     and-int/2addr v2, p0
 
@@ -5266,6 +5266,8 @@
     .line 977
     :cond_19
     invoke-static {p0, p1, v0}, Landroid/content/res/Configuration$FlymeInjector;->updateFrom(Landroid/content/res/Configuration;Landroid/content/res/Configuration;I)I
+
+    move-result v0
 
     invoke-static {}, Landroid/util/OpFeatures;->isH2()Z
 
