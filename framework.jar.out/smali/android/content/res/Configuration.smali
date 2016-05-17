@@ -946,7 +946,7 @@
 .end method
 
 .method public static needNewResources(II)Z
-    .locals 5
+    .locals 4
     .param p0, "configChanges"    # I
     .param p1, "interestingChanges"    # I
 
@@ -971,11 +971,11 @@
 
     or-int/2addr v2, v3
 
-    or-int/lit16 v3, v3, 0x4000
+    or-int/lit16 v2, v2, 0x4000
 
-    const v4, 0x8000
+    const v3, 0x8000
 
-    or-int/2addr v3, v4
+    or-int/2addr v2, v3
 
     and-int/2addr v2, p0
 
@@ -1000,11 +1000,11 @@
     :cond_2
     or-int v2, p1, v3
 
-    or-int/lit16 v3, v3, 0x4000
+    or-int/lit16 v2, v2, 0x4000
 
-    const v4, 0x8000
+    const v3, 0x8000
 
-    or-int/2addr v3, v4
+    or-int/2addr v2, v3
 
     and-int/2addr v2, p0
 

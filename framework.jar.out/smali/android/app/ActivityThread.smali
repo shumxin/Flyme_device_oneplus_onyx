@@ -15906,13 +15906,8 @@
 
     .line 5352
     .local v9, "r":Landroid/content/res/Resources;
-    if-eqz v9, :cond_0
+    invoke-virtual {v9, p1}, Landroid/content/res/Resources;->setFlymeThemeResource(Ljava/lang/String;)V
 
-    .line 5353
-    invoke-virtual {v9, p1}, Landroid/content/res/Resources;->init(Ljava/lang/String;)V
-
-    .line 5355
-    :cond_0
     return-object v9
 .end method
 
