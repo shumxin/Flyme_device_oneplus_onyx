@@ -601,7 +601,7 @@
 
     move-result-object v9
 
-    const-string v10, "com.oneplus.camera"
+    const-string v10, "com.meizu.media.camera"
 
     const/4 v11, 0x0
 
@@ -620,9 +620,9 @@
 
     new-instance v10, Landroid/content/ComponentName;
 
-    const-string v11, "com.oneplus.camera"
+    const-string v11, "com.meizu.media.camera"
 
-    const-string v12, "com.oneplus.camera.MainActivity"
+    const-string v12, "com.meizu.media.camera.CameraLauncher"
 
     invoke-direct {v10, v11, v12}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
