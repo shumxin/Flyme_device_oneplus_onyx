@@ -1,3 +1,53 @@
+.method public dispatch(Landroid/view/MotionEvent;)V
+    .locals 1
+    .param p1, "event"    # Landroid/view/MotionEvent;
+
+    .prologue
+    .line 191
+    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardService$1;->this$0:Lcom/android/systemui/keyguard/KeyguardService;
+
+    invoke-virtual {v0}, Lcom/android/systemui/keyguard/KeyguardService;->checkPermission()V
+
+    .line 192
+    return-void
+.end method
+
+.method public isDismissable()Z
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public isInputRestricted()Z
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public isSecure()Z
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public isShowing()Z
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public isShowingAndNotOccluded()Z
     .locals 1
 
@@ -17,4 +67,15 @@
     const/4 v0, 0x0
 
     return v0
+.end method
+
+.method public showAssistant()V
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardService$1;->this$0:Lcom/android/systemui/keyguard/KeyguardService;
+
+    invoke-virtual {v0}, Lcom/android/systemui/keyguard/KeyguardService;->checkPermission()V
+
+    return-void
 .end method

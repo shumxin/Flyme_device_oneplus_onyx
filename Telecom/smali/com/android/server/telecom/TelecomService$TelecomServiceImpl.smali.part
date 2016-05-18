@@ -1,0 +1,15 @@
+.method public getActiveSubscription()I
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public switchToOtherActiveSub(I)V
+    .locals 0
+
+    .prologue
+    return-void
+.end method
