@@ -1,0 +1,20 @@
+.method public h()Z
+    .locals 1
+
+    .prologue
+    sget-boolean v0, Lcom/meizu/media/camera/e/i;->x:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/meizu/media/camera/CameraActivity;->q:Lcom/meizu/common/c/f;
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
