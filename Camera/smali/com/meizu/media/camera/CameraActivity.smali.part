@@ -18,3 +18,223 @@
 
     goto :goto_0
 .end method
+
+.method public onCreate(Landroid/os/Bundle;)V
+    .locals 4
+
+    .prologue
+    invoke-super {p0, p1}, Lcom/meizu/media/camera/a;->onCreate(Landroid/os/Bundle;)V
+
+    const v0, 0x7f03001b
+
+    invoke-virtual {p0, v0}, Lcom/meizu/media/camera/CameraActivity;->setContentView(I)V
+
+    new-instance v0, Lcom/meizu/media/camera/CameraActivity$a;
+
+    invoke-virtual {p0}, Lcom/meizu/media/camera/CameraActivity;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, p0, v1}, Lcom/meizu/media/camera/CameraActivity$a;-><init>(Lcom/meizu/media/camera/CameraActivity;Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lcom/meizu/media/camera/CameraActivity;->n:Landroid/os/Handler;
+
+    iget-object v0, p0, Lcom/meizu/media/camera/CameraActivity;->n:Landroid/os/Handler;
+
+    const/4 v1, 0x3
+
+    const-wide/16 v2, 0x32
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
+
+    sget-boolean v0, Lcom/meizu/media/camera/e/i;->x:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Lcom/meizu/common/c/f;->a()Lcom/meizu/common/c/f;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/meizu/media/camera/CameraActivity;->q:Lcom/meizu/common/c/f;
+
+    :cond_0
+    new-instance v0, Landroid/content/IntentFilter;
+
+    const-string v1, "android.intent.action.BATTERY_CHANGED"
+
+    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/meizu/media/camera/CameraActivity;->y:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {p0, v1, v0}, Lcom/meizu/media/camera/CameraActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    const v0, 0x7f100077
+
+    invoke-virtual {p0, v0}, Lcom/meizu/media/camera/CameraActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/meizu/media/camera/CameraActivity;->g:Landroid/view/View;
+
+    invoke-static {}, Lcom/meizu/common/c/a;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/meizu/media/camera/CameraActivity;->g:Landroid/view/View;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setFitsSystemWindows(Z)V
+
+    :cond_1
+    new-instance v0, Lcom/meizu/media/camera/CameraActivity$b;
+
+    invoke-direct {v0, p0, p0}, Lcom/meizu/media/camera/CameraActivity$b;-><init>(Lcom/meizu/media/camera/CameraActivity;Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/meizu/media/camera/CameraActivity;->m:Lcom/meizu/media/camera/CameraActivity$b;
+
+    new-instance v0, Lcom/meizu/media/camera/bb;
+
+    invoke-direct {v0}, Lcom/meizu/media/camera/bb;-><init>()V
+
+    iput-object v0, p0, Lcom/meizu/media/camera/CameraActivity;->f:Lcom/meizu/media/camera/bb;
+
+    iget-object v0, p0, Lcom/meizu/media/camera/CameraActivity;->f:Lcom/meizu/media/camera/bb;
+
+    iget-object v1, p0, Lcom/meizu/media/camera/CameraActivity;->g:Landroid/view/View;
+
+    iget-boolean v2, p0, Lcom/meizu/media/camera/CameraActivity;->c:Z
+
+    invoke-virtual {v0, p0, v1, v2}, Lcom/meizu/media/camera/bb;->a(Lcom/meizu/media/camera/CameraActivity;Landroid/view/View;Z)V
+
+    iget-object v0, p0, Lcom/meizu/media/camera/CameraActivity;->f:Lcom/meizu/media/camera/bb;
+
+    iget-boolean v1, p0, Lcom/meizu/media/camera/CameraActivity;->b:Z
+
+    invoke-virtual {v0, v1}, Lcom/meizu/media/camera/bb;->o(Z)V
+
+    sget-boolean v0, Lcom/meizu/media/camera/e/i;->q:Z
+
+    if-eqz v0, :cond_2
+
+    const-string v0, "display"
+
+    invoke-virtual {p0, v0}, Lcom/meizu/media/camera/CameraActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/display/DisplayManager;
+
+    iput-object v0, p0, Lcom/meizu/media/camera/CameraActivity;->o:Landroid/hardware/display/DisplayManager;
+
+    new-instance v0, Landroid/content/IntentFilter;
+
+    const-string v1, "android.hardware.display.action.WIFI_DISPLAY_STATUS_CHANGED"
+
+    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/meizu/media/camera/CameraActivity;->z:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {p0, v1, v0}, Lcom/meizu/media/camera/CameraActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    :cond_2
+    new-instance v0, Landroid/content/IntentFilter;
+
+    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
+
+    const-string v1, "android.intent.action.MEDIA_SCANNER_FINISHED"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    const-string v1, "file"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcom/meizu/media/camera/CameraActivity;->A:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {p0, v1, v0}, Lcom/meizu/media/camera/CameraActivity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    invoke-virtual {p0}, Lcom/meizu/media/camera/CameraActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string v1, "audio"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/media/AudioManager;
+
+    iput-object v0, p0, Lcom/meizu/media/camera/CameraActivity;->p:Landroid/media/AudioManager;
+
+    invoke-virtual {p0}, Lcom/meizu/media/camera/CameraActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string v1, "power"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/PowerManager;
+
+    iput-object v0, p0, Lcom/meizu/media/camera/CameraActivity;->u:Landroid/os/PowerManager;
+
+    return-void
+.end method
+
+.method public onDestroy()V
+    .locals 2
+
+    .prologue
+    const/4 v1, 0x0
+
+    iget-object v0, p0, Lcom/meizu/media/camera/CameraActivity;->y:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {p0, v0}, Lcom/meizu/media/camera/CameraActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+
+    sget-boolean v0, Lcom/meizu/media/camera/e/i;->q:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/meizu/media/camera/CameraActivity;->z:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {p0, v0}, Lcom/meizu/media/camera/CameraActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+
+    iput-object v1, p0, Lcom/meizu/media/camera/CameraActivity;->z:Landroid/content/BroadcastReceiver;
+
+    :cond_0
+    iget-object v0, p0, Lcom/meizu/media/camera/CameraActivity;->A:Landroid/content/BroadcastReceiver;
+
+    invoke-virtual {p0, v0}, Lcom/meizu/media/camera/CameraActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+
+    iput-object v1, p0, Lcom/meizu/media/camera/CameraActivity;->A:Landroid/content/BroadcastReceiver;
+
+    sget-boolean v0, Lcom/meizu/media/camera/e/i;->x:Z
+
+    if-eqz v0, :cond_1
+
+    :cond_1
+    iget-object v0, p0, Lcom/meizu/media/camera/CameraActivity;->p:Landroid/media/AudioManager;
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/meizu/media/camera/CameraActivity;->p:Landroid/media/AudioManager;
+
+    iget-object v1, p0, Lcom/meizu/media/camera/CameraActivity;->C:Landroid/media/AudioManager$OnAudioFocusChangeListener;
+
+    invoke-virtual {v0, v1}, Landroid/media/AudioManager;->abandonAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;)I
+
+    :cond_2
+    invoke-super {p0}, Lcom/meizu/media/camera/a;->onDestroy()V
+
+    iget-object v0, p0, Lcom/meizu/media/camera/CameraActivity;->f:Lcom/meizu/media/camera/bb;
+
+    invoke-virtual {v0}, Lcom/meizu/media/camera/bb;->K()V
+
+    return-void
+.end method
