@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton android:background="@drawable/ripple" android:padding="@dimen/capture_bar_button_padding" android:scaleType="center" android:contentDescription="@string/capture_bar_timer"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

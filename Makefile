@@ -56,7 +56,7 @@ vendor_remove_files := media/oneplus_ftm_test.wav
 #-----------------------------------------------------------------------------
 vendor_saved_apps := Bluetooth KeyChain HTMLViewer UserDictionaryProvider BackupRestoreConfirmation \
                      FusedLocation PrintSpooler SharedStorageBackup  ExternalStorageProvider InputDevices \
-                     ProxyHandler Shell DefaultContainerService
+                     ProxyHandler Shell DefaultContainerService OnePlusCameraService
 
 ##############################################################################
 # The value decides which vendor apk you want to modify.
@@ -65,7 +65,7 @@ vendor_saved_apps := Bluetooth KeyChain HTMLViewer UserDictionaryProvider Backup
 # You need ro decode FMRadio.apk to the project directory(use apktool d FMRadio.apk) first,
 # and then you can make it by:   make FMRadio
 #-----------------------------------------------------------------------------
-#vendor_modify_apps := FMRadio
+vendor_modify_apps := OnePlusCamera
 
 ##############################################################################
 # The value decides which vendor jar you want to modify.
@@ -96,7 +96,7 @@ board_saved_files := bin/bootanimation bin/shutdownanimation lib/libwebviewchrom
 # The default value is nothing.
 # You can configure the board system apk name in the value.
 #-----------------------------------------------------------------------------
-board_remove_apps := NfcNci LogReport
+board_remove_apps := Camera NfcNci LogReport
 
 ##############################################################################
 # The value decides which apk you want to modify, when the apk is based on the board system apk.
@@ -108,7 +108,7 @@ board_remove_apps := NfcNci LogReport
 # The command idtoname how to use: first use "apktool d source/system/framework/framework-res.apk other/TMP/framework-res",
 # and then use "idtoname other/TMP/framework-res/res/values/public_master.xml XXXX/smali"(XXXX is the directory where you decode board system apk).
 #-----------------------------------------------------------------------------
-board_modify_apps := Camera FlymeLauncher SystemUI TeleService Telecom
+board_modify_apps := FileManager FlymeLauncher SystemUI TeleService Telecom VoiceAssistant
 
 ##############################################################################
 # The value decides which jar you want to modify, when the jar is based on the board framework jar.
