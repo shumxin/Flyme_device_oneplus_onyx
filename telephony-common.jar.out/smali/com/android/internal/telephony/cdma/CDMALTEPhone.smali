@@ -1588,7 +1588,7 @@
 
     check-cast v0, Lcom/android/internal/telephony/dataconnection/DcTracker;
 
-    invoke-virtual {v0}, Lcom/android/internal/telephony/dataconnection/DcTracker;->update()V
+    invoke-virtual {v0}, Lcom/android/internal/telephony/dataconnection/DcTracker;->MzUpdate()V
 
     .line 391
     return-void
