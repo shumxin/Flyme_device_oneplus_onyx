@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Lcom/oneplus/base/PropertyChangedCallback",
         "<",
-        "Lcom/oneplus/camera/PhotoCaptureState;",
+        "Lcom/meizu/media/camera/PhotoCaptureState;",
         ">;"
     }
 .end annotation
@@ -55,28 +55,28 @@
             "Lcom/oneplus/base/PropertySource;",
             "Lcom/oneplus/base/PropertyKey",
             "<",
-            "Lcom/oneplus/camera/PhotoCaptureState;",
+            "Lcom/meizu/media/camera/PhotoCaptureState;",
             ">;",
             "Lcom/oneplus/base/PropertyChangeEventArgs",
             "<",
-            "Lcom/oneplus/camera/PhotoCaptureState;",
+            "Lcom/meizu/media/camera/PhotoCaptureState;",
             ">;)V"
         }
     .end annotation
 
     .prologue
     .line 2200
-    .local p2, "key":Lcom/oneplus/base/PropertyKey;, "Lcom/oneplus/base/PropertyKey<Lcom/oneplus/camera/PhotoCaptureState;>;"
-    .local p3, "e":Lcom/oneplus/base/PropertyChangeEventArgs;, "Lcom/oneplus/base/PropertyChangeEventArgs<Lcom/oneplus/camera/PhotoCaptureState;>;"
+    .local p2, "key":Lcom/oneplus/base/PropertyKey;, "Lcom/oneplus/base/PropertyKey<Lcom/meizu/media/camera/PhotoCaptureState;>;"
+    .local p3, "e":Lcom/oneplus/base/PropertyChangeEventArgs;, "Lcom/oneplus/base/PropertyChangeEventArgs<Lcom/meizu/media/camera/PhotoCaptureState;>;"
     sget-object v1, Lcom/oneplus/gallery/CameraGalleryImpl$26;->$SwitchMap$com$oneplus$camera$PhotoCaptureState:[I
 
     invoke-virtual {p3}, Lcom/oneplus/base/PropertyChangeEventArgs;->getNewValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/oneplus/camera/PhotoCaptureState;
+    check-cast v0, Lcom/meizu/media/camera/PhotoCaptureState;
 
-    invoke-virtual {v0}, Lcom/oneplus/camera/PhotoCaptureState;->ordinal()I
+    invoke-virtual {v0}, Lcom/meizu/media/camera/PhotoCaptureState;->ordinal()I
 
     move-result v0
 

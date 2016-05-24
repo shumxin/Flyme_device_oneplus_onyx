@@ -21,7 +21,7 @@
         "Ljava/lang/Object;",
         "Lcom/oneplus/base/component/ComponentSearchCallback",
         "<",
-        "Lcom/oneplus/camera/io/FileManager;",
+        "Lcom/meizu/media/camera/io/FileManager;",
         ">;"
     }
 .end annotation
@@ -52,17 +52,17 @@
 
     .prologue
     .line 2165
-    check-cast p1, Lcom/oneplus/camera/io/FileManager;
+    check-cast p1, Lcom/meizu/media/camera/io/FileManager;
 
     .end local p1    # "x0":Lcom/oneplus/base/component/Component;
-    invoke-virtual {p0, p1}, Lcom/oneplus/gallery/CameraGalleryImpl$9;->onComponentFound(Lcom/oneplus/camera/io/FileManager;)V
+    invoke-virtual {p0, p1}, Lcom/oneplus/gallery/CameraGalleryImpl$9;->onComponentFound(Lcom/meizu/media/camera/io/FileManager;)V
 
     return-void
 .end method
 
-.method public onComponentFound(Lcom/oneplus/camera/io/FileManager;)V
+.method public onComponentFound(Lcom/meizu/media/camera/io/FileManager;)V
     .locals 2
-    .param p1, "component"    # Lcom/oneplus/camera/io/FileManager;
+    .param p1, "component"    # Lcom/meizu/media/camera/io/FileManager;
 
     .prologue
     .line 2169
@@ -80,8 +80,8 @@
     .line 2170
     iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl$9;->this$0:Lcom/oneplus/gallery/CameraGalleryImpl;
 
-    # setter for: Lcom/oneplus/gallery/CameraGalleryImpl;->m_FileManager:Lcom/oneplus/camera/io/FileManager;
-    invoke-static {v0, p1}, Lcom/oneplus/gallery/CameraGalleryImpl;->access$7902(Lcom/oneplus/gallery/CameraGalleryImpl;Lcom/oneplus/camera/io/FileManager;)Lcom/oneplus/camera/io/FileManager;
+    # setter for: Lcom/oneplus/gallery/CameraGalleryImpl;->m_FileManager:Lcom/meizu/media/camera/io/FileManager;
+    invoke-static {v0, p1}, Lcom/oneplus/gallery/CameraGalleryImpl;->access$7902(Lcom/oneplus/gallery/CameraGalleryImpl;Lcom/meizu/media/camera/io/FileManager;)Lcom/meizu/media/camera/io/FileManager;
 
     .line 2171
     return-void

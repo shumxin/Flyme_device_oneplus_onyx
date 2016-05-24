@@ -1,10 +1,10 @@
 .class public Lcom/oneplus/gallery/CameraGalleryImpl;
-.super Lcom/oneplus/camera/UIComponent;
+.super Lcom/meizu/media/camera/UIComponent;
 .source "CameraGalleryImpl.java"
 
 # interfaces
-.implements Lcom/oneplus/camera/ui/CameraGallery;
-.implements Lcom/oneplus/camera/KeyEventHandler;
+.implements Lcom/meizu/media/camera/ui/CameraGallery;
+.implements Lcom/meizu/media/camera/KeyEventHandler;
 
 
 # annotations
@@ -121,13 +121,13 @@
 
 .field private m_FakeVideoSize:Landroid/util/Size;
 
-.field private m_FileManager:Lcom/oneplus/camera/io/FileManager;
+.field private m_FileManager:Lcom/meizu/media/camera/io/FileManager;
 
 .field private m_Filmstrip:Lcom/oneplus/widget/FilmstripView;
 
 .field private m_FilmstripScrollMode:I
 
-.field private m_FlashController:Lcom/oneplus/camera/FlashController;
+.field private m_FlashController:Lcom/meizu/media/camera/FlashController;
 
 .field private m_FlashDisableHandle:Lcom/oneplus/base/Handle;
 
@@ -155,13 +155,13 @@
     .end annotation
 .end field
 
-.field private m_GalleryState:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+.field private m_GalleryState:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
-.field private m_GalleryStateOnGestureStart:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+.field private m_GalleryStateOnGestureStart:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
-.field private m_GestureDetector:Lcom/oneplus/camera/ui/GestureDetector;
+.field private m_GestureDetector:Lcom/meizu/media/camera/ui/GestureDetector;
 
-.field private m_GestureHandler:Lcom/oneplus/camera/ui/BaseGestureHandler;
+.field private m_GestureHandler:Lcom/meizu/media/camera/ui/BaseGestureHandler;
 
 .field private final m_HighResBitmapDecodeCallback:Lcom/oneplus/media/BitmapPool$Callback;
 
@@ -202,7 +202,7 @@
     .end annotation
 .end field
 
-.field private m_MainContainer:Lcom/oneplus/camera/widget/RotateRelativeLayout;
+.field private m_MainContainer:Lcom/meizu/media/camera/widget/RotateRelativeLayout;
 
 .field private m_MaxItemHeight:I
 
@@ -227,7 +227,7 @@
     .end annotation
 .end field
 
-.field private m_MediaList:Lcom/oneplus/camera/media/MediaList;
+.field private m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
 .field private m_NavigationBarContainer:Landroid/view/View;
 
@@ -242,7 +242,7 @@
         value = {
             "Ljava/util/List",
             "<",
-            "Lcom/oneplus/camera/media/MediaInfo;",
+            "Lcom/meizu/media/camera/media/MediaInfo;",
             ">;"
         }
     .end annotation
@@ -297,7 +297,7 @@
     .end annotation
 .end field
 
-.field private m_UIStateOnDraggingStart:Lcom/oneplus/camera/ui/CameraGallery$UIState;
+.field private m_UIStateOnDraggingStart:Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
 .field private m_UndoBarContainer:Landroid/view/View;
 
@@ -309,9 +309,9 @@
 
 
 # direct methods
-.method protected constructor <init>(Lcom/oneplus/camera/CameraActivity;)V
+.method protected constructor <init>(Lcom/meizu/media/camera/CameraActivity;)V
     .locals 4
-    .param p1, "cameraActivity"    # Lcom/oneplus/camera/CameraActivity;
+    .param p1, "cameraActivity"    # Lcom/meizu/media/camera/CameraActivity;
 
     .prologue
     const/16 v3, 0x50
@@ -321,7 +321,7 @@
     .line 1147
     const-string v0, "Camera Gallery Impl"
 
-    invoke-direct {p0, v0, p1, v2}, Lcom/oneplus/camera/UIComponent;-><init>(Ljava/lang/String;Lcom/oneplus/camera/CameraActivity;Z)V
+    invoke-direct {p0, v0, p1, v2}, Lcom/meizu/media/camera/UIComponent;-><init>(Ljava/lang/String;Lcom/meizu/media/camera/CameraActivity;Z)V
 
     .line 122
     sget-object v0, Lcom/oneplus/gallery/CameraGalleryImpl$ViewVisibilityState;->INVISIBLE:Lcom/oneplus/gallery/CameraGalleryImpl$ViewVisibilityState;
@@ -366,9 +366,9 @@
     iput-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GalleryItems:Landroid/util/SparseArray;
 
     .line 141
-    sget-object v0, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->BACKGROUND:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    sget-object v0, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->BACKGROUND:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
-    iput-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GalleryState:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    iput-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GalleryState:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     .line 144
     new-instance v0, Lcom/oneplus/gallery/CameraGalleryImpl$1;
@@ -449,7 +449,7 @@
 
     invoke-direct {v0, p0}, Lcom/oneplus/gallery/CameraGalleryImpl$5;-><init>(Lcom/oneplus/gallery/CameraGalleryImpl;)V
 
-    iput-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GestureHandler:Lcom/oneplus/camera/ui/BaseGestureHandler;
+    iput-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GestureHandler:Lcom/meizu/media/camera/ui/BaseGestureHandler;
 
     .line 514
     new-instance v0, Lcom/oneplus/gallery/CameraGalleryImpl$6;
@@ -504,13 +504,13 @@
     return-void
 .end method
 
-.method static synthetic access$1000(Lcom/oneplus/gallery/CameraGalleryImpl;)Lcom/oneplus/camera/media/MediaList;
+.method static synthetic access$1000(Lcom/oneplus/gallery/CameraGalleryImpl;)Lcom/meizu/media/camera/media/MediaList;
     .locals 1
     .param p0, "x0"    # Lcom/oneplus/gallery/CameraGalleryImpl;
 
     .prologue
     .line 80
-    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
     return-object v0
 .end method
@@ -526,14 +526,14 @@
     return-object v0
 .end method
 
-.method static synthetic access$1002(Lcom/oneplus/gallery/CameraGalleryImpl;Lcom/oneplus/camera/media/MediaList;)Lcom/oneplus/camera/media/MediaList;
+.method static synthetic access$1002(Lcom/oneplus/gallery/CameraGalleryImpl;Lcom/meizu/media/camera/media/MediaList;)Lcom/meizu/media/camera/media/MediaList;
     .locals 0
     .param p0, "x0"    # Lcom/oneplus/gallery/CameraGalleryImpl;
-    .param p1, "x1"    # Lcom/oneplus/camera/media/MediaList;
+    .param p1, "x1"    # Lcom/meizu/media/camera/media/MediaList;
 
     .prologue
     .line 80
-    iput-object p1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iput-object p1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
     return-object p1
 .end method
@@ -575,13 +575,13 @@
     return v0
 .end method
 
-.method static synthetic access$1200(Lcom/oneplus/gallery/CameraGalleryImpl;)Lcom/oneplus/camera/ui/CameraGallery$UIState;
+.method static synthetic access$1200(Lcom/oneplus/gallery/CameraGalleryImpl;)Lcom/meizu/media/camera/ui/CameraGallery$UIState;
     .locals 1
     .param p0, "x0"    # Lcom/oneplus/gallery/CameraGalleryImpl;
 
     .prologue
     .line 80
-    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_UIStateOnDraggingStart:Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_UIStateOnDraggingStart:Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
     return-object v0
 .end method
@@ -928,14 +928,14 @@
     return v0
 .end method
 
-.method static synthetic access$4500(Lcom/oneplus/gallery/CameraGalleryImpl;Lcom/oneplus/camera/ui/CameraGallery$GalleryState;)Z
+.method static synthetic access$4500(Lcom/oneplus/gallery/CameraGalleryImpl;Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;)Z
     .locals 1
     .param p0, "x0"    # Lcom/oneplus/gallery/CameraGalleryImpl;
-    .param p1, "x1"    # Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    .param p1, "x1"    # Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     .prologue
     .line 80
-    invoke-direct {p0, p1}, Lcom/oneplus/gallery/CameraGalleryImpl;->setGalleryStateProp(Lcom/oneplus/camera/ui/CameraGallery$GalleryState;)Z
+    invoke-direct {p0, p1}, Lcom/oneplus/gallery/CameraGalleryImpl;->setGalleryStateProp(Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;)Z
 
     move-result v0
 
@@ -1151,14 +1151,14 @@
     return-void
 .end method
 
-.method static synthetic access$6200(Lcom/oneplus/gallery/CameraGalleryImpl;Lcom/oneplus/camera/media/MediaInfo;)V
+.method static synthetic access$6200(Lcom/oneplus/gallery/CameraGalleryImpl;Lcom/meizu/media/camera/media/MediaInfo;)V
     .locals 0
     .param p0, "x0"    # Lcom/oneplus/gallery/CameraGalleryImpl;
-    .param p1, "x1"    # Lcom/oneplus/camera/media/MediaInfo;
+    .param p1, "x1"    # Lcom/meizu/media/camera/media/MediaInfo;
 
     .prologue
     .line 80
-    invoke-direct {p0, p1}, Lcom/oneplus/gallery/CameraGalleryImpl;->playVideoPage(Lcom/oneplus/camera/media/MediaInfo;)V
+    invoke-direct {p0, p1}, Lcom/oneplus/gallery/CameraGalleryImpl;->playVideoPage(Lcom/meizu/media/camera/media/MediaInfo;)V
 
     return-void
 .end method
@@ -1211,25 +1211,25 @@
     return v0
 .end method
 
-.method static synthetic access$6700(Lcom/oneplus/gallery/CameraGalleryImpl;)Lcom/oneplus/camera/FlashController;
+.method static synthetic access$6700(Lcom/oneplus/gallery/CameraGalleryImpl;)Lcom/meizu/media/camera/FlashController;
     .locals 1
     .param p0, "x0"    # Lcom/oneplus/gallery/CameraGalleryImpl;
 
     .prologue
     .line 80
-    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_FlashController:Lcom/oneplus/camera/FlashController;
+    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_FlashController:Lcom/meizu/media/camera/FlashController;
 
     return-object v0
 .end method
 
-.method static synthetic access$6702(Lcom/oneplus/gallery/CameraGalleryImpl;Lcom/oneplus/camera/FlashController;)Lcom/oneplus/camera/FlashController;
+.method static synthetic access$6702(Lcom/oneplus/gallery/CameraGalleryImpl;Lcom/meizu/media/camera/FlashController;)Lcom/meizu/media/camera/FlashController;
     .locals 0
     .param p0, "x0"    # Lcom/oneplus/gallery/CameraGalleryImpl;
-    .param p1, "x1"    # Lcom/oneplus/camera/FlashController;
+    .param p1, "x1"    # Lcom/meizu/media/camera/FlashController;
 
     .prologue
     .line 80
-    iput-object p1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_FlashController:Lcom/oneplus/camera/FlashController;
+    iput-object p1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_FlashController:Lcom/meizu/media/camera/FlashController;
 
     return-object p1
 .end method
@@ -1356,13 +1356,13 @@
     return-void
 .end method
 
-.method static synthetic access$7700(Lcom/oneplus/gallery/CameraGalleryImpl;)Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+.method static synthetic access$7700(Lcom/oneplus/gallery/CameraGalleryImpl;)Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
     .locals 1
     .param p0, "x0"    # Lcom/oneplus/gallery/CameraGalleryImpl;
 
     .prologue
     .line 80
-    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GalleryState:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GalleryState:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     return-object v0
 .end method
@@ -1378,14 +1378,14 @@
     return-object v0
 .end method
 
-.method static synthetic access$7902(Lcom/oneplus/gallery/CameraGalleryImpl;Lcom/oneplus/camera/io/FileManager;)Lcom/oneplus/camera/io/FileManager;
+.method static synthetic access$7902(Lcom/oneplus/gallery/CameraGalleryImpl;Lcom/meizu/media/camera/io/FileManager;)Lcom/meizu/media/camera/io/FileManager;
     .locals 0
     .param p0, "x0"    # Lcom/oneplus/gallery/CameraGalleryImpl;
-    .param p1, "x1"    # Lcom/oneplus/camera/io/FileManager;
+    .param p1, "x1"    # Lcom/meizu/media/camera/io/FileManager;
 
     .prologue
     .line 80
-    iput-object p1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_FileManager:Lcom/oneplus/camera/io/FileManager;
+    iput-object p1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_FileManager:Lcom/meizu/media/camera/io/FileManager;
 
     return-object p1
 .end method
@@ -1692,7 +1692,7 @@
 
     move-result-object v3
 
-    sget-object v4, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->BROWSE_FAST:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    sget-object v4, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->BROWSE_FAST:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     if-ne v3, v4, :cond_0
 
@@ -1737,7 +1737,7 @@
 
     move-result-object v3
 
-    sget-object v4, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->BROWSE_FAST:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    sget-object v4, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->BROWSE_FAST:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     if-ne v3, v4, :cond_0
 
@@ -1776,13 +1776,13 @@
     const/4 v6, 0x0
 
     .line 1214
-    iget-object v4, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v4, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
     if-eqz v4, :cond_0
 
-    iget-object v4, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v4, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
-    invoke-interface {v4}, Lcom/oneplus/camera/media/MediaList;->size()I
+    invoke-interface {v4}, Lcom/meizu/media/camera/media/MediaList;->size()I
 
     move-result v4
 
@@ -1812,15 +1812,15 @@
     if-eq v3, v4, :cond_0
 
     .line 1219
-    iget-object v4, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v4, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
-    invoke-interface {v4, v3}, Lcom/oneplus/camera/media/MediaList;->get(I)Ljava/lang/Object;
+    invoke-interface {v4, v3}, Lcom/meizu/media/camera/media/MediaList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lcom/oneplus/camera/media/MediaInfo;
+    check-cast v4, Lcom/meizu/media/camera/media/MediaInfo;
 
-    invoke-virtual {v4}, Lcom/oneplus/camera/media/MediaInfo;->isVideo()Z
+    invoke-virtual {v4}, Lcom/meizu/media/camera/media/MediaInfo;->isVideo()Z
 
     move-result v2
 
@@ -1832,7 +1832,7 @@
 
     move-result-object v4
 
-    sget-object v7, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->BROWSE_FAST:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    sget-object v7, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->BROWSE_FAST:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     if-ne v4, v7, :cond_2
 
@@ -1841,13 +1841,13 @@
     .line 1221
     .local v0, "isBrowseFastMode":Z
     :goto_1
-    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/meizu/media/camera/CameraActivity;
 
     move-result-object v4
 
-    sget-object v7, Lcom/oneplus/camera/CameraActivity;->PROP_IS_SECURE_MODE:Lcom/oneplus/base/PropertyKey;
+    sget-object v7, Lcom/meizu/media/camera/CameraActivity;->PROP_IS_SECURE_MODE:Lcom/oneplus/base/PropertyKey;
 
-    invoke-virtual {v4, v7}, Lcom/oneplus/camera/CameraActivity;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
+    invoke-virtual {v4, v7}, Lcom/meizu/media/camera/CameraActivity;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -1898,7 +1898,7 @@
 
     move-result-object v2
 
-    sget-object v5, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->BROWSE_FAST:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    sget-object v5, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->BROWSE_FAST:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     if-ne v2, v5, :cond_2
 
@@ -1907,13 +1907,13 @@
     .line 1233
     .local v0, "isBrowseFastMode":Z
     :goto_0
-    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/meizu/media/camera/CameraActivity;
 
     move-result-object v2
 
-    sget-object v5, Lcom/oneplus/camera/CameraActivity;->PROP_IS_SECURE_MODE:Lcom/oneplus/base/PropertyKey;
+    sget-object v5, Lcom/meizu/media/camera/CameraActivity;->PROP_IS_SECURE_MODE:Lcom/oneplus/base/PropertyKey;
 
-    invoke-virtual {v2, v5}, Lcom/oneplus/camera/CameraActivity;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
+    invoke-virtual {v2, v5}, Lcom/meizu/media/camera/CameraActivity;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -1945,9 +1945,9 @@
     goto :goto_0
 .end method
 
-.method private cancelDecodingHighResolutionImage(Lcom/oneplus/camera/media/MediaInfo;)V
+.method private cancelDecodingHighResolutionImage(Lcom/meizu/media/camera/media/MediaInfo;)V
     .locals 1
-    .param p1, "mediaInfo"    # Lcom/oneplus/camera/media/MediaInfo;
+    .param p1, "mediaInfo"    # Lcom/meizu/media/camera/media/MediaInfo;
 
     .prologue
     .line 1158
@@ -2101,11 +2101,11 @@
     const/4 v4, 0x0
 
     .line 1292
-    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/meizu/media/camera/CameraActivity;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/oneplus/camera/CameraActivity;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-virtual {v3}, Lcom/meizu/media/camera/CameraActivity;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
@@ -2181,9 +2181,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    check-cast v0, Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
-    invoke-virtual {v0}, Lcom/oneplus/camera/ui/CameraGallery$UIState;->ordinal()I
+    invoke-virtual {v0}, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->ordinal()I
 
     move-result v0
 
@@ -2245,7 +2245,7 @@
     .line 1279
     sget-object v0, Lcom/oneplus/gallery/CameraGalleryImpl;->PROP_UI_STATE:Lcom/oneplus/base/PropertyKey;
 
-    sget-object v1, Lcom/oneplus/camera/ui/CameraGallery$UIState;->CLOSING:Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    sget-object v1, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->CLOSING:Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
     invoke-virtual {p0, v0, v1}, Lcom/oneplus/gallery/CameraGalleryImpl;->setReadOnly(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
 
@@ -2279,11 +2279,11 @@
     .line 1308
     new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
-    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/meizu/media/camera/CameraActivity;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v1}, Lcom/meizu/media/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -2306,9 +2306,9 @@
     goto :goto_0
 .end method
 
-.method private decodeHighResolutionImage(Lcom/oneplus/camera/media/MediaInfo;)V
+.method private decodeHighResolutionImage(Lcom/meizu/media/camera/media/MediaInfo;)V
     .locals 7
-    .param p1, "mediaInfo"    # Lcom/oneplus/camera/media/MediaInfo;
+    .param p1, "mediaInfo"    # Lcom/meizu/media/camera/media/MediaInfo;
 
     .prologue
     const/16 v2, 0x1000
@@ -2325,7 +2325,7 @@
     .line 1322
     iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_HighResBitmapPool:Lcom/oneplus/media/BitmapPool;
 
-    invoke-virtual {p1}, Lcom/oneplus/camera/media/MediaInfo;->getFilePath()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/meizu/media/camera/media/MediaInfo;->getFilePath()Ljava/lang/String;
 
     move-result-object v1
 
@@ -2367,13 +2367,13 @@
     const/4 v9, 0x0
 
     .line 1330
-    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/meizu/media/camera/CameraActivity;
 
     move-result-object v0
 
-    sget-object v1, Lcom/oneplus/camera/CameraActivity;->PROP_IS_BURST_PHOTO_ON_CAPTURE:Lcom/oneplus/base/PropertyKey;
+    sget-object v1, Lcom/meizu/media/camera/CameraActivity;->PROP_IS_BURST_PHOTO_ON_CAPTURE:Lcom/oneplus/base/PropertyKey;
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/camera/CameraActivity;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/meizu/media/camera/CameraActivity;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2576,7 +2576,7 @@
     .line 1376
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v0, v0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
     move-object/from16 v17, v0
 
@@ -2588,13 +2588,13 @@
 
     .line 1378
     :cond_1
-    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+    invoke-virtual/range {p0 .. p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/meizu/media/camera/CameraActivity;
 
     move-result-object v17
 
-    sget-object v18, Lcom/oneplus/camera/CameraActivity;->PROP_IS_BURST_PHOTO_ON_CAPTURE:Lcom/oneplus/base/PropertyKey;
+    sget-object v18, Lcom/meizu/media/camera/CameraActivity;->PROP_IS_BURST_PHOTO_ON_CAPTURE:Lcom/oneplus/base/PropertyKey;
 
-    invoke-virtual/range {v17 .. v18}, Lcom/oneplus/camera/CameraActivity;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
+    invoke-virtual/range {v17 .. v18}, Lcom/meizu/media/camera/CameraActivity;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
 
     move-result-object v17
 
@@ -2609,11 +2609,11 @@
     .line 1380
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v0, v0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
     move-object/from16 v17, v0
 
-    invoke-interface/range {v17 .. v17}, Lcom/oneplus/camera/media/MediaList;->size()I
+    invoke-interface/range {v17 .. v17}, Lcom/meizu/media/camera/media/MediaList;->size()I
 
     move-result v12
 
@@ -2687,11 +2687,11 @@
     .line 1390
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v0, v0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
     move-object/from16 v17, v0
 
-    invoke-interface/range {v17 .. v17}, Lcom/oneplus/camera/media/MediaList;->size()I
+    invoke-interface/range {v17 .. v17}, Lcom/meizu/media/camera/media/MediaList;->size()I
 
     move-result v17
 
@@ -2703,11 +2703,11 @@
     .local v13, "newEndPosition":I
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v0, v0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
     move-object/from16 v17, v0
 
-    invoke-interface/range {v17 .. v17}, Lcom/oneplus/camera/media/MediaList;->size()I
+    invoke-interface/range {v17 .. v17}, Lcom/meizu/media/camera/media/MediaList;->size()I
 
     move-result v17
 
@@ -2733,9 +2733,9 @@
 
     move-result-object v17
 
-    check-cast v17, Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    check-cast v17, Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
-    invoke-virtual/range {v17 .. v17}, Lcom/oneplus/camera/ui/CameraGallery$UIState;->ordinal()I
+    invoke-virtual/range {v17 .. v17}, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->ordinal()I
 
     move-result v17
 
@@ -2841,19 +2841,19 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v0, v0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
     move-object/from16 v17, v0
 
     move-object/from16 v0, v17
 
-    invoke-interface {v0, v11}, Lcom/oneplus/camera/media/MediaList;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v11}, Lcom/meizu/media/camera/media/MediaList;->get(I)Ljava/lang/Object;
 
     move-result-object v17
 
-    check-cast v17, Lcom/oneplus/camera/media/MediaInfo;
+    check-cast v17, Lcom/meizu/media/camera/media/MediaInfo;
 
-    invoke-virtual/range {v17 .. v17}, Lcom/oneplus/camera/media/MediaInfo;->getFilePath()Ljava/lang/String;
+    invoke-virtual/range {v17 .. v17}, Lcom/meizu/media/camera/media/MediaInfo;->getFilePath()Ljava/lang/String;
 
     move-result-object v17
 
@@ -3001,19 +3001,19 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v0, v0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
     move-object/from16 v17, v0
 
     move-object/from16 v0, v17
 
-    invoke-interface {v0, v11}, Lcom/oneplus/camera/media/MediaList;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v11}, Lcom/meizu/media/camera/media/MediaList;->get(I)Ljava/lang/Object;
 
     move-result-object v17
 
-    check-cast v17, Lcom/oneplus/camera/media/MediaInfo;
+    check-cast v17, Lcom/meizu/media/camera/media/MediaInfo;
 
-    invoke-virtual/range {v17 .. v17}, Lcom/oneplus/camera/media/MediaInfo;->getFilePath()Ljava/lang/String;
+    invoke-virtual/range {v17 .. v17}, Lcom/meizu/media/camera/media/MediaInfo;->getFilePath()Ljava/lang/String;
 
     move-result-object v17
 
@@ -3094,19 +3094,19 @@
     .line 1455
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v0, v0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
     move-object/from16 v17, v0
 
     move-object/from16 v0, v17
 
-    invoke-interface {v0, v9}, Lcom/oneplus/camera/media/MediaList;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v9}, Lcom/meizu/media/camera/media/MediaList;->get(I)Ljava/lang/Object;
 
     move-result-object v17
 
-    check-cast v17, Lcom/oneplus/camera/media/MediaInfo;
+    check-cast v17, Lcom/meizu/media/camera/media/MediaInfo;
 
-    invoke-virtual/range {v17 .. v17}, Lcom/oneplus/camera/media/MediaInfo;->getFilePath()Ljava/lang/String;
+    invoke-virtual/range {v17 .. v17}, Lcom/meizu/media/camera/media/MediaInfo;->getFilePath()Ljava/lang/String;
 
     move-result-object v18
 
@@ -3154,19 +3154,19 @@
     .line 1457
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v0, v0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
     move-object/from16 v17, v0
 
     move-object/from16 v0, v17
 
-    invoke-interface {v0, v9}, Lcom/oneplus/camera/media/MediaList;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v9}, Lcom/meizu/media/camera/media/MediaList;->get(I)Ljava/lang/Object;
 
     move-result-object v17
 
-    check-cast v17, Lcom/oneplus/camera/media/MediaInfo;
+    check-cast v17, Lcom/meizu/media/camera/media/MediaInfo;
 
-    invoke-virtual/range {v17 .. v17}, Lcom/oneplus/camera/media/MediaInfo;->getFilePath()Ljava/lang/String;
+    invoke-virtual/range {v17 .. v17}, Lcom/meizu/media/camera/media/MediaInfo;->getFilePath()Ljava/lang/String;
 
     move-result-object v18
 
@@ -3212,19 +3212,19 @@
     .line 1459
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v0, v0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
     move-object/from16 v17, v0
 
     move-object/from16 v0, v17
 
-    invoke-interface {v0, v9}, Lcom/oneplus/camera/media/MediaList;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v9}, Lcom/meizu/media/camera/media/MediaList;->get(I)Ljava/lang/Object;
 
     move-result-object v17
 
-    check-cast v17, Lcom/oneplus/camera/media/MediaInfo;
+    check-cast v17, Lcom/meizu/media/camera/media/MediaInfo;
 
-    invoke-virtual/range {v17 .. v17}, Lcom/oneplus/camera/media/MediaInfo;->getFilePath()Ljava/lang/String;
+    invoke-virtual/range {v17 .. v17}, Lcom/meizu/media/camera/media/MediaInfo;->getFilePath()Ljava/lang/String;
 
     move-result-object v18
 
@@ -3278,7 +3278,7 @@
 
     if-lez v3, :cond_1
 
-    iget-object v3, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_FileManager:Lcom/oneplus/camera/io/FileManager;
+    iget-object v3, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_FileManager:Lcom/meizu/media/camera/io/FileManager;
 
     if-eqz v3, :cond_1
 
@@ -3301,19 +3301,19 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/oneplus/camera/media/MediaInfo;
+    check-cast v2, Lcom/meizu/media/camera/media/MediaInfo;
 
     .line 1471
-    .local v2, "media":Lcom/oneplus/camera/media/MediaInfo;
-    invoke-virtual {v2}, Lcom/oneplus/camera/media/MediaInfo;->getFilePath()Ljava/lang/String;
+    .local v2, "media":Lcom/meizu/media/camera/media/MediaInfo;
+    invoke-virtual {v2}, Lcom/meizu/media/camera/media/MediaInfo;->getFilePath()Ljava/lang/String;
 
     move-result-object v0
 
     .line 1472
     .local v0, "file":Ljava/lang/String;
-    iget-object v3, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_FileManager:Lcom/oneplus/camera/io/FileManager;
+    iget-object v3, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_FileManager:Lcom/meizu/media/camera/io/FileManager;
 
-    invoke-interface {v3, v0}, Lcom/oneplus/camera/io/FileManager;->deleteFile(Ljava/lang/String;)V
+    invoke-interface {v3, v0}, Lcom/meizu/media/camera/io/FileManager;->deleteFile(Ljava/lang/String;)V
 
     .line 1473
     iget-object v3, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->TAG:Ljava/lang/String;
@@ -3326,7 +3326,7 @@
 
     .line 1475
     .end local v0    # "file":Ljava/lang/String;
-    .end local v2    # "media":Lcom/oneplus/camera/media/MediaInfo;
+    .end local v2    # "media":Lcom/meizu/media/camera/media/MediaInfo;
     :cond_0
     iget-object v3, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_RecycledMediaInfos:Ljava/util/List;
 
@@ -3359,9 +3359,9 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    check-cast v3, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
-    invoke-virtual {v3}, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->ordinal()I
+    invoke-virtual {v3}, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->ordinal()I
 
     move-result v3
 
@@ -3419,13 +3419,13 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    check-cast v3, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     .line 1506
-    .local v3, "state":Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    .local v3, "state":Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
     sget-object v5, Lcom/oneplus/gallery/CameraGalleryImpl$26;->$SwitchMap$com$oneplus$camera$ui$CameraGallery$GalleryState:[I
 
-    invoke-virtual {v3}, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->ordinal()I
+    invoke-virtual {v3}, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->ordinal()I
 
     move-result v6
 
@@ -3527,7 +3527,7 @@
     :cond_4
     sget-object v4, Lcom/oneplus/gallery/CameraGalleryImpl$26;->$SwitchMap$com$oneplus$camera$ui$CameraGallery$GalleryState:[I
 
-    invoke-virtual {v3}, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->ordinal()I
+    invoke-virtual {v3}, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->ordinal()I
 
     move-result v5
 
@@ -3559,9 +3559,9 @@
 
     .line 1538
     :pswitch_2
-    sget-object v4, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->BROWSE_SINGLE_PAGE:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    sget-object v4, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->BROWSE_SINGLE_PAGE:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
-    invoke-direct {p0, v4}, Lcom/oneplus/gallery/CameraGalleryImpl;->setGalleryStateProp(Lcom/oneplus/camera/ui/CameraGallery$GalleryState;)Z
+    invoke-direct {p0, v4}, Lcom/oneplus/gallery/CameraGalleryImpl;->setGalleryStateProp(Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;)Z
 
     goto :goto_2
 
@@ -3613,13 +3613,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    check-cast v0, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     .line 1562
-    .local v0, "state":Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    .local v0, "state":Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
     sget-object v1, Lcom/oneplus/gallery/CameraGalleryImpl$26;->$SwitchMap$com$oneplus$camera$ui$CameraGallery$GalleryState:[I
 
-    invoke-virtual {v0}, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->ordinal()I
+    invoke-virtual {v0}, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->ordinal()I
 
     move-result v2
 
@@ -3691,17 +3691,17 @@
 
     .line 1584
     .local v1, "editIntent":Landroid/content/Intent;
-    iget-object v4, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v4, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
-    invoke-interface {v4, p1}, Lcom/oneplus/camera/media/MediaList;->get(I)Ljava/lang/Object;
+    invoke-interface {v4, p1}, Lcom/meizu/media/camera/media/MediaList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lcom/oneplus/camera/media/MediaInfo;
+    check-cast v3, Lcom/meizu/media/camera/media/MediaInfo;
 
     .line 1585
-    .local v3, "mediaInfo":Lcom/oneplus/camera/media/MediaInfo;
-    invoke-virtual {v3}, Lcom/oneplus/camera/media/MediaInfo;->getContentUri()Landroid/net/Uri;
+    .local v3, "mediaInfo":Lcom/meizu/media/camera/media/MediaInfo;
+    invoke-virtual {v3}, Lcom/meizu/media/camera/media/MediaInfo;->getContentUri()Landroid/net/Uri;
 
     move-result-object v4
 
@@ -3710,19 +3710,19 @@
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 1588
-    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/meizu/media/camera/CameraActivity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/oneplus/camera/OPCameraActivity;
+    check-cast v0, Lcom/meizu/media/camera/OPCameraActivity;
 
     .line 1589
-    .local v0, "activity":Lcom/oneplus/camera/OPCameraActivity;
+    .local v0, "activity":Lcom/meizu/media/camera/OPCameraActivity;
     new-instance v4, Lcom/oneplus/gallery/CameraGalleryImpl$8;
 
-    invoke-direct {v4, p0, v3}, Lcom/oneplus/gallery/CameraGalleryImpl$8;-><init>(Lcom/oneplus/gallery/CameraGalleryImpl;Lcom/oneplus/camera/media/MediaInfo;)V
+    invoke-direct {v4, p0, v3}, Lcom/oneplus/gallery/CameraGalleryImpl$8;-><init>(Lcom/oneplus/gallery/CameraGalleryImpl;Lcom/meizu/media/camera/media/MediaInfo;)V
 
-    invoke-virtual {v0, v1, v4}, Lcom/oneplus/camera/OPCameraActivity;->startActivityForResultByAgent(Landroid/content/Intent;Lcom/oneplus/camera/CameraActivity$ActivityResultCallback;)Lcom/oneplus/base/Handle;
+    invoke-virtual {v0, v1, v4}, Lcom/meizu/media/camera/OPCameraActivity;->startActivityForResultByAgent(Landroid/content/Intent;Lcom/meizu/media/camera/CameraActivity$ActivityResultCallback;)Lcom/oneplus/base/Handle;
 
     move-result-object v2
 
@@ -4002,13 +4002,13 @@
 
     .line 1728
     :cond_0
-    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/meizu/media/camera/CameraActivity;
 
     move-result-object v3
 
-    sget-object v4, Lcom/oneplus/camera/CameraActivity;->PROP_SCREEN_SIZE:Lcom/oneplus/base/PropertyKey;
+    sget-object v4, Lcom/meizu/media/camera/CameraActivity;->PROP_SCREEN_SIZE:Lcom/oneplus/base/PropertyKey;
 
-    invoke-virtual {v3, v4}, Lcom/oneplus/camera/CameraActivity;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
+    invoke-virtual {v3, v4}, Lcom/meizu/media/camera/CameraActivity;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -4284,16 +4284,16 @@
     const/4 v4, 0x1
 
     .line 1813
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
-    invoke-interface {v1, p1}, Lcom/oneplus/camera/media/MediaList;->remove(I)Ljava/lang/Object;
+    invoke-interface {v1, p1}, Lcom/meizu/media/camera/media/MediaList;->remove(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/oneplus/camera/media/MediaInfo;
+    check-cast v0, Lcom/meizu/media/camera/media/MediaInfo;
 
     .line 1814
-    .local v0, "media":Lcom/oneplus/camera/media/MediaInfo;
+    .local v0, "media":Lcom/meizu/media/camera/media/MediaInfo;
     if-eqz v0, :cond_0
 
     .line 1815
@@ -4330,9 +4330,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    check-cast v1, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->ordinal()I
+    invoke-virtual {v1}, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->ordinal()I
 
     move-result v1
 
@@ -4349,9 +4349,9 @@
     invoke-static {p0, v1, v4, v2, v3}, Lcom/oneplus/base/HandlerUtils;->sendMessage(Lcom/oneplus/base/HandlerObject;IZJ)Z
 
     .line 1839
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
-    invoke-interface {v1}, Lcom/oneplus/camera/media/MediaList;->isEmpty()Z
+    invoke-interface {v1}, Lcom/meizu/media/camera/media/MediaList;->isEmpty()Z
 
     move-result v1
 
@@ -4428,9 +4428,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    check-cast v0, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
-    invoke-virtual {v0}, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->ordinal()I
+    invoke-virtual {v0}, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->ordinal()I
 
     move-result v0
 
@@ -4445,9 +4445,9 @@
 
     .line 1855
     :pswitch_1
-    sget-object v0, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->BROWSE_FAST:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    sget-object v0, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->BROWSE_FAST:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
-    invoke-direct {p0, v0}, Lcom/oneplus/gallery/CameraGalleryImpl;->setGalleryStateProp(Lcom/oneplus/camera/ui/CameraGallery$GalleryState;)Z
+    invoke-direct {p0, v0}, Lcom/oneplus/gallery/CameraGalleryImpl;->setGalleryStateProp(Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;)Z
 
     goto :goto_0
 
@@ -4504,9 +4504,9 @@
 
     move-result-object v5
 
-    check-cast v5, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    check-cast v5, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
-    invoke-virtual {v5}, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->ordinal()I
+    invoke-virtual {v5}, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->ordinal()I
 
     move-result v5
 
@@ -4530,7 +4530,7 @@
     .line 1961
     const/4 v5, 0x0
 
-    iput-object v5, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GalleryStateOnGestureStart:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    iput-object v5, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GalleryStateOnGestureStart:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     .line 1962
     return-void
@@ -4709,9 +4709,9 @@
     invoke-static {v5, v6}, Lcom/oneplus/base/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1922
-    sget-object v5, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->BROWSE_FAST:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    sget-object v5, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->BROWSE_FAST:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
-    invoke-direct {p0, v5}, Lcom/oneplus/gallery/CameraGalleryImpl;->setGalleryStateProp(Lcom/oneplus/camera/ui/CameraGallery$GalleryState;)Z
+    invoke-direct {p0, v5}, Lcom/oneplus/gallery/CameraGalleryImpl;->setGalleryStateProp(Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;)Z
 
     .line 1923
     iget-object v5, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_LatestFilmstripItemPositions:Ljava/util/List;
@@ -4822,9 +4822,9 @@
     .line 1973
     sget-object v3, Lcom/oneplus/gallery/CameraGalleryImpl$26;->$SwitchMap$com$oneplus$camera$ui$CameraGallery$UIState:[I
 
-    iget-object v4, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_UIStateOnDraggingStart:Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    iget-object v4, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_UIStateOnDraggingStart:Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
-    invoke-virtual {v4}, Lcom/oneplus/camera/ui/CameraGallery$UIState;->ordinal()I
+    invoke-virtual {v4}, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->ordinal()I
 
     move-result v4
 
@@ -4846,7 +4846,7 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_UIStateOnDraggingStart:Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    iget-object v5, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_UIStateOnDraggingStart:Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -4878,7 +4878,7 @@
     .line 1978
     sget-object v3, Lcom/oneplus/gallery/CameraGalleryImpl;->PROP_UI_STATE:Lcom/oneplus/base/PropertyKey;
 
-    sget-object v4, Lcom/oneplus/camera/ui/CameraGallery$UIState;->CLOSING:Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    sget-object v4, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->CLOSING:Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
     invoke-virtual {p0, v3, v4}, Lcom/oneplus/gallery/CameraGalleryImpl;->setReadOnly(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
 
@@ -4890,7 +4890,7 @@
 
     move-result-object v3
 
-    sget-object v4, Lcom/oneplus/camera/ui/CameraGallery$UIState;->OPENING:Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    sget-object v4, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->OPENING:Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
     if-ne v3, v4, :cond_2
 
@@ -4905,7 +4905,7 @@
     :cond_0
     sget-object v3, Lcom/oneplus/gallery/CameraGalleryImpl;->PROP_UI_STATE:Lcom/oneplus/base/PropertyKey;
 
-    sget-object v4, Lcom/oneplus/camera/ui/CameraGallery$UIState;->OPENING:Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    sget-object v4, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->OPENING:Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
     invoke-virtual {p0, v3, v4}, Lcom/oneplus/gallery/CameraGalleryImpl;->setReadOnly(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
 
@@ -4922,7 +4922,7 @@
     .line 1985
     sget-object v3, Lcom/oneplus/gallery/CameraGalleryImpl;->PROP_UI_STATE:Lcom/oneplus/base/PropertyKey;
 
-    sget-object v4, Lcom/oneplus/camera/ui/CameraGallery$UIState;->OPENING:Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    sget-object v4, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->OPENING:Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
     invoke-virtual {p0, v3, v4}, Lcom/oneplus/gallery/CameraGalleryImpl;->setReadOnly(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
 
@@ -4932,7 +4932,7 @@
     :cond_1
     sget-object v3, Lcom/oneplus/gallery/CameraGalleryImpl;->PROP_UI_STATE:Lcom/oneplus/base/PropertyKey;
 
-    sget-object v4, Lcom/oneplus/camera/ui/CameraGallery$UIState;->CLOSING:Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    sget-object v4, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->CLOSING:Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
     invoke-virtual {p0, v3, v4}, Lcom/oneplus/gallery/CameraGalleryImpl;->setReadOnly(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
 
@@ -4970,9 +4970,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    check-cast v0, Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
-    iput-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_UIStateOnDraggingStart:Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    iput-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_UIStateOnDraggingStart:Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
     .line 2009
     invoke-direct {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->deleteMediaInfoFromRecycler()V
@@ -4992,7 +4992,7 @@
     .line 2018
     sget-object v0, Lcom/oneplus/gallery/CameraGalleryImpl;->PROP_UI_STATE:Lcom/oneplus/base/PropertyKey;
 
-    sget-object v1, Lcom/oneplus/camera/ui/CameraGallery$UIState;->DRAGGING:Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    sget-object v1, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->DRAGGING:Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
     invoke-virtual {p0, v0, v1}, Lcom/oneplus/gallery/CameraGalleryImpl;->setReadOnly(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
 
@@ -5204,13 +5204,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    check-cast v0, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     .line 2080
-    .local v0, "galleryState":Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    .local v0, "galleryState":Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
     sget-object v2, Lcom/oneplus/gallery/CameraGalleryImpl$26;->$SwitchMap$com$oneplus$camera$ui$CameraGallery$GalleryState:[I
 
-    invoke-virtual {v0}, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->ordinal()I
+    invoke-virtual {v0}, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->ordinal()I
 
     move-result v3
 
@@ -5219,18 +5219,18 @@
     packed-switch v2, :pswitch_data_0
 
     .line 2099
-    .end local v0    # "galleryState":Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    .end local v0    # "galleryState":Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
     :cond_1
     :goto_0
     :pswitch_0
     return v1
 
     .line 2086
-    .restart local v0    # "galleryState":Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    .restart local v0    # "galleryState":Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
     :pswitch_1
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GestureDetector:Lcom/oneplus/camera/ui/GestureDetector;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GestureDetector:Lcom/meizu/media/camera/ui/GestureDetector;
 
-    invoke-interface {v1, p1}, Lcom/oneplus/camera/ui/GestureDetector;->handleTouchEvent(Landroid/view/MotionEvent;)V
+    invoke-interface {v1, p1}, Lcom/meizu/media/camera/ui/GestureDetector;->handleTouchEvent(Landroid/view/MotionEvent;)V
 
     .line 2087
     const/4 v1, 0x1
@@ -5238,7 +5238,7 @@
     goto :goto_0
 
     .line 2096
-    .end local v0    # "galleryState":Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    .end local v0    # "galleryState":Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
     :cond_2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -5351,13 +5351,13 @@
     .local v0, "galleryItem":Lcom/oneplus/gallery/CameraGalleryImpl$GalleryItem;
     if-eqz v0, :cond_3
 
-    iget-object v4, v0, Lcom/oneplus/gallery/CameraGalleryImpl$GalleryItem;->mediaInfo:Lcom/oneplus/camera/media/MediaInfo;
+    iget-object v4, v0, Lcom/oneplus/gallery/CameraGalleryImpl$GalleryItem;->mediaInfo:Lcom/meizu/media/camera/media/MediaInfo;
 
     if-eqz v4, :cond_3
 
-    iget-object v4, v0, Lcom/oneplus/gallery/CameraGalleryImpl$GalleryItem;->mediaInfo:Lcom/oneplus/camera/media/MediaInfo;
+    iget-object v4, v0, Lcom/oneplus/gallery/CameraGalleryImpl$GalleryItem;->mediaInfo:Lcom/meizu/media/camera/media/MediaInfo;
 
-    invoke-virtual {v4}, Lcom/oneplus/camera/media/MediaInfo;->getFilePath()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/meizu/media/camera/media/MediaInfo;->getFilePath()Ljava/lang/String;
 
     move-result-object v4
 
@@ -5431,16 +5431,16 @@
     if-ne v1, v2, :cond_0
 
     .line 2409
-    iget-object v2, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GalleryStateOnGestureStart:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    iget-object v2, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GalleryStateOnGestureStart:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     if-eqz v2, :cond_1
 
     .line 2411
     sget-object v2, Lcom/oneplus/gallery/CameraGalleryImpl$26;->$SwitchMap$com$oneplus$camera$ui$CameraGallery$GalleryState:[I
 
-    iget-object v3, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GalleryStateOnGestureStart:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    iget-object v3, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GalleryStateOnGestureStart:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
-    invoke-virtual {v3}, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->ordinal()I
+    invoke-virtual {v3}, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->ordinal()I
 
     move-result v3
 
@@ -5454,7 +5454,7 @@
 
     const-string v3, "onScaleImageBoundsChanged() - State is not support to set over scale: "
 
-    iget-object v4, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GalleryStateOnGestureStart:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    iget-object v4, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GalleryStateOnGestureStart:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     invoke-static {v2, v3, v4}, Lcom/oneplus/base/Log;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
 
@@ -5615,21 +5615,21 @@
     if-ne p2, v0, :cond_2
 
     .line 2459
-    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
     invoke-direct {p0, v9}, Lcom/oneplus/gallery/CameraGalleryImpl;->getRotateMediaListIndex(I)I
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcom/oneplus/camera/media/MediaList;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lcom/meizu/media/camera/media/MediaList;->get(I)Ljava/lang/Object;
 
     move-result-object v8
 
-    check-cast v8, Lcom/oneplus/camera/media/MediaInfo;
+    check-cast v8, Lcom/meizu/media/camera/media/MediaInfo;
 
     .line 2460
-    .local v8, "mediaInfo":Lcom/oneplus/camera/media/MediaInfo;
-    invoke-direct {p0, v8}, Lcom/oneplus/gallery/CameraGalleryImpl;->decodeHighResolutionImage(Lcom/oneplus/camera/media/MediaInfo;)V
+    .local v8, "mediaInfo":Lcom/meizu/media/camera/media/MediaInfo;
+    invoke-direct {p0, v8}, Lcom/oneplus/gallery/CameraGalleryImpl;->decodeHighResolutionImage(Lcom/meizu/media/camera/media/MediaInfo;)V
 
     .line 2463
     iput-boolean v10, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_IsScaleImageOverScaledDown:Z
@@ -5637,28 +5637,28 @@
     goto :goto_0
 
     .line 2465
-    .end local v8    # "mediaInfo":Lcom/oneplus/camera/media/MediaInfo;
+    .end local v8    # "mediaInfo":Lcom/meizu/media/camera/media/MediaInfo;
     :cond_2
     sget-object v0, Lcom/oneplus/widget/ScaleImageView$BoundsType;->FIT_SHORT_SIDE:Lcom/oneplus/widget/ScaleImageView$BoundsType;
 
     if-ne p3, v0, :cond_4
 
     .line 2468
-    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
     invoke-direct {p0, v9}, Lcom/oneplus/gallery/CameraGalleryImpl;->getRotateMediaListIndex(I)I
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcom/oneplus/camera/media/MediaList;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lcom/meizu/media/camera/media/MediaList;->get(I)Ljava/lang/Object;
 
     move-result-object v8
 
-    check-cast v8, Lcom/oneplus/camera/media/MediaInfo;
+    check-cast v8, Lcom/meizu/media/camera/media/MediaInfo;
 
     .line 2469
-    .restart local v8    # "mediaInfo":Lcom/oneplus/camera/media/MediaInfo;
-    invoke-direct {p0, v8}, Lcom/oneplus/gallery/CameraGalleryImpl;->cancelDecodingHighResolutionImage(Lcom/oneplus/camera/media/MediaInfo;)V
+    .restart local v8    # "mediaInfo":Lcom/meizu/media/camera/media/MediaInfo;
+    invoke-direct {p0, v8}, Lcom/oneplus/gallery/CameraGalleryImpl;->cancelDecodingHighResolutionImage(Lcom/meizu/media/camera/media/MediaInfo;)V
 
     .line 2472
     iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GalleryItems:Landroid/util/SparseArray;
@@ -5679,7 +5679,7 @@
     iput-object v0, v7, Lcom/oneplus/gallery/CameraGalleryImpl$GalleryItem;->imageDecodeState:Lcom/oneplus/gallery/CameraGalleryImpl$ImageDecodeState;
 
     .line 2476
-    invoke-virtual {v8}, Lcom/oneplus/camera/media/MediaInfo;->getFilePath()Ljava/lang/String;
+    invoke-virtual {v8}, Lcom/meizu/media/camera/media/MediaInfo;->getFilePath()Ljava/lang/String;
 
     move-result-object v0
 
@@ -5697,9 +5697,9 @@
     iput-boolean v10, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_IsScaleImageOverScaledDown:Z
 
     .line 2485
-    sget-object v0, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->BROWSE_FAST:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    sget-object v0, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->BROWSE_FAST:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
-    invoke-direct {p0, v0}, Lcom/oneplus/gallery/CameraGalleryImpl;->setGalleryStateProp(Lcom/oneplus/camera/ui/CameraGallery$GalleryState;)Z
+    invoke-direct {p0, v0}, Lcom/oneplus/gallery/CameraGalleryImpl;->setGalleryStateProp(Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;)Z
 
     goto :goto_0
 
@@ -5715,7 +5715,7 @@
 
     .line 2491
     .end local v7    # "galleryItem":Lcom/oneplus/gallery/CameraGalleryImpl$GalleryItem;
-    .end local v8    # "mediaInfo":Lcom/oneplus/camera/media/MediaInfo;
+    .end local v8    # "mediaInfo":Lcom/meizu/media/camera/media/MediaInfo;
     :cond_4
     iput-boolean v10, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_IsScaleImageOverScaledDown:Z
 
@@ -5764,9 +5764,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    check-cast v0, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
-    iput-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GalleryStateOnGestureStart:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    iput-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GalleryStateOnGestureStart:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     .line 2514
     :cond_0
@@ -5898,13 +5898,13 @@
     .local v0, "galleryItem":Lcom/oneplus/gallery/CameraGalleryImpl$GalleryItem;
     if-eqz v0, :cond_2
 
-    iget-object v5, v0, Lcom/oneplus/gallery/CameraGalleryImpl$GalleryItem;->mediaInfo:Lcom/oneplus/camera/media/MediaInfo;
+    iget-object v5, v0, Lcom/oneplus/gallery/CameraGalleryImpl$GalleryItem;->mediaInfo:Lcom/meizu/media/camera/media/MediaInfo;
 
     if-eqz v5, :cond_2
 
-    iget-object v5, v0, Lcom/oneplus/gallery/CameraGalleryImpl$GalleryItem;->mediaInfo:Lcom/oneplus/camera/media/MediaInfo;
+    iget-object v5, v0, Lcom/oneplus/gallery/CameraGalleryImpl$GalleryItem;->mediaInfo:Lcom/meizu/media/camera/media/MediaInfo;
 
-    invoke-virtual {v5}, Lcom/oneplus/camera/media/MediaInfo;->getFilePath()Ljava/lang/String;
+    invoke-virtual {v5}, Lcom/meizu/media/camera/media/MediaInfo;->getFilePath()Ljava/lang/String;
 
     move-result-object v5
 
@@ -6035,13 +6035,13 @@
     if-nez v0, :cond_0
 
     .line 2624
-    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/meizu/media/camera/CameraActivity;
 
     move-result-object v0
 
     const-string v1, "CameraGallery"
 
-    invoke-virtual {v0, v1, v2}, Lcom/oneplus/camera/CameraActivity;->disableCaptureUI(Ljava/lang/String;I)Lcom/oneplus/base/Handle;
+    invoke-virtual {v0, v1, v2}, Lcom/meizu/media/camera/CameraActivity;->disableCaptureUI(Ljava/lang/String;I)Lcom/oneplus/base/Handle;
 
     move-result-object v0
 
@@ -6058,11 +6058,11 @@
     if-nez v0, :cond_1
 
     .line 2627
-    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/meizu/media/camera/CameraActivity;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/oneplus/camera/CameraActivity;->takeScreenShot()Lcom/oneplus/base/Handle;
+    invoke-virtual {v0}, Lcom/meizu/media/camera/CameraActivity;->takeScreenShot()Lcom/oneplus/base/Handle;
 
     move-result-object v0
 
@@ -6081,29 +6081,29 @@
     .line 2633
     sget-object v0, Lcom/oneplus/gallery/CameraGalleryImpl;->PROP_UI_STATE:Lcom/oneplus/base/PropertyKey;
 
-    sget-object v1, Lcom/oneplus/camera/ui/CameraGallery$UIState;->OPENING:Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    sget-object v1, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->OPENING:Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
     invoke-virtual {p0, v0, v1}, Lcom/oneplus/gallery/CameraGalleryImpl;->setReadOnly(Lcom/oneplus/base/PropertyKey;Ljava/lang/Object;)Z
 
     .line 2636
-    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GestureDetector:Lcom/oneplus/camera/ui/GestureDetector;
+    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GestureDetector:Lcom/meizu/media/camera/ui/GestureDetector;
 
     if-eqz v0, :cond_2
 
     .line 2637
-    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GestureDetector:Lcom/oneplus/camera/ui/GestureDetector;
+    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GestureDetector:Lcom/meizu/media/camera/ui/GestureDetector;
 
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GestureHandler:Lcom/oneplus/camera/ui/BaseGestureHandler;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GestureHandler:Lcom/meizu/media/camera/ui/BaseGestureHandler;
 
-    invoke-interface {v0, v1, v2}, Lcom/oneplus/camera/ui/GestureDetector;->setGestureHandler(Lcom/oneplus/camera/ui/GestureDetector$GestureHandler;I)Lcom/oneplus/base/Handle;
+    invoke-interface {v0, v1, v2}, Lcom/meizu/media/camera/ui/GestureDetector;->setGestureHandler(Lcom/meizu/media/camera/ui/GestureDetector$GestureHandler;I)Lcom/oneplus/base/Handle;
 
     .line 2640
     :cond_2
-    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/meizu/media/camera/CameraActivity;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/oneplus/camera/CameraActivity;->setKeyEventHandler(Lcom/oneplus/camera/KeyEventHandler;)Lcom/oneplus/base/Handle;
+    invoke-virtual {v0, p0}, Lcom/meizu/media/camera/CameraActivity;->setKeyEventHandler(Lcom/meizu/media/camera/KeyEventHandler;)Lcom/oneplus/base/Handle;
 
     move-result-object v0
 
@@ -6121,9 +6121,9 @@
     return-void
 .end method
 
-.method private playVideoPage(Lcom/oneplus/camera/media/MediaInfo;)V
+.method private playVideoPage(Lcom/meizu/media/camera/media/MediaInfo;)V
     .locals 4
-    .param p1, "info"    # Lcom/oneplus/camera/media/MediaInfo;
+    .param p1, "info"    # Lcom/meizu/media/camera/media/MediaInfo;
 
     .prologue
     .line 2654
@@ -6136,13 +6136,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    check-cast v0, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     .line 2658
-    .local v0, "state":Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    .local v0, "state":Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
     sget-object v1, Lcom/oneplus/gallery/CameraGalleryImpl$26;->$SwitchMap$com$oneplus$camera$ui$CameraGallery$GalleryState:[I
 
-    invoke-virtual {v0}, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->ordinal()I
+    invoke-virtual {v0}, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->ordinal()I
 
     move-result v2
 
@@ -6184,7 +6184,7 @@
     if-eqz p1, :cond_0
 
     .line 2671
-    invoke-direct {p0, p1}, Lcom/oneplus/gallery/CameraGalleryImpl;->playVideoPageDirectly(Lcom/oneplus/camera/media/MediaInfo;)V
+    invoke-direct {p0, p1}, Lcom/oneplus/gallery/CameraGalleryImpl;->playVideoPageDirectly(Lcom/meizu/media/camera/media/MediaInfo;)V
 
     goto :goto_0
 
@@ -6199,22 +6199,22 @@
     .end packed-switch
 .end method
 
-.method private playVideoPageDirectly(Lcom/oneplus/camera/media/MediaInfo;)V
+.method private playVideoPageDirectly(Lcom/meizu/media/camera/media/MediaInfo;)V
     .locals 6
-    .param p1, "info"    # Lcom/oneplus/camera/media/MediaInfo;
+    .param p1, "info"    # Lcom/meizu/media/camera/media/MediaInfo;
 
     .prologue
     const/4 v5, 0x1
 
     .line 2679
-    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/meizu/media/camera/CameraActivity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/oneplus/camera/OPCameraActivity;
+    check-cast v0, Lcom/meizu/media/camera/OPCameraActivity;
 
     .line 2680
-    .local v0, "activity":Lcom/oneplus/camera/OPCameraActivity;
+    .local v0, "activity":Lcom/meizu/media/camera/OPCameraActivity;
     new-instance v2, Landroid/content/Intent;
 
     const-string v3, "android.intent.action.VIEW"
@@ -6223,7 +6223,7 @@
 
     .line 2681
     .local v2, "playIntent":Landroid/content/Intent;
-    invoke-virtual {p1}, Lcom/oneplus/camera/media/MediaInfo;->getContentUri()Landroid/net/Uri;
+    invoke-virtual {p1}, Lcom/meizu/media/camera/media/MediaInfo;->getContentUri()Landroid/net/Uri;
 
     move-result-object v3
 
@@ -6237,7 +6237,7 @@
     invoke-virtual {v2, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 2683
-    invoke-virtual {v0}, Lcom/oneplus/camera/OPCameraActivity;->isSecurePhotoMode()Z
+    invoke-virtual {v0}, Lcom/meizu/media/camera/OPCameraActivity;->isSecurePhotoMode()Z
 
     move-result v3
 
@@ -6257,7 +6257,7 @@
     :cond_0
     const/4 v3, 0x0
 
-    invoke-virtual {v0, v2, v3}, Lcom/oneplus/camera/OPCameraActivity;->startActivityForResultByAgent(Landroid/content/Intent;Lcom/oneplus/camera/CameraActivity$ActivityResultCallback;)Lcom/oneplus/base/Handle;
+    invoke-virtual {v0, v2, v3}, Lcom/meizu/media/camera/OPCameraActivity;->startActivityForResultByAgent(Landroid/content/Intent;Lcom/meizu/media/camera/CameraActivity$ActivityResultCallback;)Lcom/oneplus/base/Handle;
 
     move-result-object v1
 
@@ -6351,13 +6351,13 @@
     .local v0, "galleryItem":Lcom/oneplus/gallery/CameraGalleryImpl$GalleryItem;
     if-eqz v0, :cond_0
 
-    iget-object v3, v0, Lcom/oneplus/gallery/CameraGalleryImpl$GalleryItem;->mediaInfo:Lcom/oneplus/camera/media/MediaInfo;
+    iget-object v3, v0, Lcom/oneplus/gallery/CameraGalleryImpl$GalleryItem;->mediaInfo:Lcom/meizu/media/camera/media/MediaInfo;
 
     if-eqz v3, :cond_0
 
-    iget-object v3, v0, Lcom/oneplus/gallery/CameraGalleryImpl$GalleryItem;->mediaInfo:Lcom/oneplus/camera/media/MediaInfo;
+    iget-object v3, v0, Lcom/oneplus/gallery/CameraGalleryImpl$GalleryItem;->mediaInfo:Lcom/meizu/media/camera/media/MediaInfo;
 
-    invoke-virtual {v3}, Lcom/oneplus/camera/media/MediaInfo;->getFilePath()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/meizu/media/camera/media/MediaInfo;->getFilePath()Ljava/lang/String;
 
     move-result-object v3
 
@@ -6435,9 +6435,9 @@
     invoke-static {v1, v2}, Lcom/oneplus/base/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2735
-    sget-object v1, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->BACKGROUND:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    sget-object v1, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->BACKGROUND:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
-    invoke-direct {p0, v1}, Lcom/oneplus/gallery/CameraGalleryImpl;->setGalleryStateProp(Lcom/oneplus/camera/ui/CameraGallery$GalleryState;)Z
+    invoke-direct {p0, v1}, Lcom/oneplus/gallery/CameraGalleryImpl;->setGalleryStateProp(Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;)Z
 
     .line 2738
     invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getRotation()Lcom/oneplus/base/Rotation;
@@ -6503,9 +6503,9 @@
     :pswitch_1
     iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_Filmstrip:Lcom/oneplus/widget/FilmstripView;
 
-    iget-object v2, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v2, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
-    invoke-interface {v2}, Lcom/oneplus/camera/media/MediaList;->size()I
+    invoke-interface {v2}, Lcom/meizu/media/camera/media/MediaList;->size()I
 
     move-result v2
 
@@ -6536,7 +6536,7 @@
     const/4 v2, 0x0
 
     .line 2776
-    .local v2, "lastMedia":Lcom/oneplus/camera/media/MediaInfo;
+    .local v2, "lastMedia":Lcom/meizu/media/camera/media/MediaInfo;
     iget-object v4, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_RecycledMediaInfos:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -6555,10 +6555,10 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/oneplus/camera/media/MediaInfo;
+    check-cast v3, Lcom/meizu/media/camera/media/MediaInfo;
 
     .line 2778
-    .local v3, "media":Lcom/oneplus/camera/media/MediaInfo;
+    .local v3, "media":Lcom/meizu/media/camera/media/MediaInfo;
     iget-object v4, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->TAG:Ljava/lang/String;
 
     const-string v5, "restoreMediaInfoFromRecycler() - Restore: "
@@ -6566,9 +6566,9 @@
     invoke-static {v4, v5, v3}, Lcom/oneplus/base/Log;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 2779
-    iget-object v4, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v4, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
-    invoke-interface {v4, v3}, Lcom/oneplus/camera/media/MediaList;->add(Ljava/lang/Object;)Z
+    invoke-interface {v4, v3}, Lcom/meizu/media/camera/media/MediaList;->add(Ljava/lang/Object;)Z
 
     .line 2780
     move-object v2, v3
@@ -6577,7 +6577,7 @@
     goto :goto_0
 
     .line 2782
-    .end local v3    # "media":Lcom/oneplus/camera/media/MediaInfo;
+    .end local v3    # "media":Lcom/meizu/media/camera/media/MediaInfo;
     :cond_0
     iget-object v4, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_RecycledMediaInfos:Ljava/util/List;
 
@@ -6587,9 +6587,9 @@
     if-eqz v2, :cond_1
 
     .line 2787
-    iget-object v4, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v4, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
-    invoke-interface {v4, v2}, Lcom/oneplus/camera/media/MediaList;->indexOf(Ljava/lang/Object;)I
+    invoke-interface {v4, v2}, Lcom/meizu/media/camera/media/MediaList;->indexOf(Ljava/lang/Object;)I
 
     move-result v1
 
@@ -6628,9 +6628,9 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    check-cast v4, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
-    invoke-virtual {v4}, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->ordinal()I
+    invoke-virtual {v4}, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->ordinal()I
 
     move-result v4
 
@@ -6664,9 +6664,9 @@
 
     .prologue
     .line 2809
-    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
-    invoke-interface {v0}, Lcom/oneplus/camera/media/MediaList;->size()I
+    invoke-interface {v0}, Lcom/meizu/media/camera/media/MediaList;->size()I
 
     move-result v0
 
@@ -6712,13 +6712,13 @@
 
     .line 2822
     :cond_0
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
-    invoke-interface {v1}, Lcom/oneplus/camera/media/MediaList;->size()I
+    invoke-interface {v1}, Lcom/meizu/media/camera/media/MediaList;->size()I
 
     move-result v1
 
@@ -6742,9 +6742,9 @@
     if-ne p3, v2, :cond_4
 
     .line 2827
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
-    invoke-interface {v1}, Lcom/oneplus/camera/media/MediaList;->size()I
+    invoke-interface {v1}, Lcom/meizu/media/camera/media/MediaList;->size()I
 
     move-result v1
 
@@ -6759,15 +6759,15 @@
     if-lt v0, p2, :cond_6
 
     .line 2830
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
-    invoke-interface {v1, v0}, Lcom/oneplus/camera/media/MediaList;->get(I)Ljava/lang/Object;
+    invoke-interface {v1, v0}, Lcom/meizu/media/camera/media/MediaList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/oneplus/camera/media/MediaInfo;
+    check-cast v1, Lcom/meizu/media/camera/media/MediaInfo;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/media/MediaInfo;->getContentUri()Landroid/net/Uri;
+    invoke-virtual {v1}, Lcom/meizu/media/camera/media/MediaInfo;->getContentUri()Landroid/net/Uri;
 
     move-result-object v1
 
@@ -6897,9 +6897,9 @@
     goto :goto_0
 .end method
 
-.method private setGalleryStateProp(Lcom/oneplus/camera/ui/CameraGallery$GalleryState;)Z
+.method private setGalleryStateProp(Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;)Z
     .locals 8
-    .param p1, "state"    # Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    .param p1, "state"    # Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     .prologue
     const/4 v7, 0x1
@@ -6907,10 +6907,10 @@
     const/4 v4, 0x0
 
     .line 2878
-    iget-object v3, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GalleryState:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    iget-object v3, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GalleryState:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     .line 2879
-    .local v3, "oldState":Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    .local v3, "oldState":Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
     if-ne v3, p1, :cond_0
 
     .line 2918
@@ -6919,12 +6919,12 @@
 
     .line 2883
     :cond_0
-    iput-object p1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GalleryState:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    iput-object p1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GalleryState:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     .line 2886
     sget-object v5, Lcom/oneplus/gallery/CameraGalleryImpl$26;->$SwitchMap$com$oneplus$camera$ui$CameraGallery$GalleryState:[I
 
-    invoke-virtual {p1}, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->ordinal()I
+    invoke-virtual {p1}, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->ordinal()I
 
     move-result v6
 
@@ -6951,7 +6951,7 @@
     invoke-direct {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->updateFooterContainerMarginBottom()V
 
     .line 2891
-    sget-object v5, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->BROWSE_FAST:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    sget-object v5, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->BROWSE_FAST:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     if-ne v3, v5, :cond_2
 
@@ -6970,7 +6970,7 @@
 
     .line 2898
     :pswitch_1
-    sget-object v5, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->BROWSE_FAST:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    sget-object v5, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->BROWSE_FAST:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     if-ne p1, v5, :cond_4
 
@@ -7011,7 +7011,7 @@
 
     .line 2908
     .local v1, "item":Lcom/oneplus/gallery/CameraGalleryImpl$GalleryItem;
-    iget-object v4, v1, Lcom/oneplus/gallery/CameraGalleryImpl$GalleryItem;->mediaInfo:Lcom/oneplus/camera/media/MediaInfo;
+    iget-object v4, v1, Lcom/oneplus/gallery/CameraGalleryImpl$GalleryItem;->mediaInfo:Lcom/meizu/media/camera/media/MediaInfo;
 
     if-eqz v4, :cond_3
 
@@ -7112,12 +7112,12 @@
     if-eqz p1, :cond_0
 
     .line 2953
-    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/meizu/media/camera/CameraActivity;
 
     move-result-object v6
 
     .line 2954
-    .local v6, "cameraActivity":Lcom/oneplus/camera/CameraActivity;
+    .local v6, "cameraActivity":Lcom/meizu/media/camera/CameraActivity;
     iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_UndoBarPhotoCountView:Landroid/widget/TextView;
 
     const v1, 0x7f090071
@@ -7140,14 +7140,14 @@
 
     aput-object v5, v2, v4
 
-    invoke-virtual {v6, v1, v2}, Lcom/oneplus/camera/CameraActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v6, v1, v2}, Lcom/meizu/media/camera/CameraActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 2958
-    .end local v6    # "cameraActivity":Lcom/oneplus/camera/CameraActivity;
+    .end local v6    # "cameraActivity":Lcom/meizu/media/camera/CameraActivity;
     :cond_0
     const/4 v3, 0x0
 
@@ -7289,13 +7289,13 @@
     invoke-static {v1, v2}, Lcom/oneplus/base/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2994
-    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/meizu/media/camera/CameraActivity;
 
     move-result-object v0
 
     .line 2995
-    .local v0, "cameraActivity":Lcom/oneplus/camera/CameraActivity;
-    invoke-virtual {v0}, Lcom/oneplus/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
+    .local v0, "cameraActivity":Lcom/meizu/media/camera/CameraActivity;
+    invoke-virtual {v0}, Lcom/meizu/media/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -7308,7 +7308,7 @@
     iput v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MaxItemWidthPortrait:I
 
     .line 2996
-    invoke-virtual {v0}, Lcom/oneplus/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Lcom/meizu/media/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -7321,7 +7321,7 @@
     iput v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MaxItemHeightPortrait:I
 
     .line 2997
-    invoke-virtual {v0}, Lcom/oneplus/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Lcom/meizu/media/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -7334,7 +7334,7 @@
     iput v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MaxItemWidthLandscape:I
 
     .line 2998
-    invoke-virtual {v0}, Lcom/oneplus/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Lcom/meizu/media/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -7352,7 +7352,7 @@
     .line 3000
     new-instance v1, Landroid/util/Size;
 
-    invoke-virtual {v0}, Lcom/oneplus/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Lcom/meizu/media/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -7362,7 +7362,7 @@
 
     move-result v2
 
-    invoke-virtual {v0}, Lcom/oneplus/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Lcom/meizu/media/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -7379,7 +7379,7 @@
     .line 3002
     new-instance v1, Landroid/util/Size;
 
-    invoke-virtual {v0}, Lcom/oneplus/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Lcom/meizu/media/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -7389,7 +7389,7 @@
 
     move-result v2
 
-    invoke-virtual {v0}, Lcom/oneplus/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Lcom/meizu/media/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
@@ -7406,7 +7406,7 @@
     .line 3006
     const v1, 0x7f0b0011
 
-    invoke-virtual {v0, v1}, Lcom/oneplus/camera/CameraActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v1}, Lcom/meizu/media/camera/CameraActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -7416,16 +7416,16 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/oneplus/camera/widget/RotateRelativeLayout;
+    check-cast v1, Lcom/meizu/media/camera/widget/RotateRelativeLayout;
 
-    iput-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/oneplus/camera/widget/RotateRelativeLayout;
+    iput-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/meizu/media/camera/widget/RotateRelativeLayout;
 
     .line 3007
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/oneplus/camera/widget/RotateRelativeLayout;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/meizu/media/camera/widget/RotateRelativeLayout;
 
     const v2, 0x7f0b0016
 
-    invoke-virtual {v1, v2}, Lcom/oneplus/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v2}, Lcom/meizu/media/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -7471,11 +7471,11 @@
     invoke-virtual {v1, v2}, Lcom/oneplus/widget/FilmstripView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     .line 3042
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/oneplus/camera/widget/RotateRelativeLayout;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/meizu/media/camera/widget/RotateRelativeLayout;
 
     const v2, 0x7f0b0015
 
-    invoke-virtual {v1, v2}, Lcom/oneplus/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v2}, Lcom/meizu/media/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -7489,33 +7489,33 @@
     invoke-virtual {v1, v2}, Landroid/view/View;->setAlpha(F)V
 
     .line 3046
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/oneplus/camera/widget/RotateRelativeLayout;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/meizu/media/camera/widget/RotateRelativeLayout;
 
     const v2, 0x7f0b0017
 
-    invoke-virtual {v1, v2}, Lcom/oneplus/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v2}, Lcom/meizu/media/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_NavigationBarContainer:Landroid/view/View;
 
     .line 3047
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/oneplus/camera/widget/RotateRelativeLayout;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/meizu/media/camera/widget/RotateRelativeLayout;
 
     const v2, 0x7f0b0019
 
-    invoke-virtual {v1, v2}, Lcom/oneplus/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v2}, Lcom/meizu/media/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_FooterContainer:Landroid/view/View;
 
     .line 3048
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/oneplus/camera/widget/RotateRelativeLayout;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/meizu/media/camera/widget/RotateRelativeLayout;
 
     const v2, 0x7f0b0018
 
-    invoke-virtual {v1, v2}, Lcom/oneplus/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v2}, Lcom/meizu/media/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -7531,22 +7531,22 @@
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 3058
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/oneplus/camera/widget/RotateRelativeLayout;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/meizu/media/camera/widget/RotateRelativeLayout;
 
     const v2, 0x7f0b0020
 
-    invoke-virtual {v1, v2}, Lcom/oneplus/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v2}, Lcom/meizu/media/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_DeleteContainer:Landroid/view/View;
 
     .line 3059
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/oneplus/camera/widget/RotateRelativeLayout;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/meizu/media/camera/widget/RotateRelativeLayout;
 
     const v2, 0x7f0b0021
 
-    invoke-virtual {v1, v2}, Lcom/oneplus/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v2}, Lcom/meizu/media/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -7562,22 +7562,22 @@
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 3069
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/oneplus/camera/widget/RotateRelativeLayout;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/meizu/media/camera/widget/RotateRelativeLayout;
 
     const v2, 0x7f0b001a
 
-    invoke-virtual {v1, v2}, Lcom/oneplus/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v2}, Lcom/meizu/media/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_ShareContainer:Landroid/view/View;
 
     .line 3070
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/oneplus/camera/widget/RotateRelativeLayout;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/meizu/media/camera/widget/RotateRelativeLayout;
 
     const v2, 0x7f0b001b
 
-    invoke-virtual {v1, v2}, Lcom/oneplus/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v2}, Lcom/meizu/media/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -7593,22 +7593,22 @@
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 3080
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/oneplus/camera/widget/RotateRelativeLayout;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/meizu/media/camera/widget/RotateRelativeLayout;
 
     const v2, 0x7f0b001c
 
-    invoke-virtual {v1, v2}, Lcom/oneplus/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v2}, Lcom/meizu/media/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_EditContainer:Landroid/view/View;
 
     .line 3081
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/oneplus/camera/widget/RotateRelativeLayout;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/meizu/media/camera/widget/RotateRelativeLayout;
 
     const v2, 0x7f0b001d
 
-    invoke-virtual {v1, v2}, Lcom/oneplus/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v2}, Lcom/meizu/media/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -7624,22 +7624,22 @@
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 3091
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/oneplus/camera/widget/RotateRelativeLayout;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/meizu/media/camera/widget/RotateRelativeLayout;
 
     const v2, 0x7f0b001e
 
-    invoke-virtual {v1, v2}, Lcom/oneplus/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v2}, Lcom/meizu/media/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_DetailsContainer:Landroid/view/View;
 
     .line 3092
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/oneplus/camera/widget/RotateRelativeLayout;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/meizu/media/camera/widget/RotateRelativeLayout;
 
     const v2, 0x7f0b001f
 
-    invoke-virtual {v1, v2}, Lcom/oneplus/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v2}, Lcom/meizu/media/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -7655,11 +7655,11 @@
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 3104
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/oneplus/camera/widget/RotateRelativeLayout;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/meizu/media/camera/widget/RotateRelativeLayout;
 
     const v2, 0x7f0b0022
 
-    invoke-virtual {v1, v2}, Lcom/oneplus/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v2}, Lcom/meizu/media/camera/widget/RotateRelativeLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -7726,17 +7726,17 @@
 
     .line 3159
     .local v3, "sharingIntent":Landroid/content/Intent;
-    iget-object v5, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v5, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
-    invoke-interface {v5, p1}, Lcom/oneplus/camera/media/MediaList;->get(I)Ljava/lang/Object;
+    invoke-interface {v5, p1}, Lcom/meizu/media/camera/media/MediaList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/oneplus/camera/media/MediaInfo;
+    check-cast v2, Lcom/meizu/media/camera/media/MediaInfo;
 
     .line 3160
-    .local v2, "mediaInfo":Lcom/oneplus/camera/media/MediaInfo;
-    invoke-virtual {v2}, Lcom/oneplus/camera/media/MediaInfo;->isVideo()Z
+    .local v2, "mediaInfo":Lcom/meizu/media/camera/media/MediaInfo;
+    invoke-virtual {v2}, Lcom/meizu/media/camera/media/MediaInfo;->isVideo()Z
 
     move-result v5
 
@@ -7751,20 +7751,20 @@
     :goto_0
     const-string v5, "android.intent.extra.STREAM"
 
-    invoke-virtual {v2}, Lcom/oneplus/camera/media/MediaInfo;->getContentUri()Landroid/net/Uri;
+    invoke-virtual {v2}, Lcom/meizu/media/camera/media/MediaInfo;->getContentUri()Landroid/net/Uri;
 
     move-result-object v6
 
     invoke-virtual {v3, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
     .line 3173
-    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/meizu/media/camera/CameraActivity;
 
     move-result-object v5
 
     const v6, 0x7f09006b
 
-    invoke-virtual {v5, v6}, Lcom/oneplus/camera/CameraActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v5, v6}, Lcom/meizu/media/camera/CameraActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -7774,17 +7774,17 @@
 
     .line 3176
     .local v4, "targetIntent":Landroid/content/Intent;
-    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/meizu/media/camera/CameraActivity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/oneplus/camera/OPCameraActivity;
+    check-cast v0, Lcom/meizu/media/camera/OPCameraActivity;
 
     .line 3177
-    .local v0, "activity":Lcom/oneplus/camera/OPCameraActivity;
+    .local v0, "activity":Lcom/meizu/media/camera/OPCameraActivity;
     const/4 v5, 0x0
 
-    invoke-virtual {v0, v4, v5}, Lcom/oneplus/camera/OPCameraActivity;->startActivityForResultByAgent(Landroid/content/Intent;Lcom/oneplus/camera/CameraActivity$ActivityResultCallback;)Lcom/oneplus/base/Handle;
+    invoke-virtual {v0, v4, v5}, Lcom/meizu/media/camera/OPCameraActivity;->startActivityForResultByAgent(Landroid/content/Intent;Lcom/meizu/media/camera/CameraActivity$ActivityResultCallback;)Lcom/oneplus/base/Handle;
 
     move-result-object v1
 
@@ -7806,11 +7806,11 @@
     return-void
 
     .line 3164
-    .end local v0    # "activity":Lcom/oneplus/camera/OPCameraActivity;
+    .end local v0    # "activity":Lcom/meizu/media/camera/OPCameraActivity;
     .end local v1    # "handle":Lcom/oneplus/base/Handle;
     .end local v4    # "targetIntent":Landroid/content/Intent;
     :cond_1
-    invoke-virtual {v2}, Lcom/oneplus/camera/media/MediaInfo;->isPhoto()Z
+    invoke-virtual {v2}, Lcom/meizu/media/camera/media/MediaInfo;->isPhoto()Z
 
     move-result v5
 
@@ -7862,13 +7862,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    check-cast v0, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     .line 3137
-    .local v0, "state":Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    .local v0, "state":Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
     sget-object v1, Lcom/oneplus/gallery/CameraGalleryImpl$26;->$SwitchMap$com$oneplus$camera$ui$CameraGallery$GalleryState:[I
 
-    invoke-virtual {v0}, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->ordinal()I
+    invoke-virtual {v0}, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->ordinal()I
 
     move-result v2
 
@@ -7956,13 +7956,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    check-cast v0, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     .line 3195
-    .local v0, "state":Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    .local v0, "state":Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
     sget-object v1, Lcom/oneplus/gallery/CameraGalleryImpl$26;->$SwitchMap$com$oneplus$camera$ui$CameraGallery$GalleryState:[I
 
-    invoke-virtual {v0}, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->ordinal()I
+    invoke-virtual {v0}, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->ordinal()I
 
     move-result v2
 
@@ -8028,19 +8028,19 @@
     .line 3215
     new-instance v0, Lcom/oneplus/gallery/MediaDetailsDialog;
 
-    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/meizu/media/camera/CameraActivity;
 
     move-result-object v2
 
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
-    invoke-interface {v1, p1}, Lcom/oneplus/camera/media/MediaList;->get(I)Ljava/lang/Object;
+    invoke-interface {v1, p1}, Lcom/meizu/media/camera/media/MediaList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/oneplus/camera/media/MediaInfo;
+    check-cast v1, Lcom/meizu/media/camera/media/MediaInfo;
 
-    invoke-direct {v0, v2, v1}, Lcom/oneplus/gallery/MediaDetailsDialog;-><init>(Lcom/oneplus/camera/CameraActivity;Lcom/oneplus/camera/media/MediaInfo;)V
+    invoke-direct {v0, v2, v1}, Lcom/oneplus/gallery/MediaDetailsDialog;-><init>(Lcom/meizu/media/camera/CameraActivity;Lcom/meizu/media/camera/media/MediaInfo;)V
 
     .line 3216
     .local v0, "dialog":Lcom/oneplus/gallery/MediaDetailsDialog;
@@ -8078,13 +8078,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    check-cast v0, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     .line 3232
-    .local v0, "state":Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    .local v0, "state":Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
     sget-object v1, Lcom/oneplus/gallery/CameraGalleryImpl$26;->$SwitchMap$com$oneplus$camera$ui$CameraGallery$GalleryState:[I
 
-    invoke-virtual {v0}, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->ordinal()I
+    invoke-virtual {v0}, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->ordinal()I
 
     move-result v2
 
@@ -8212,9 +8212,9 @@
 
     move-result-object v8
 
-    check-cast v8, Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    check-cast v8, Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
-    invoke-virtual {v8}, Lcom/oneplus/camera/ui/CameraGallery$UIState;->ordinal()I
+    invoke-virtual {v8}, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->ordinal()I
 
     move-result v8
 
@@ -8376,12 +8376,12 @@
 
     .line 3313
     .local v2, "newRotation":Lcom/oneplus/base/Rotation;
-    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/meizu/media/camera/CameraActivity;
 
     move-result-object v0
 
     .line 3314
-    .local v0, "cameraActivity":Lcom/oneplus/camera/CameraActivity;
+    .local v0, "cameraActivity":Lcom/meizu/media/camera/CameraActivity;
     const/4 v1, 0x0
 
     .line 3315
@@ -8396,7 +8396,7 @@
 
     .line 3316
     :cond_0
-    invoke-virtual {v0}, Lcom/oneplus/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Lcom/meizu/media/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -8444,7 +8444,7 @@
     .line 3318
     .end local v3    # "params":Landroid/widget/RelativeLayout$LayoutParams;
     :cond_1
-    invoke-virtual {v0}, Lcom/oneplus/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Lcom/meizu/media/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -8458,7 +8458,7 @@
 
     .line 3323
     :pswitch_0
-    invoke-virtual {v0}, Lcom/oneplus/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Lcom/meizu/media/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -8592,13 +8592,13 @@
     invoke-virtual {v1}, Lcom/oneplus/widget/FilmstripView$Adapter;->notifyDataSetChanged()V
 
     .line 3372
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
     if-eqz v1, :cond_2
 
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
-    invoke-interface {v1}, Lcom/oneplus/camera/media/MediaList;->isEmpty()Z
+    invoke-interface {v1}, Lcom/meizu/media/camera/media/MediaList;->isEmpty()Z
 
     move-result v1
 
@@ -8642,7 +8642,7 @@
 
     move-result-object v1
 
-    sget-object v2, Lcom/oneplus/camera/ui/CameraGallery$UIState;->CLOSED:Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    sget-object v2, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->CLOSED:Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
     if-ne v1, v2, :cond_0
 
@@ -8663,12 +8663,12 @@
 
     .line 3391
     .local v2, "newRotation":Lcom/oneplus/base/Rotation;
-    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/meizu/media/camera/CameraActivity;
 
     move-result-object v0
 
     .line 3392
-    .local v0, "cameraActivity":Lcom/oneplus/camera/CameraActivity;
+    .local v0, "cameraActivity":Lcom/meizu/media/camera/CameraActivity;
     const/4 v1, 0x0
 
     .line 3393
@@ -8683,7 +8683,7 @@
 
     .line 3394
     :cond_0
-    invoke-virtual {v0}, Lcom/oneplus/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Lcom/meizu/media/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -8713,7 +8713,7 @@
     .line 3396
     .end local v3    # "params":Landroid/widget/RelativeLayout$LayoutParams;
     :cond_1
-    invoke-virtual {v0}, Lcom/oneplus/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Lcom/meizu/media/camera/CameraActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -8740,11 +8740,11 @@
 
     move-result-object v24
 
-    check-cast v24, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    check-cast v24, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     .line 3408
-    .local v24, "state":Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
-    sget-object v2, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->BACKGROUND:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    .local v24, "state":Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
+    sget-object v2, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->BACKGROUND:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     move-object/from16 v0, v24
 
@@ -8852,7 +8852,7 @@
     .line 3421
     sget-object v2, Lcom/oneplus/gallery/CameraGalleryImpl$26;->$SwitchMap$com$oneplus$camera$ui$CameraGallery$GalleryState:[I
 
-    invoke-virtual/range {v24 .. v24}, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->ordinal()I
+    invoke-virtual/range {v24 .. v24}, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->ordinal()I
 
     move-result v3
 
@@ -9408,9 +9408,9 @@
     .line 3578
     if-ltz p1, :cond_0
 
-    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
-    invoke-interface {v0}, Lcom/oneplus/camera/media/MediaList;->size()I
+    invoke-interface {v0}, Lcom/meizu/media/camera/media/MediaList;->size()I
 
     move-result v0
 
@@ -9451,14 +9451,14 @@
     if-ne p1, v0, :cond_0
 
     .line 1668
-    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GalleryState:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GalleryState:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     .line 1669
     :goto_0
     return-object v0
 
     :cond_0
-    invoke-super {p0, p1}, Lcom/oneplus/camera/UIComponent;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
+    invoke-super {p0, p1}, Lcom/meizu/media/camera/UIComponent;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -9476,7 +9476,7 @@
     sparse-switch v0, :sswitch_data_0
 
     .line 1792
-    invoke-super {p0, p1}, Lcom/oneplus/camera/UIComponent;->handleMessage(Landroid/os/Message;)V
+    invoke-super {p0, p1}, Lcom/meizu/media/camera/UIComponent;->handleMessage(Landroid/os/Message;)V
 
     .line 1795
     :goto_0
@@ -9516,21 +9516,21 @@
 
     .prologue
     .line 1869
-    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
     if-eqz v0, :cond_0
 
     .line 1870
-    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
-    invoke-interface {v0}, Lcom/oneplus/camera/media/MediaList;->release()V
+    invoke-interface {v0}, Lcom/meizu/media/camera/media/MediaList;->release()V
 
     .line 1873
     :cond_0
     invoke-direct {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->cancelDecodingImages()V
 
     .line 1876
-    invoke-super {p0}, Lcom/oneplus/camera/UIComponent;->onDeinitialize()V
+    invoke-super {p0}, Lcom/meizu/media/camera/UIComponent;->onDeinitialize()V
 
     .line 1877
     return-void
@@ -9545,20 +9545,20 @@
     const/4 v7, 0x0
 
     .line 2160
-    invoke-super {p0}, Lcom/oneplus/camera/UIComponent;->onInitialize()V
+    invoke-super {p0}, Lcom/meizu/media/camera/UIComponent;->onInitialize()V
 
     .line 2161
-    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/oneplus/camera/CameraActivity;
+    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraActivity()Lcom/meizu/media/camera/CameraActivity;
 
     move-result-object v6
 
     .line 2164
-    .local v6, "cameraActivity":Lcom/oneplus/camera/CameraActivity;
-    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraThread()Lcom/oneplus/camera/CameraThread;
+    .local v6, "cameraActivity":Lcom/meizu/media/camera/CameraActivity;
+    invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->getCameraThread()Lcom/meizu/media/camera/CameraThread;
 
     move-result-object v0
 
-    const-class v1, Lcom/oneplus/camera/io/FileManager;
+    const-class v1, Lcom/meizu/media/camera/io/FileManager;
 
     new-instance v2, Lcom/oneplus/gallery/CameraGalleryImpl$9;
 
@@ -9580,9 +9580,9 @@
     iput-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_HighResBitmapPool:Lcom/oneplus/media/BitmapPool;
 
     .line 2178
-    sget-object v0, Lcom/oneplus/camera/CameraActivity;->PROP_IS_SECURE_MODE:Lcom/oneplus/base/PropertyKey;
+    sget-object v0, Lcom/meizu/media/camera/CameraActivity;->PROP_IS_SECURE_MODE:Lcom/oneplus/base/PropertyKey;
 
-    invoke-virtual {v6, v0}, Lcom/oneplus/camera/CameraActivity;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
+    invoke-virtual {v6, v0}, Lcom/meizu/media/camera/CameraActivity;->get(Lcom/oneplus/base/PropertyKey;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -9595,37 +9595,37 @@
     if-eqz v0, :cond_4
 
     :goto_0
-    invoke-static {v6, v5}, Lcom/oneplus/camera/media/MediaListManager;->createMediaList(Landroid/content/Context;I)Lcom/oneplus/camera/media/MediaList;
+    invoke-static {v6, v5}, Lcom/meizu/media/camera/media/MediaListManager;->createMediaList(Landroid/content/Context;I)Lcom/meizu/media/camera/media/MediaList;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iput-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
     .line 2181
     invoke-direct {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->setupUI()V
 
     .line 2184
-    const-class v0, Lcom/oneplus/camera/ui/GestureDetector;
+    const-class v0, Lcom/meizu/media/camera/ui/GestureDetector;
 
     invoke-virtual {p0, v0}, Lcom/oneplus/gallery/CameraGalleryImpl;->findComponent(Ljava/lang/Class;)Lcom/oneplus/base/component/Component;
 
     move-result-object v0
 
-    check-cast v0, Lcom/oneplus/camera/ui/GestureDetector;
+    check-cast v0, Lcom/meizu/media/camera/ui/GestureDetector;
 
-    iput-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GestureDetector:Lcom/oneplus/camera/ui/GestureDetector;
+    iput-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GestureDetector:Lcom/meizu/media/camera/ui/GestureDetector;
 
     .line 2185
-    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GestureDetector:Lcom/oneplus/camera/ui/GestureDetector;
+    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GestureDetector:Lcom/meizu/media/camera/ui/GestureDetector;
 
     if-eqz v0, :cond_0
 
     .line 2186
-    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GestureDetector:Lcom/oneplus/camera/ui/GestureDetector;
+    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GestureDetector:Lcom/meizu/media/camera/ui/GestureDetector;
 
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GestureHandler:Lcom/oneplus/camera/ui/BaseGestureHandler;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_GestureHandler:Lcom/meizu/media/camera/ui/BaseGestureHandler;
 
-    invoke-interface {v0, v1, v7}, Lcom/oneplus/camera/ui/GestureDetector;->setGestureHandler(Lcom/oneplus/camera/ui/GestureDetector$GestureHandler;I)Lcom/oneplus/base/Handle;
+    invoke-interface {v0, v1, v7}, Lcom/meizu/media/camera/ui/GestureDetector;->setGestureHandler(Lcom/meizu/media/camera/ui/GestureDetector$GestureHandler;I)Lcom/oneplus/base/Handle;
 
     .line 2189
     :cond_0
@@ -9667,63 +9667,63 @@
 
     .line 2195
     :cond_2
-    sget-object v0, Lcom/oneplus/camera/CameraActivity;->PROP_PHOTO_CAPTURE_STATE:Lcom/oneplus/base/PropertyKey;
+    sget-object v0, Lcom/meizu/media/camera/CameraActivity;->PROP_PHOTO_CAPTURE_STATE:Lcom/oneplus/base/PropertyKey;
 
     new-instance v1, Lcom/oneplus/gallery/CameraGalleryImpl$10;
 
     invoke-direct {v1, p0}, Lcom/oneplus/gallery/CameraGalleryImpl$10;-><init>(Lcom/oneplus/gallery/CameraGalleryImpl;)V
 
-    invoke-virtual {v6, v0, v1}, Lcom/oneplus/camera/CameraActivity;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
+    invoke-virtual {v6, v0, v1}, Lcom/meizu/media/camera/CameraActivity;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
 
     .line 2211
-    sget-object v0, Lcom/oneplus/camera/CameraActivity;->PROP_VIDEO_CAPTURE_STATE:Lcom/oneplus/base/PropertyKey;
+    sget-object v0, Lcom/meizu/media/camera/CameraActivity;->PROP_VIDEO_CAPTURE_STATE:Lcom/oneplus/base/PropertyKey;
 
     new-instance v1, Lcom/oneplus/gallery/CameraGalleryImpl$11;
 
     invoke-direct {v1, p0}, Lcom/oneplus/gallery/CameraGalleryImpl$11;-><init>(Lcom/oneplus/gallery/CameraGalleryImpl;)V
 
-    invoke-virtual {v6, v0, v1}, Lcom/oneplus/camera/CameraActivity;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
+    invoke-virtual {v6, v0, v1}, Lcom/meizu/media/camera/CameraActivity;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
 
     .line 2229
-    sget-object v0, Lcom/oneplus/camera/CameraActivity;->PROP_STATE:Lcom/oneplus/base/PropertyKey;
+    sget-object v0, Lcom/meizu/media/camera/CameraActivity;->PROP_STATE:Lcom/oneplus/base/PropertyKey;
 
     new-instance v1, Lcom/oneplus/gallery/CameraGalleryImpl$12;
 
     invoke-direct {v1, p0}, Lcom/oneplus/gallery/CameraGalleryImpl$12;-><init>(Lcom/oneplus/gallery/CameraGalleryImpl;)V
 
-    invoke-virtual {v6, v0, v1}, Lcom/oneplus/camera/CameraActivity;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
+    invoke-virtual {v6, v0, v1}, Lcom/meizu/media/camera/CameraActivity;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
 
     .line 2273
-    sget-object v0, Lcom/oneplus/camera/CameraActivity;->PROP_IS_BURST_PHOTO_ON_CAPTURE:Lcom/oneplus/base/PropertyKey;
+    sget-object v0, Lcom/meizu/media/camera/CameraActivity;->PROP_IS_BURST_PHOTO_ON_CAPTURE:Lcom/oneplus/base/PropertyKey;
 
     new-instance v1, Lcom/oneplus/gallery/CameraGalleryImpl$13;
 
     invoke-direct {v1, p0}, Lcom/oneplus/gallery/CameraGalleryImpl$13;-><init>(Lcom/oneplus/gallery/CameraGalleryImpl;)V
 
-    invoke-virtual {v6, v0, v1}, Lcom/oneplus/camera/CameraActivity;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
+    invoke-virtual {v6, v0, v1}, Lcom/meizu/media/camera/CameraActivity;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
 
     .line 2287
-    sget-object v0, Lcom/oneplus/camera/CameraActivity;->PROP_IS_SECURE_MODE:Lcom/oneplus/base/PropertyKey;
+    sget-object v0, Lcom/meizu/media/camera/CameraActivity;->PROP_IS_SECURE_MODE:Lcom/oneplus/base/PropertyKey;
 
     new-instance v1, Lcom/oneplus/gallery/CameraGalleryImpl$14;
 
-    invoke-direct {v1, p0, v6}, Lcom/oneplus/gallery/CameraGalleryImpl$14;-><init>(Lcom/oneplus/gallery/CameraGalleryImpl;Lcom/oneplus/camera/CameraActivity;)V
+    invoke-direct {v1, p0, v6}, Lcom/oneplus/gallery/CameraGalleryImpl$14;-><init>(Lcom/oneplus/gallery/CameraGalleryImpl;Lcom/meizu/media/camera/CameraActivity;)V
 
-    invoke-virtual {v6, v0, v1}, Lcom/oneplus/camera/CameraActivity;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
+    invoke-virtual {v6, v0, v1}, Lcom/meizu/media/camera/CameraActivity;->addCallback(Lcom/oneplus/base/PropertyKey;Lcom/oneplus/base/PropertyChangedCallback;)V
 
     .line 2304
-    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
     if-eqz v0, :cond_3
 
     .line 2306
-    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/oneplus/camera/media/MediaList;
+    iget-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaList:Lcom/meizu/media/camera/media/MediaList;
 
-    sget-object v1, Lcom/oneplus/camera/media/MediaList;->EVENT_CHANGED:Lcom/oneplus/base/EventKey;
+    sget-object v1, Lcom/meizu/media/camera/media/MediaList;->EVENT_CHANGED:Lcom/oneplus/base/EventKey;
 
     iget-object v2, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MediaChangeEventHandler:Lcom/oneplus/base/EventHandler;
 
-    invoke-interface {v0, v1, v2}, Lcom/oneplus/camera/media/MediaList;->addHandler(Lcom/oneplus/base/EventKey;Lcom/oneplus/base/EventHandler;)V
+    invoke-interface {v0, v1, v2}, Lcom/meizu/media/camera/media/MediaList;->addHandler(Lcom/oneplus/base/EventKey;Lcom/oneplus/base/EventHandler;)V
 
     .line 2308
     :cond_3
@@ -9736,7 +9736,7 @@
     goto :goto_0
 .end method
 
-.method public onKeyDown(ILandroid/view/KeyEvent;)Lcom/oneplus/camera/KeyEventHandler$KeyResult;
+.method public onKeyDown(ILandroid/view/KeyEvent;)Lcom/meizu/media/camera/KeyEventHandler$KeyResult;
     .locals 1
     .param p1, "keyCode"    # I
     .param p2, "event"    # Landroid/view/KeyEvent;
@@ -9753,19 +9753,19 @@
 
     .line 2315
     :cond_0
-    sget-object v0, Lcom/oneplus/camera/KeyEventHandler$KeyResult;->HANDLED_AND_PASS_TO_SYSTEM:Lcom/oneplus/camera/KeyEventHandler$KeyResult;
+    sget-object v0, Lcom/meizu/media/camera/KeyEventHandler$KeyResult;->HANDLED_AND_PASS_TO_SYSTEM:Lcom/meizu/media/camera/KeyEventHandler$KeyResult;
 
     .line 2317
     :goto_0
     return-object v0
 
     :cond_1
-    sget-object v0, Lcom/oneplus/camera/KeyEventHandler$KeyResult;->NOT_HANDLED:Lcom/oneplus/camera/KeyEventHandler$KeyResult;
+    sget-object v0, Lcom/meizu/media/camera/KeyEventHandler$KeyResult;->NOT_HANDLED:Lcom/meizu/media/camera/KeyEventHandler$KeyResult;
 
     goto :goto_0
 .end method
 
-.method public onKeyUp(ILandroid/view/KeyEvent;)Lcom/oneplus/camera/KeyEventHandler$KeyResult;
+.method public onKeyUp(ILandroid/view/KeyEvent;)Lcom/meizu/media/camera/KeyEventHandler$KeyResult;
     .locals 2
     .param p1, "keyCode"    # I
     .param p2, "event"    # Landroid/view/KeyEvent;
@@ -9783,7 +9783,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/oneplus/camera/ui/CameraGallery$UIState;->OPENED:Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    sget-object v1, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->OPENED:Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
     if-ne v0, v1, :cond_2
 
@@ -9791,7 +9791,7 @@
     invoke-direct {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->navigateBack()V
 
     .line 2329
-    sget-object v0, Lcom/oneplus/camera/KeyEventHandler$KeyResult;->HANDLED:Lcom/oneplus/camera/KeyEventHandler$KeyResult;
+    sget-object v0, Lcom/meizu/media/camera/KeyEventHandler$KeyResult;->HANDLED:Lcom/meizu/media/camera/KeyEventHandler$KeyResult;
 
     .line 2334
     :goto_0
@@ -9809,13 +9809,13 @@
 
     .line 2333
     :cond_1
-    sget-object v0, Lcom/oneplus/camera/KeyEventHandler$KeyResult;->HANDLED_AND_PASS_TO_SYSTEM:Lcom/oneplus/camera/KeyEventHandler$KeyResult;
+    sget-object v0, Lcom/meizu/media/camera/KeyEventHandler$KeyResult;->HANDLED_AND_PASS_TO_SYSTEM:Lcom/meizu/media/camera/KeyEventHandler$KeyResult;
 
     goto :goto_0
 
     .line 2334
     :cond_2
-    sget-object v0, Lcom/oneplus/camera/KeyEventHandler$KeyResult;->NOT_HANDLED:Lcom/oneplus/camera/KeyEventHandler$KeyResult;
+    sget-object v0, Lcom/meizu/media/camera/KeyEventHandler$KeyResult;->NOT_HANDLED:Lcom/meizu/media/camera/KeyEventHandler$KeyResult;
 
     goto :goto_0
 .end method
@@ -9829,7 +9829,7 @@
     const/4 v3, 0x0
 
     .line 2344
-    invoke-super {p0, p1, p2}, Lcom/oneplus/camera/UIComponent;->onRotationChanged(Lcom/oneplus/base/Rotation;Lcom/oneplus/base/Rotation;)V
+    invoke-super {p0, p1, p2}, Lcom/meizu/media/camera/UIComponent;->onRotationChanged(Lcom/oneplus/base/Rotation;Lcom/oneplus/base/Rotation;)V
 
     .line 2347
     const/4 v1, 0x0
@@ -9891,14 +9891,14 @@
     .line 2363
     .end local v0    # "newPosition":I
     :cond_1
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/oneplus/camera/widget/RotateRelativeLayout;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/meizu/media/camera/widget/RotateRelativeLayout;
 
     if-eqz v1, :cond_2
 
     .line 2364
-    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/oneplus/camera/widget/RotateRelativeLayout;
+    iget-object v1, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_MainContainer:Lcom/meizu/media/camera/widget/RotateRelativeLayout;
 
-    invoke-virtual {v1, p2}, Lcom/oneplus/camera/widget/RotateRelativeLayout;->setRotation(Lcom/oneplus/base/Rotation;)V
+    invoke-virtual {v1, p2}, Lcom/meizu/media/camera/widget/RotateRelativeLayout;->setRotation(Lcom/oneplus/base/Rotation;)V
 
     .line 2367
     :cond_2
@@ -9916,9 +9916,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    check-cast v1, Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/ui/CameraGallery$UIState;->ordinal()I
+    invoke-virtual {v1}, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->ordinal()I
 
     move-result v1
 
@@ -9945,9 +9945,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    check-cast v1, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->ordinal()I
+    invoke-virtual {v1}, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->ordinal()I
 
     move-result v1
 
@@ -9979,9 +9979,9 @@
 
     .line 2391
     :pswitch_2
-    sget-object v1, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->BROWSE_SINGLE_PAGE:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    sget-object v1, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->BROWSE_SINGLE_PAGE:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
-    invoke-direct {p0, v1}, Lcom/oneplus/gallery/CameraGalleryImpl;->setGalleryStateProp(Lcom/oneplus/camera/ui/CameraGallery$GalleryState;)Z
+    invoke-direct {p0, v1}, Lcom/oneplus/gallery/CameraGalleryImpl;->setGalleryStateProp(Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;)Z
 
     goto :goto_1
 
@@ -10013,9 +10013,9 @@
     invoke-static {v0, v1}, Lcom/oneplus/base/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2598
-    sget-object v0, Lcom/oneplus/camera/ui/CameraGallery$UIState;->CLOSED:Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    sget-object v0, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->CLOSED:Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
-    iput-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_UIStateOnDraggingStart:Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    iput-object v0, p0, Lcom/oneplus/gallery/CameraGalleryImpl;->m_UIStateOnDraggingStart:Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
     .line 2599
     invoke-virtual {p0}, Lcom/oneplus/gallery/CameraGalleryImpl;->isDependencyThread()Z

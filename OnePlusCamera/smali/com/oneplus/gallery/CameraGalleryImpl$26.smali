@@ -247,7 +247,7 @@
 
     .line 529
     :goto_a
-    invoke-static {}, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->values()[Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    invoke-static {}, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->values()[Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
     move-result-object v0
 
@@ -260,9 +260,9 @@
     :try_start_b
     sget-object v0, Lcom/oneplus/gallery/CameraGalleryImpl$26;->$SwitchMap$com$oneplus$camera$ui$CameraGallery$GalleryState:[I
 
-    sget-object v1, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->BROWSE_FAST:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    sget-object v1, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->BROWSE_FAST:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->ordinal()I
+    invoke-virtual {v1}, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->ordinal()I
 
     move-result v1
 
@@ -276,9 +276,9 @@
     :try_start_c
     sget-object v0, Lcom/oneplus/gallery/CameraGalleryImpl$26;->$SwitchMap$com$oneplus$camera$ui$CameraGallery$GalleryState:[I
 
-    sget-object v1, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->BACKGROUND:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    sget-object v1, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->BACKGROUND:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->ordinal()I
+    invoke-virtual {v1}, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->ordinal()I
 
     move-result v1
 
@@ -292,9 +292,9 @@
     :try_start_d
     sget-object v0, Lcom/oneplus/gallery/CameraGalleryImpl$26;->$SwitchMap$com$oneplus$camera$ui$CameraGallery$GalleryState:[I
 
-    sget-object v1, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->BROWSE_SINGLE_PAGE:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    sget-object v1, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->BROWSE_SINGLE_PAGE:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->ordinal()I
+    invoke-virtual {v1}, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->ordinal()I
 
     move-result v1
 
@@ -308,9 +308,9 @@
     :try_start_e
     sget-object v0, Lcom/oneplus/gallery/CameraGalleryImpl$26;->$SwitchMap$com$oneplus$camera$ui$CameraGallery$GalleryState:[I
 
-    sget-object v1, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->VIEW_DETAILS:Lcom/oneplus/camera/ui/CameraGallery$GalleryState;
+    sget-object v1, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->VIEW_DETAILS:Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/ui/CameraGallery$GalleryState;->ordinal()I
+    invoke-virtual {v1}, Lcom/meizu/media/camera/ui/CameraGallery$GalleryState;->ordinal()I
 
     move-result v1
 
@@ -322,7 +322,7 @@
 
     .line 401
     :goto_e
-    invoke-static {}, Lcom/oneplus/camera/ui/CameraGallery$UIState;->values()[Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    invoke-static {}, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->values()[Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
     move-result-object v0
 
@@ -335,9 +335,9 @@
     :try_start_f
     sget-object v0, Lcom/oneplus/gallery/CameraGalleryImpl$26;->$SwitchMap$com$oneplus$camera$ui$CameraGallery$UIState:[I
 
-    sget-object v1, Lcom/oneplus/camera/ui/CameraGallery$UIState;->CLOSED:Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    sget-object v1, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->CLOSED:Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/ui/CameraGallery$UIState;->ordinal()I
+    invoke-virtual {v1}, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->ordinal()I
 
     move-result v1
 
@@ -351,9 +351,9 @@
     :try_start_10
     sget-object v0, Lcom/oneplus/gallery/CameraGalleryImpl$26;->$SwitchMap$com$oneplus$camera$ui$CameraGallery$UIState:[I
 
-    sget-object v1, Lcom/oneplus/camera/ui/CameraGallery$UIState;->OPENED:Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    sget-object v1, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->OPENED:Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/ui/CameraGallery$UIState;->ordinal()I
+    invoke-virtual {v1}, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->ordinal()I
 
     move-result v1
 
@@ -367,9 +367,9 @@
     :try_start_11
     sget-object v0, Lcom/oneplus/gallery/CameraGalleryImpl$26;->$SwitchMap$com$oneplus$camera$ui$CameraGallery$UIState:[I
 
-    sget-object v1, Lcom/oneplus/camera/ui/CameraGallery$UIState;->OPENING:Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    sget-object v1, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->OPENING:Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/ui/CameraGallery$UIState;->ordinal()I
+    invoke-virtual {v1}, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->ordinal()I
 
     move-result v1
 
@@ -383,9 +383,9 @@
     :try_start_12
     sget-object v0, Lcom/oneplus/gallery/CameraGalleryImpl$26;->$SwitchMap$com$oneplus$camera$ui$CameraGallery$UIState:[I
 
-    sget-object v1, Lcom/oneplus/camera/ui/CameraGallery$UIState;->DRAGGING:Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    sget-object v1, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->DRAGGING:Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/ui/CameraGallery$UIState;->ordinal()I
+    invoke-virtual {v1}, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->ordinal()I
 
     move-result v1
 
@@ -399,9 +399,9 @@
     :try_start_13
     sget-object v0, Lcom/oneplus/gallery/CameraGalleryImpl$26;->$SwitchMap$com$oneplus$camera$ui$CameraGallery$UIState:[I
 
-    sget-object v1, Lcom/oneplus/camera/ui/CameraGallery$UIState;->CLOSING:Lcom/oneplus/camera/ui/CameraGallery$UIState;
+    sget-object v1, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->CLOSING:Lcom/meizu/media/camera/ui/CameraGallery$UIState;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/ui/CameraGallery$UIState;->ordinal()I
+    invoke-virtual {v1}, Lcom/meizu/media/camera/ui/CameraGallery$UIState;->ordinal()I
 
     move-result v1
 
@@ -488,7 +488,7 @@
 
     .line 338
     :goto_17
-    invoke-static {}, Lcom/oneplus/camera/VideoCaptureState;->values()[Lcom/oneplus/camera/VideoCaptureState;
+    invoke-static {}, Lcom/meizu/media/camera/VideoCaptureState;->values()[Lcom/meizu/media/camera/VideoCaptureState;
 
     move-result-object v0
 
@@ -501,9 +501,9 @@
     :try_start_18
     sget-object v0, Lcom/oneplus/gallery/CameraGalleryImpl$26;->$SwitchMap$com$oneplus$camera$VideoCaptureState:[I
 
-    sget-object v1, Lcom/oneplus/camera/VideoCaptureState;->PREPARING:Lcom/oneplus/camera/VideoCaptureState;
+    sget-object v1, Lcom/meizu/media/camera/VideoCaptureState;->PREPARING:Lcom/meizu/media/camera/VideoCaptureState;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/VideoCaptureState;->ordinal()I
+    invoke-virtual {v1}, Lcom/meizu/media/camera/VideoCaptureState;->ordinal()I
 
     move-result v1
 
@@ -517,9 +517,9 @@
     :try_start_19
     sget-object v0, Lcom/oneplus/gallery/CameraGalleryImpl$26;->$SwitchMap$com$oneplus$camera$VideoCaptureState:[I
 
-    sget-object v1, Lcom/oneplus/camera/VideoCaptureState;->READY:Lcom/oneplus/camera/VideoCaptureState;
+    sget-object v1, Lcom/meizu/media/camera/VideoCaptureState;->READY:Lcom/meizu/media/camera/VideoCaptureState;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/VideoCaptureState;->ordinal()I
+    invoke-virtual {v1}, Lcom/meizu/media/camera/VideoCaptureState;->ordinal()I
 
     move-result v1
 
@@ -531,7 +531,7 @@
 
     .line 326
     :goto_19
-    invoke-static {}, Lcom/oneplus/camera/PhotoCaptureState;->values()[Lcom/oneplus/camera/PhotoCaptureState;
+    invoke-static {}, Lcom/meizu/media/camera/PhotoCaptureState;->values()[Lcom/meizu/media/camera/PhotoCaptureState;
 
     move-result-object v0
 
@@ -544,9 +544,9 @@
     :try_start_1a
     sget-object v0, Lcom/oneplus/gallery/CameraGalleryImpl$26;->$SwitchMap$com$oneplus$camera$PhotoCaptureState:[I
 
-    sget-object v1, Lcom/oneplus/camera/PhotoCaptureState;->PREPARING:Lcom/oneplus/camera/PhotoCaptureState;
+    sget-object v1, Lcom/meizu/media/camera/PhotoCaptureState;->PREPARING:Lcom/meizu/media/camera/PhotoCaptureState;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/PhotoCaptureState;->ordinal()I
+    invoke-virtual {v1}, Lcom/meizu/media/camera/PhotoCaptureState;->ordinal()I
 
     move-result v1
 
@@ -560,9 +560,9 @@
     :try_start_1b
     sget-object v0, Lcom/oneplus/gallery/CameraGalleryImpl$26;->$SwitchMap$com$oneplus$camera$PhotoCaptureState:[I
 
-    sget-object v1, Lcom/oneplus/camera/PhotoCaptureState;->READY:Lcom/oneplus/camera/PhotoCaptureState;
+    sget-object v1, Lcom/meizu/media/camera/PhotoCaptureState;->READY:Lcom/meizu/media/camera/PhotoCaptureState;
 
-    invoke-virtual {v1}, Lcom/oneplus/camera/PhotoCaptureState;->ordinal()I
+    invoke-virtual {v1}, Lcom/meizu/media/camera/PhotoCaptureState;->ordinal()I
 
     move-result v1
 

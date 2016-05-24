@@ -1,5 +1,5 @@
 .class public Lcom/oneplus/gallery/CameraGalleryBuilder;
-.super Lcom/oneplus/camera/UIComponentBuilder;
+.super Lcom/meizu/media/camera/UIComponentBuilder;
 .source "CameraGalleryBuilder.java"
 
 
@@ -11,7 +11,7 @@
     .line 11
     const-class v0, Lcom/oneplus/gallery/CameraGalleryImpl;
 
-    invoke-direct {p0, v0}, Lcom/oneplus/camera/UIComponentBuilder;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/meizu/media/camera/UIComponentBuilder;-><init>(Ljava/lang/Class;)V
 
     .line 12
     return-void
@@ -19,13 +19,13 @@
 
 
 # virtual methods
-.method protected create(Lcom/oneplus/camera/CameraActivity;)Lcom/oneplus/camera/CameraComponent;
+.method protected create(Lcom/meizu/media/camera/CameraActivity;)Lcom/meizu/media/camera/CameraComponent;
     .locals 1
-    .param p1, "cameraActivity"    # Lcom/oneplus/camera/CameraActivity;
+    .param p1, "cameraActivity"    # Lcom/meizu/media/camera/CameraActivity;
 
     .prologue
     .line 18
-    invoke-virtual {p1}, Lcom/oneplus/camera/CameraActivity;->isServiceMode()Z
+    invoke-virtual {p1}, Lcom/meizu/media/camera/CameraActivity;->isServiceMode()Z
 
     move-result v0
 
@@ -41,7 +41,7 @@
     :cond_0
     new-instance v0, Lcom/oneplus/gallery/CameraGalleryImpl;
 
-    invoke-direct {v0, p1}, Lcom/oneplus/gallery/CameraGalleryImpl;-><init>(Lcom/oneplus/camera/CameraActivity;)V
+    invoke-direct {v0, p1}, Lcom/oneplus/gallery/CameraGalleryImpl;-><init>(Lcom/meizu/media/camera/CameraActivity;)V
 
     goto :goto_0
 .end method
