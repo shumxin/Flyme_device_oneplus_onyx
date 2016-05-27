@@ -276,35 +276,29 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 337
-    invoke-static {p1}, Landroid/app/WallpaperManager;->openDefaultWallpaper(Landroid/content/Context;)Ljava/io/InputStream;
+    invoke-static {p1}, Landroid/app/WallpaperManager$FlymeInjector;->flymeOpenDefaultWallpaper(Landroid/content/Context;)Ljava/io/InputStream;
 
     move-result-object v3
 
-    .line 338
     .local v3, "is":Ljava/io/InputStream;
     if-eqz v3, :cond_0
 
-    .line 340
     :try_start_0
     new-instance v4, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v4}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 347
     .local v4, "options":Landroid/graphics/BitmapFactory$Options;
     iget-object v7, p0, Landroid/app/WallpaperManager$Globals;->mService:Landroid/app/IWallpaperManager;
 
     if-eqz v7, :cond_1
 
-    .line 348
     iget-object v7, p0, Landroid/app/WallpaperManager$Globals;->mService:Landroid/app/IWallpaperManager;
 
     invoke-interface {v7}, Landroid/app/IWallpaperManager;->getWidthHint()I
 
     move-result v5
 
-    .line 349
     .local v5, "width":I
     iget-object v7, p0, Landroid/app/WallpaperManager$Globals;->mService:Landroid/app/IWallpaperManager;
 

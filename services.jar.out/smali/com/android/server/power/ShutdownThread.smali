@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/android/server/power/ShutdownThread$FlymeInjector;,
         Lcom/android/server/power/ShutdownThread$CloseDialogReceiver;
     }
 .end annotation
@@ -276,25 +277,21 @@
 
     sput-object v4, Lcom/android/server/power/ShutdownThread;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 369
     sget-object v4, Lcom/android/server/power/ShutdownThread;->mAudioManager:Landroid/media/AudioManager;
 
     invoke-virtual {v4, v9, v11, v8}, Landroid/media/AudioManager;->requestAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;II)I
 
-    .line 372
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->checkAnimationFileExist()Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
-    .line 390
     :cond_1
     sget-object v4, Lcom/android/server/power/ShutdownThread;->sInstance:Lcom/android/server/power/ShutdownThread;
 
     iput-object p0, v4, Lcom/android/server/power/ShutdownThread;->mContext:Landroid/content/Context;
 
-    .line 391
     sget-object v5, Lcom/android/server/power/ShutdownThread;->sInstance:Lcom/android/server/power/ShutdownThread;
 
     const-string v4, "power"
@@ -1351,7 +1348,7 @@
 
     move-result-object v6
 
-    const v7, 0x1070038
+    const v7, #android:array@config_globalActionsList#t
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -1387,7 +1384,7 @@
 
     move-result-object v6
 
-    const v7, 0x10e0040
+    const v7, #android:integer@config_longPressOnPowerBehavior#t
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -1399,7 +1396,7 @@
 
     if-eqz v6, :cond_5
 
-    const v4, 0x104010a
+    const v4, #android:string@reboot_safemode_confirm#t
 
     .line 213
     .local v4, "resourceId":I
@@ -1410,10 +1407,8 @@
 
     if-nez v6, :cond_2
 
-    .line 214
-    const v4, 0x104010c
+    const v4, #android:string@reboot_confirm#t
 
-    .line 217
     :cond_2
     const-string v6, "ShutdownThread"
 
@@ -1466,7 +1461,7 @@
 
     if-eqz v6, :cond_7
 
-    const v6, 0x1040109
+    const v6, #android:string@reboot_safemode_title#t
 
     :goto_3
     invoke-virtual {v7, v6}, Landroid/app/AlertDialog$Builder;->setTitle(I)Landroid/app/AlertDialog$Builder;
@@ -1477,7 +1472,7 @@
 
     move-result-object v6
 
-    const v7, 0x1040013
+    const v7, #android:string@yes#t
 
     new-instance v8, Lcom/android/server/power/ShutdownThread$1;
 
@@ -1487,7 +1482,7 @@
 
     move-result-object v6
 
-    const v7, 0x1040009
+    const v7, #android:string@no#t
 
     const/4 v8, 0x0
 
@@ -1562,12 +1557,12 @@
 
     if-ne v3, v6, :cond_6
 
-    const v4, 0x1040108
+    const v4, #android:string@shutdown_confirm_question#t
 
     goto/16 :goto_2
 
     :cond_6
-    const v4, 0x1040107
+    const v4, #android:string@shutdown_confirm#t
 
     goto/16 :goto_2
 
@@ -1577,12 +1572,12 @@
     :cond_7
     if-eqz v5, :cond_8
 
-    const v6, 0x104010b
+    const v6, #android:string@reboot_title#t
 
     goto :goto_3
 
     :cond_8
-    const v6, 0x1040102
+    const v6, #android:string@power_off#t
 
     goto :goto_3
 

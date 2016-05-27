@@ -3,6 +3,13 @@
 .source "SystemServer.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/android/server/SystemServer$FlymeInjector;
+    }
+.end annotation
+
 # static fields
 .field private static final APPWIDGET_SERVICE_CLASS:Ljava/lang/String; = "com.android.server.appwidget.AppWidgetService"
 
@@ -1163,7 +1170,7 @@
 
     move-result-object v5
 
-    const v6, 0x1120096
+    const v6, #android:bool@config_digitalPenCapable#t
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -1637,7 +1644,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 610
     new-instance v70, Lcom/android/server/ColorInputMethodManagerService;
 
     move-object/from16 v0, v70
@@ -1775,7 +1781,7 @@
 
     move-result-object v6
 
-    const v9, 0x10404af
+    const v9, #android:string@android_upgrading_starting_apps#t
 
     invoke-virtual {v6, v9}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -1944,24 +1950,20 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 713
     invoke-static {v4}, Lcom/android/server/NetworkManagementService;->create(Landroid/content/Context;)Lcom/android/server/NetworkManagementService;
 
     move-result-object v8
 
-    .line 714
     const-string v5, "network_management"
 
     invoke-static {v5, v8}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
     :try_end_15
     .catch Ljava/lang/Throwable; {:try_start_15 .. :try_end_15} :catch_b
 
-    .line 720
     :cond_6
     :goto_f
     if-nez v64, :cond_7
 
-    .line 722
     :try_start_16
     const-string v5, "SystemServer"
 
@@ -2218,6 +2220,8 @@
     .end local v47    # "connectivity":Lcom/android/server/ConnectivityService;
     .restart local v46    # "connectivity":Lcom/android/server/ConnectivityService;
     :goto_14
+    invoke-static/range {p0 .. p0}, Lcom/android/server/SystemServer$FlymeInjector;->addSambaService(Lcom/android/server/SystemServer;)V
+
     :try_start_20
     const-string v5, "SystemServer"
 
@@ -2545,7 +2549,7 @@
 
     move-result-object v5
 
-    const v6, 0x1120047
+    const v6, #android:bool@config_enableWallpaperService#t
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -2918,13 +2922,11 @@
     :try_end_36
     .catch Ljava/lang/Throwable; {:try_start_36 .. :try_end_36} :catch_22
 
-    .line 1014
     :goto_27
     if-nez v62, :cond_1a
 
     if-nez v63, :cond_1a
 
-    .line 1016
     :try_start_37
     const-string v5, "SystemServer"
 
@@ -3019,13 +3021,11 @@
 
     invoke-virtual {v5, v6}, Lcom/android/server/SystemServiceManager;->startService(Ljava/lang/Class;)Lcom/android/server/SystemService;
 
-    .line 1047
     :cond_1d
     if-nez v64, :cond_1e
 
     if-nez v58, :cond_1e
 
-    .line 1049
     :try_start_3b
     const-string v5, "SystemServer"
 
@@ -3084,7 +3084,6 @@
 
     invoke-static {v5, v0}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 1063
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/android/server/SystemServer;->mPackageManager:Landroid/content/pm/PackageManager;
@@ -3097,6 +3096,7 @@
 
     if-eqz v5, :cond_1f
 
+    .line 1063
     .line 1064
     move-object/from16 v0, p0
 
@@ -3489,24 +3489,20 @@
     .end local v83    # "mmsService":Lcom/android/server/MmsServiceBroker;
     check-cast v83, Lcom/android/server/MmsServiceBroker;
 
-    .line 1170
     .restart local v83    # "mmsService":Lcom/android/server/MmsServiceBroker;
     :try_start_42
     invoke-virtual/range {v106 .. v106}, Lcom/android/server/VibratorService;->systemReady()V
     :try_end_42
     .catch Ljava/lang/Throwable; {:try_start_42 .. :try_end_42} :catch_2b
 
-    .line 1175
     :goto_30
     if-eqz v77, :cond_25
 
-    .line 1177
     :try_start_43
     invoke-virtual/range {v77 .. v77}, Lcom/android/server/LockSettingsService;->systemReady()V
     :try_end_43
     .catch Ljava/lang/Throwable; {:try_start_43 .. :try_end_43} :catch_2c
 
-    .line 1184
     :cond_25
     :goto_31
     move-object/from16 v0, p0
@@ -5232,4 +5228,22 @@
 
     .line 1414
     return-void
+.end method
+
+.method flymeGetFieldPackageManagerService()Lcom/android/server/pm/PackageManagerService;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/SystemServer;->mPackageManagerService:Lcom/android/server/pm/PackageManagerService;
+
+    return-object v0
+.end method
+
+.method flymeGetFieldSystemContext()Landroid/content/Context;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/SystemServer;->mSystemContext:Landroid/content/Context;
+
+    return-object v0
 .end method

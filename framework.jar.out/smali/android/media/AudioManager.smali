@@ -685,7 +685,7 @@
 
     move-result-object v1
 
-    const v2, 0x1120013
+    const v2, #android:bool@config_useMasterVolume#t
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -700,7 +700,7 @@
 
     move-result-object v1
 
-    const v2, 0x1120014
+    const v2, #android:bool@config_useVolumeKeySounds#t
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -715,7 +715,7 @@
 
     move-result-object v1
 
-    const v2, 0x112007a
+    const v2, #android:bool@config_useFixedVolume#t
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -2005,18 +2005,19 @@
     .param p3, "flags"    # I
 
     .prologue
-    .line 972
+    invoke-direct {p0, p3}, Landroid/media/AudioManager;->adjustFlymeFlags(I)I
+
+    move-result p3
+
     invoke-static {}, Landroid/media/AudioManager;->getService()Landroid/media/IAudioService;
 
     move-result-object v2
 
-    .line 975
     .local v2, "service":Landroid/media/IAudioService;
     iget-boolean v3, p0, Landroid/media/AudioManager;->mDebugLog:Z
 
     if-eqz v3, :cond_0
 
-    .line 976
     sget-object v3, Landroid/media/AudioManager;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3323,7 +3324,7 @@
 
     move-result-object v0
 
-    const v1, 0x112004e
+    const v1, #android:bool@config_bluetooth_sco_off_call#t
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -6996,4 +6997,32 @@
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
+.end method
+
+.method private adjustFlymeFlags(I)I
+    .locals 2
+    .param p1, "flags"    # I
+
+    .prologue
+    iget-object v1, p0, Landroid/media/AudioManager;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getOpPackageName()Ljava/lang/String;
+
+    move-result-object v0
+
+    .local v0, "packageName":Ljava/lang/String;
+    if-nez p1, :cond_0
+
+    const-string v1, "com.android.systemui"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/16 p1, 0x10
+
+    :cond_0
+    return p1
 .end method

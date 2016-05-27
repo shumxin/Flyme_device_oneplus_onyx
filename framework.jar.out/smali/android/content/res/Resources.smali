@@ -7,6 +7,7 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/content/res/Resources$Theme;,
+        Landroid/content/res/Resources$FlymeInjector;,
         Landroid/content/res/Resources$NotFoundException;
     }
 .end annotation
@@ -103,6 +104,12 @@
 
 
 # instance fields
+.field mFlymeThemeChanges:I
+
+.field mFlymeThemeResource:Landroid/content/res/flymetheme/FlymeThemeResource;
+
+.field mIsFlymeThemeChange:Z
+
 .field private final mAccessLock:Ljava/lang/Object;
 
 .field private final mAnimatorCache:Landroid/content/res/ConfigurationBoundResourceCache;
@@ -412,172 +419,142 @@
 
     iput-object v0, p0, Landroid/content/res/Resources;->mTypedArrayPool:Landroid/util/Pools$SynchronizedPool;
 
-    .line 137
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/Resources;->mAccessLock:Ljava/lang/Object;
 
-    .line 138
     new-instance v0, Landroid/content/res/Configuration;
 
     invoke-direct {v0}, Landroid/content/res/Configuration;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/Resources;->mTmpConfig:Landroid/content/res/Configuration;
 
-    .line 139
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/Resources;->mDrawableCache:Landroid/util/ArrayMap;
 
-    .line 141
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/Resources;->mColorDrawableCache:Landroid/util/ArrayMap;
 
-    .line 143
     new-instance v0, Landroid/util/LongSparseArray;
 
     invoke-direct {v0}, Landroid/util/LongSparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/Resources;->mColorStateListCache:Landroid/util/LongSparseArray;
 
-    .line 145
     new-instance v0, Landroid/content/res/ConfigurationBoundResourceCache;
 
     invoke-direct {v0, p0}, Landroid/content/res/ConfigurationBoundResourceCache;-><init>(Landroid/content/res/Resources;)V
 
     iput-object v0, p0, Landroid/content/res/Resources;->mAnimatorCache:Landroid/content/res/ConfigurationBoundResourceCache;
 
-    .line 147
     new-instance v0, Landroid/content/res/ConfigurationBoundResourceCache;
 
     invoke-direct {v0, p0}, Landroid/content/res/ConfigurationBoundResourceCache;-><init>(Landroid/content/res/Resources;)V
 
     iput-object v0, p0, Landroid/content/res/Resources;->mStateListAnimatorCache:Landroid/content/res/ConfigurationBoundResourceCache;
 
-    .line 150
     new-instance v0, Landroid/util/TypedValue;
 
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/Resources;->mTmpValue:Landroid/util/TypedValue;
 
-    .line 153
     iput-object v2, p0, Landroid/content/res/Resources;->mCachedStyledAttributes:Landroid/content/res/TypedArray;
 
-    .line 155
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/content/res/Resources;->mLastCachedXmlBlockIndex:I
 
-    .line 156
     new-array v0, v4, [I
 
     fill-array-data v0, :array_0
 
     iput-object v0, p0, Landroid/content/res/Resources;->mCachedXmlBlockIds:[I
 
-    .line 157
     new-array v0, v4, [Landroid/content/res/XmlBlock;
 
     iput-object v0, p0, Landroid/content/res/Resources;->mCachedXmlBlocks:[Landroid/content/res/XmlBlock;
 
-    .line 160
     new-instance v0, Landroid/util/DisplayMetrics;
 
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/Resources;->mMetrics:Landroid/util/DisplayMetrics;
 
-    .line 162
     new-instance v0, Landroid/content/res/Configuration;
 
     invoke-direct {v0}, Landroid/content/res/Configuration;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/Resources;->mConfiguration:Landroid/content/res/Configuration;
 
-    .line 165
     sget-object v0, Landroid/content/res/CompatibilityInfo;->DEFAULT_COMPATIBILITY_INFO:Landroid/content/res/CompatibilityInfo;
 
     iput-object v0, p0, Landroid/content/res/Resources;->mCompatibilityInfo:Landroid/content/res/CompatibilityInfo;
 
-    .line 2911
     iput-boolean v3, p0, Landroid/content/res/Resources;->mIsHasValues:Z
 
-    .line 2917
     iput-boolean v3, p0, Landroid/content/res/Resources;->mIsHasDrawables:Z
 
-    .line 2923
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/Resources;->mCharSequences:Landroid/util/SparseArray;
 
-    .line 2929
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/Resources;->mCookies:Landroid/util/SparseIntArray;
 
-    .line 2935
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/Resources;->mIntegers:Landroid/util/SparseArray;
 
-    .line 2941
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/content/res/Resources;->mSkipFiles:Landroid/util/SparseArray;
 
-    .line 2959
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/content/res/Resources;->mThemeChangeEnable:Z
 
-    .line 2879
     invoke-static {}, Landroid/content/res/AssetManager;->getSystem()Landroid/content/res/AssetManager;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/res/Resources;->mAssets:Landroid/content/res/AssetManager;
 
-    .line 2883
     iget-object v0, p0, Landroid/content/res/Resources;->mConfiguration:Landroid/content/res/Configuration;
 
     invoke-virtual {v0}, Landroid/content/res/Configuration;->setToDefaults()V
 
-    .line 2884
     iget-object v0, p0, Landroid/content/res/Resources;->mMetrics:Landroid/util/DisplayMetrics;
 
     invoke-virtual {v0}, Landroid/util/DisplayMetrics;->setToDefaults()V
 
-    .line 2885
     invoke-virtual {p0, v2, v2}, Landroid/content/res/Resources;->updateConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;)V
 
-    .line 2886
     iget-object v0, p0, Landroid/content/res/Resources;->mAssets:Landroid/content/res/AssetManager;
 
     invoke-virtual {v0}, Landroid/content/res/AssetManager;->ensureStringBlocks()V
 
-    .line 2889
     invoke-virtual {p0, v2}, Landroid/content/res/Resources;->init(Ljava/lang/String;)V
 
-    .line 2891
     return-void
 
-    .line 156
     nop
 
     :array_0
@@ -1149,6 +1126,8 @@
 
     invoke-virtual {v3, p5, p6, v4}, Landroid/util/LongSparseArray;->put(JLjava/lang/Object;)V
 
+    invoke-static {p0, p3, p5, p6, p7}, Landroid/content/res/Resources$FlymeInjector;->putFlymeBoostCachedDrawable(Landroid/content/res/Resources;ZJLandroid/graphics/drawable/Drawable;)V
+
     .line 2570
     monitor-exit v5
 
@@ -1242,6 +1221,8 @@
 
     .line 2016
     :cond_1
+    invoke-static/range {p0 .. p0}, Landroid/content/res/Resources$FlymeInjector;->isFlymeThemeChange(Landroid/content/res/Resources;)V
+
     iget-object v2, p0, Landroid/content/res/Resources;->mConfiguration:Landroid/content/res/Configuration;
 
     iget-object v3, p0, Landroid/content/res/Resources;->mTmpConfig:Landroid/content/res/Configuration;
@@ -1826,34 +1807,29 @@
     .end annotation
 
     .prologue
-    .line 304
     sget-object v2, Landroid/content/res/Resources;->sSync:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 305
     :try_start_0
     sget-object v0, Landroid/content/res/Resources;->mSystem:Landroid/content/res/Resources;
 
-    .line 306
     .local v0, "ret":Landroid/content/res/Resources;
     if-nez v0, :cond_0
 
-    .line 313
     invoke-static {}, Landroid/content/res/OppoClassFactory;->newResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 315
     sput-object v0, Landroid/content/res/Resources;->mSystem:Landroid/content/res/Resources;
 
-    .line 318
+    invoke-static {}, Landroid/content/res/Resources$FlymeInjector;->setSystemFlymeThemeResource()V
+
     :cond_0
     monitor-exit v2
 
     return-object v0
 
-    .line 319
     :catchall_0
     move-exception v1
 
@@ -2014,7 +1990,7 @@
     .local v3, "is":Ljava/io/InputStream;
     const/4 v6, 0x0
 
-    invoke-static {p0, p1, v3, v2, v6}, Landroid/graphics/drawable/Drawable;->createFromResourceStream(Landroid/content/res/Resources;Landroid/util/TypedValue;Ljava/io/InputStream;Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/drawable/Drawable;
+    invoke-static/range {p0 .. p2}, Landroid/content/res/Resources$FlymeInjector;->createFromResourceStream(Landroid/content/res/Resources;Landroid/util/TypedValue;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -2198,14 +2174,13 @@
     .param p1, "targetSdkVersion"    # I
 
     .prologue
-    .line 191
-    const v2, 0x1030005
+    const v2, #android:style@Theme#t
 
-    const v3, 0x103006b
+    const v3, #android:style@Theme.Holo#t
 
-    const v4, 0x1030128
+    const v4, #android:style@Theme.DeviceDefault#t
 
-    const v5, 0x103013f
+    const v5, #android:style@Theme.DeviceDefault.Light.DarkActionBar#t
 
     move v0, p0
 
@@ -2791,33 +2766,43 @@
     .end annotation
 
     .prologue
-    .line 958
     iget-object v3, p0, Landroid/content/res/Resources;->mAccessLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 959
     :try_start_0
     iget-object v1, p0, Landroid/content/res/Resources;->mTmpValue:Landroid/util/TypedValue;
 
-    .line 960
     .local v1, "value":Landroid/util/TypedValue;
     if-nez v1, :cond_0
 
-    .line 961
     new-instance v1, Landroid/util/TypedValue;
 
     .end local v1    # "value":Landroid/util/TypedValue;
     invoke-direct {v1}, Landroid/util/TypedValue;-><init>()V
 
-    .line 963
     .restart local v1    # "value":Landroid/util/TypedValue;
     :cond_0
+    invoke-static/range {p0 .. p1}, Landroid/content/res/Resources$FlymeInjector;->isFlymeThemeColor(Landroid/content/res/Resources;I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_flyme_0
+
+    invoke-static/range {p0 .. p1}, Landroid/content/res/Resources$FlymeInjector;->getFlymeThemeColorValue(Landroid/content/res/Resources;I)I
+
+    move-result v2
+
+    monitor-exit v3
+
+    return v2
+
+    :cond_flyme_0
+
     const/4 v2, 0x1
 
     invoke-virtual {p0, p1, v1, v2}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
 
-    .line 964
     iget v2, v1, Landroid/util/TypedValue;->type:I
 
     const/16 v4, 0x10
@@ -5504,7 +5489,16 @@
     .end annotation
 
     .prologue
-    .line 2699
+    invoke-static {p0, p2}, Landroid/content/res/Resources$FlymeInjector;->loadFlymeColorStateList(Landroid/content/res/Resources;I)Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_flyme_0
+
+    return-object v0
+
+    :cond_flyme_0
+
     iget v8, p1, Landroid/util/TypedValue;->assetCookie:I
 
     int-to-long v8, v8
@@ -6004,11 +5998,21 @@
     .restart local v8    # "key":J
     goto :goto_0
 
-    .line 2500
     :cond_1
+    move-object/from16 v0, p0
+
+    invoke-static {v0, v8, v9}, Landroid/content/res/Resources$FlymeInjector;->getBoostCachedDrawable(Landroid/content/res/Resources;J)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_flyme_0
+
+    return-object v0
+
+    :cond_flyme_0
+
     if-eqz v6, :cond_3
 
-    .line 2501
     sget-object v3, Landroid/content/res/Resources;->sPreloadedColorDrawables:Landroid/util/LongSparseArray;
 
     invoke-virtual {v3, v8, v9}, Landroid/util/LongSparseArray;->get(J)Ljava/lang/Object;
@@ -7352,21 +7356,17 @@
     .end annotation
 
     .prologue
-    .line 1228
     const/4 v3, 0x1
 
     invoke-virtual {p0, p1, p2, v3}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
 
-    .line 1232
     invoke-virtual {p0, p1, p2}, Landroid/content/res/Resources;->openOppoThemeRawResource(ILandroid/util/TypedValue;)Ljava/io/InputStream;
 
     move-result-object v1
 
-    .line 1233
     .local v1, "input":Ljava/io/InputStream;
     if-eqz v1, :cond_0
 
-    .line 1238
     .end local v1    # "input":Ljava/io/InputStream;
     :goto_0
     return-object v1
@@ -8579,6 +8579,12 @@
     .line 1968
     move-object/from16 v0, p0
 
+    move/from16 v1, v20
+
+    invoke-static {v0, v1}, Landroid/content/res/Resources$FlymeInjector;->clearFlymeBoostDrawableCacheLocked(Landroid/content/res/Resources;I)V
+
+    move-object/from16 v0, p0
+
     iget-object v2, v0, Landroid/content/res/Resources;->mAnimatorCache:Landroid/content/res/ConfigurationBoundResourceCache;
 
     move/from16 v0, v20
@@ -8594,27 +8600,24 @@
 
     invoke-virtual {v2, v0}, Landroid/content/res/ConfigurationBoundResourceCache;->onConfigurationChange(I)V
 
-    .line 1971
     move-object/from16 v0, p0
 
     iget-object v2, v0, Landroid/content/res/Resources;->mColorStateListCache:Landroid/util/LongSparseArray;
 
     invoke-virtual {v2}, Landroid/util/LongSparseArray;->clear()V
 
-    .line 1973
+    invoke-direct/range {p0 .. p0}, Landroid/content/res/Resources;->clearCachesByFlymeChange()V
+
     invoke-virtual/range {p0 .. p0}, Landroid/content/res/Resources;->flushLayoutCache()V
 
-    .line 1974
     monitor-exit v22
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1975
     sget-object v3, Landroid/content/res/Resources;->sSync:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 1976
     :try_start_1
     move-object/from16 v0, p0
 
@@ -8785,4 +8788,174 @@
     iput-boolean v2, v0, Landroid/content/res/Resources;->mIsHasDrawables:Z
 
     goto :goto_1
+.end method
+
+.method private clearCachesByFlymeChange()V
+    .locals 4
+
+    .prologue
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    iget-boolean v2, p0, Landroid/content/res/Resources;->mIsFlymeThemeChange:Z
+
+    if-eqz v2, :cond_0
+
+    iget-object v2, p0, Landroid/content/res/Resources;->mDrawableCache:Landroid/util/ArrayMap;
+
+    iget v3, p0, Landroid/content/res/Resources;->mFlymeThemeChanges:I
+
+    invoke-direct {p0, v2, v3}, Landroid/content/res/Resources;->clearDrawableCachesLocked(Landroid/util/ArrayMap;I)V
+
+    iget-object v2, p0, Landroid/content/res/Resources;->mColorDrawableCache:Landroid/util/ArrayMap;
+
+    iget v3, p0, Landroid/content/res/Resources;->mFlymeThemeChanges:I
+
+    invoke-direct {p0, v2, v3}, Landroid/content/res/Resources;->clearDrawableCachesLocked(Landroid/util/ArrayMap;I)V
+
+    sget-object v2, Landroid/content/res/Resources;->sPreloadedColorDrawables:Landroid/util/LongSparseArray;
+
+    invoke-virtual {v2}, Landroid/util/LongSparseArray;->clear()V
+
+    sget-object v2, Landroid/content/res/Resources;->sPreloadedColorStateLists:Landroid/util/LongSparseArray;
+
+    invoke-virtual {v2}, Landroid/util/LongSparseArray;->clear()V
+
+    sget-object v2, Landroid/content/res/Resources;->sPreloadedDrawables:[Landroid/util/LongSparseArray;
+
+    aget-object v2, v2, v1
+
+    invoke-virtual {v2}, Landroid/util/LongSparseArray;->clear()V
+
+    sget-object v2, Landroid/content/res/Resources;->sPreloadedDrawables:[Landroid/util/LongSparseArray;
+
+    aget-object v2, v2, v0
+
+    invoke-virtual {v2}, Landroid/util/LongSparseArray;->clear()V
+
+    const/4 v2, 0x0
+
+    iput-object v2, p0, Landroid/content/res/Resources;->mTmpValue:Landroid/util/TypedValue;
+
+    iput-boolean v1, p0, Landroid/content/res/Resources;->mIsFlymeThemeChange:Z
+
+    :cond_0
+    iget v2, p0, Landroid/content/res/Resources;->mFlymeThemeChanges:I
+
+    const v3, 0x8000
+
+    and-int/2addr v2, v3
+
+    if-eqz v2, :cond_3
+
+    .local v0, "isFlymeFontChange":Z
+    :goto_0
+    if-nez v0, :cond_1
+
+    iget-boolean v1, p0, Landroid/content/res/Resources;->mIsFlymeThemeChange:Z
+
+    if-eqz v1, :cond_2
+
+    :cond_1
+    invoke-static {}, Landroid/content/res/flymetheme/FlymeFontsHelper;->cleanflymeTypeface()V
+
+    :cond_2
+    return-void
+
+    .end local v0    # "isFlymeFontChange":Z
+    :cond_3
+    move v0, v1
+
+    goto :goto_0
+.end method
+
+.method flymeGetFieldAccessLock()Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/content/res/Resources;->mAccessLock:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method flymeGetFieldConfiguration()Landroid/content/res/Configuration;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/content/res/Resources;->mConfiguration:Landroid/content/res/Configuration;
+
+    return-object v0
+.end method
+
+.method flymeGetFieldTmpConfig()Landroid/content/res/Configuration;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/content/res/Resources;->mTmpConfig:Landroid/content/res/Configuration;
+
+    return-object v0
+.end method
+
+.method public getFlymeThemeResource()Landroid/content/res/flymetheme/FlymeThemeResource;
+    .locals 1
+
+    .prologue
+    iget-object v0, p0, Landroid/content/res/Resources;->mFlymeThemeResource:Landroid/content/res/flymetheme/FlymeThemeResource;
+
+    return-object v0
+.end method
+
+.method public setFlymeThemeResource(Ljava/lang/String;)V
+    .locals 2
+    .param p1, "packageName"    # Ljava/lang/String;
+
+    .prologue
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Landroid/content/res/Resources;->mFlymeThemeResource:Landroid/content/res/flymetheme/FlymeThemeResource;
+
+    if-nez v0, :cond_2
+
+    invoke-static {}, Landroid/content/res/flymetheme/FlymeThemeResourceManager;->getInstance()Landroid/content/res/flymetheme/FlymeThemeResourceManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/content/res/flymetheme/FlymeThemeResourceManager;->getFlymeThemeResource(Ljava/lang/String;)Landroid/content/res/flymetheme/FlymeThemeResource;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroid/content/res/Resources;->mFlymeThemeResource:Landroid/content/res/flymetheme/FlymeThemeResource;
+
+    :cond_2
+    iget-object v0, p0, Landroid/content/res/Resources;->mFlymeThemeResource:Landroid/content/res/flymetheme/FlymeThemeResource;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroid/content/res/flymetheme/FlymeThemeResource;
+
+    invoke-direct {v0, p1, p0}, Landroid/content/res/flymetheme/FlymeThemeResource;-><init>(Ljava/lang/String;Landroid/content/res/Resources;)V
+
+    iput-object v0, p0, Landroid/content/res/Resources;->mFlymeThemeResource:Landroid/content/res/flymetheme/FlymeThemeResource;
+
+    invoke-static {}, Landroid/content/res/flymetheme/FlymeThemeResourceManager;->getInstance()Landroid/content/res/flymetheme/FlymeThemeResourceManager;
+
+    move-result-object v0
+
+    iget-object v1, p0, Landroid/content/res/Resources;->mFlymeThemeResource:Landroid/content/res/flymetheme/FlymeThemeResource;
+
+    invoke-virtual {v0, p1, v1}, Landroid/content/res/flymetheme/FlymeThemeResourceManager;->setFlymeThemeResource(Ljava/lang/String;Landroid/content/res/flymetheme/FlymeThemeResource;)V
+
+    goto :goto_0
 .end method

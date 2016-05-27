@@ -714,12 +714,10 @@
     .param p0, "style"    # I
 
     .prologue
-    .line 215
     sget-boolean v0, Loppo/content/res/OppoFontUtils;->isFlipFontUsed:Z
 
     if-eqz v0, :cond_0
 
-    .line 216
     sget-object v0, Landroid/graphics/Typeface;->sDefaults:[Landroid/graphics/Typeface;
 
     aget-object v0, v0, p0
@@ -1516,4 +1514,22 @@
     const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method public static isSystemTypeface(Landroid/graphics/Typeface;)Z
+    .locals 1
+    .param p0, "typeface"    # Landroid/graphics/Typeface;
+
+    .prologue
+    sget-object v0, Landroid/graphics/Typeface;->sSystemFontMap:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
+
+    move-result-object v0
+
+    invoke-interface {v0, p0}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
 .end method

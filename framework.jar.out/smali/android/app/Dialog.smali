@@ -169,7 +169,7 @@
 
     move-result-object v2
 
-    const v3, 0x1010308
+    const v3, #android:attr@dialogTheme#t
 
     invoke-virtual {v2, v3, v0, v4}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
 
@@ -2625,4 +2625,13 @@
 
     .line 983
     return-void
+.end method
+
+.method public isCancelable()Z
+    .locals 1
+
+    .prologue
+    iget-boolean v0, p0, Landroid/app/Dialog;->mCancelable:Z
+
+    return v0
 .end method
