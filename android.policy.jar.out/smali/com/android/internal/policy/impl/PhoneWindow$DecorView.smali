@@ -2290,6 +2290,17 @@
 
     invoke-static {v6, v7}, Lcom/oppo/debug/InputLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    invoke-static/range {p0 .. p1}, Lcom/android/internal/policy/impl/PhoneWindow$FlymeInjector;->flymeDispatchKeyEvent(Lcom/android/internal/policy/impl/PhoneWindow$DecorView;Landroid/view/KeyEvent;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_flyme_0
+
+    const/4 v6, 0x1
+
+    return v6
+
+    :cond_flyme_0
     if-nez v2, :cond_0
 
     .end local v1    # "cb":Landroid/view/Window$Callback;
@@ -4892,6 +4903,18 @@
     iget-object v2, p0, Lcom/android/internal/policy/impl/PhoneWindow$DecorView;->mActionMode:Landroid/view/ActionMode;
 
     if-eqz v2, :cond_2
+
+    invoke-static/range {p0 .. p1}, Lcom/android/internal/policy/impl/PhoneWindow$FlymeInjector;->flymeSuperDispatchKeyEvent(Lcom/android/internal/policy/impl/PhoneWindow$DecorView;Landroid/view/KeyEvent;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_flyme_0
+
+    const/4 v2, 0x1
+
+    return v2
+
+    :cond_flyme_0
 
     .line 2414
     if-ne v0, v1, :cond_1

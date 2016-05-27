@@ -532,7 +532,7 @@
 
     move-result v6
 
-    if-eqz v6, :cond_c
+    if-eqz v6, :cond_flyme_0
 
     .line 372
     new-instance v2, Landroid/view/animation/PathInterpolator;
@@ -543,7 +543,23 @@
     .restart local v2    # "interpolator":Landroid/view/animation/BaseInterpolator;
     goto/16 :goto_0
 
+    :cond_flyme_0
+    const-string v6, "valueArrayInterpolator"
+
+    invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_flyme_1
+
+    new-instance v2, Landroid/view/animation/ValueArrayInterpolator;
+
+    invoke-direct {v2, p0, p1, v0}, Landroid/view/animation/ValueArrayInterpolator;-><init>(Landroid/content/res/Resources;Landroid/content/res/Resources$Theme;Landroid/util/AttributeSet;)V
+
+    goto/16 :goto_flyme_0
+
     :cond_c
+    :cond_flyme_1
     new-instance v6, Ljava/lang/RuntimeException;
 
     new-instance v7, Ljava/lang/StringBuilder;

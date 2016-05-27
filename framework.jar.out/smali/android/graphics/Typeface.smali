@@ -714,6 +714,19 @@
     .param p0, "style"    # I
 
     .prologue
+    invoke-static {}, Landroid/content/res/flymetheme/FlymeFontsHelper;->hasFlymeTypeface()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_flyme_0
+
+    invoke-static {}, Landroid/content/res/flymetheme/FlymeFontsHelper;->getflymeTypeface()Landroid/graphics/Typeface;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_flyme_0
     sget-boolean v0, Loppo/content/res/OppoFontUtils;->isFlipFontUsed:Z
 
     if-eqz v0, :cond_0

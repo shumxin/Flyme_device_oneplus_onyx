@@ -120,6 +120,7 @@
 /dev/zero		u:object_r:zero_device:s0
 /dev/__kmsg__		u:object_r:klog_device:s0
 /dev/__properties__ u:object_r:properties_device:s0
+/dev/socket/flymed      u:object_r:flymed_socket:s0
 #ifdef COLOROS_EDIT
 #ZhiYong.Lin@Plf.Framework,2015.02.04:add for tunman
 /dev/socket/tunman    u:object_r:tunman_socket:s0
@@ -168,6 +169,9 @@
 /system/bin/dex2oat     u:object_r:dex2oat_exec:s0
 # patchoat executable has (essentially) the same requirements as dex2oat.
 /system/bin/patchoat    u:object_r:dex2oat_exec:s0
+/system/bin/flymed      u:object_r:flymed_exec:s0
+/system/bin/smbd        u:object_r:smbd_exec:s0
+/system/bin/nmbd        u:object_r:nmbd_exec:s0
 #ifdef COLOROS_EDIT
 #ZhiYong.Lin@Plf.Framework,2015.02.04:add for tunman
 /system/bin/tunman    u:object_r:tunman_exec:s0

@@ -4021,6 +4021,8 @@
     and-int/lit8 p3, p3, -0x5
 
     :cond_3
+    goto/16 :goto_flyme_0
+
     iget-object v0, p0, Landroid/media/AudioService;->mVolumeController:Landroid/media/AudioService$VolumeController;
 
     invoke-virtual {v0, v8, p3}, Landroid/media/AudioService$VolumeController;->suppressAdjustment(II)Z
@@ -4050,6 +4052,7 @@
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_4
+    :goto_flyme_0
     move-object v0, p0
 
     move v2, p1

@@ -8073,6 +8073,8 @@
     .line 1190
     .end local v17    # "e":Landroid/os/RemoteException;
     :cond_35
+    invoke-static/range {v33 .. v33}, Lcom/android/server/am/BroadcastQueue$FlymeBroadcastQueueInjector;->setCurrentBroadcastRecord(Lcom/android/server/am/BroadcastRecord;)V
+
     sget-boolean v4, Lcom/android/server/am/BroadcastQueue;->DEBUG_BROADCAST:Z
 
     if-eqz v4, :cond_36

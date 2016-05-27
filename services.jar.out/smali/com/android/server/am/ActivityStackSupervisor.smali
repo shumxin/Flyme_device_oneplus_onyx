@@ -14459,6 +14459,18 @@
 
     .end local v29    # "e":Landroid/os/RemoteException;
     :cond_1d
+    move-object/from16 v12, p0
+
+    move-object/from16 v13, p2
+
+    move-object/from16 v14, p4
+
+    move/from16 v15, p11
+
+    invoke-static/range {v12 .. v15}, Lcom/android/server/am/ActivityStackSupervisor$FlymeInjector;->interceptForAccessControl(Lcom/android/server/am/ActivityStackSupervisor;Landroid/content/Intent;Landroid/content/pm/ActivityInfo;I)Landroid/content/pm/ActivityInfo;
+
+    move-result-object p4
+
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lcom/android/server/am/ActivityStackSupervisor;->mOppoSecureProtectUtils:Lcom/android/server/am/OppoSecureProtectUtils;

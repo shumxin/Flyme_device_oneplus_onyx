@@ -553,6 +553,8 @@
 
     invoke-virtual {p0, v2}, Landroid/content/res/Resources;->init(Ljava/lang/String;)V
 
+    invoke-static/range {p0 .. p0}, Landroid/content/res/Resources$FlymeInjector;->initFlymeExtraFields(Landroid/content/res/Resources;)V
+
     return-void
 
     nop

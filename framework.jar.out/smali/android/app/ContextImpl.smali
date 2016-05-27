@@ -773,6 +773,8 @@
 
     invoke-static {v0}, Landroid/app/ColorInjector$ContextImpl;->registerServices(Landroid/app/ColorInjector$ContextImpl$ServiceRegister;)V
 
+    invoke-static {}, Landroid/app/ContextImpl;->registeFlymeManager()V
+
     return-void
 .end method
 
@@ -966,7 +968,9 @@
 
     move-result-object v12
 
-    invoke-direct {p0, p3, v11}, Landroid/app/ContextImpl;->setFlymeThemeResource(Landroid/app/LoadedApk;Landroid/content/res/Resources;)V
+    move-object/from16 v0, p3
+
+    invoke-direct {p0, v0, v12}, Landroid/app/ContextImpl;->setFlymeThemeResource(Landroid/app/LoadedApk;Landroid/content/res/Resources;)V
 
     :cond_4
     iput-object v12, p0, Landroid/app/ContextImpl;->mResources:Landroid/content/res/Resources;

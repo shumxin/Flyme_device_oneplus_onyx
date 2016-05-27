@@ -1644,13 +1644,13 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    new-instance v70, Lcom/android/server/ColorInputMethodManagerService;
+    new-instance v70, Lcom/android/server/MzInputMethodManagerService;
 
     move-object/from16 v0, v70
 
     move-object/from16 v1, v115
 
-    invoke-direct {v0, v4, v1}, Lcom/android/server/ColorInputMethodManagerService;-><init>(Landroid/content/Context;Lcom/android/server/wm/WindowManagerService;)V
+    invoke-direct {v0, v4, v1}, Lcom/android/server/MzInputMethodManagerService;-><init>(Landroid/content/Context;Lcom/android/server/wm/WindowManagerService;)V
     :try_end_8
     .catch Ljava/lang/Throwable; {:try_start_8 .. :try_end_8} :catch_3
 
@@ -1906,6 +1906,9 @@
     move-object/from16 v0, v100
 
     invoke-static {v5, v0}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
+
+    invoke-static {}, Lcom/android/server/SystemServer$FlymeInjector;->addFlymeStatusBarManagerService()V
+
     :try_end_13
     .catch Ljava/lang/Throwable; {:try_start_13 .. :try_end_13} :catch_3e
 
@@ -1957,6 +1960,9 @@
     const-string v5, "network_management"
 
     invoke-static {v5, v8}, Landroid/os/ServiceManager;->addService(Ljava/lang/String;Landroid/os/IBinder;)V
+
+    invoke-static/range {p0 .. p0}, Lcom/android/server/SystemServer$FlymeInjector;->addNetworkManagementServiceFlyme(Lcom/android/server/SystemServer;)V
+
     :try_end_15
     .catch Ljava/lang/Throwable; {:try_start_15 .. :try_end_15} :catch_b
 
@@ -3022,6 +3028,8 @@
     invoke-virtual {v5, v6}, Lcom/android/server/SystemServiceManager;->startService(Ljava/lang/Class;)Lcom/android/server/SystemService;
 
     :cond_1d
+    goto/16 :goto_flyme_0
+
     if-nez v64, :cond_1e
 
     if-nez v58, :cond_1e
@@ -3060,6 +3068,7 @@
     .end local v38    # "atlas":Lcom/android/server/AssetAtlasService;
     .restart local v37    # "atlas":Lcom/android/server/AssetAtlasService;
     :cond_1e
+    :goto_flyme_0
     :goto_2b
     new-instance v79, Lcom/android/server/OemExService;
 
@@ -3490,6 +3499,14 @@
     check-cast v83, Lcom/android/server/MmsServiceBroker;
 
     .restart local v83    # "mmsService":Lcom/android/server/MmsServiceBroker;
+    move-object/from16 v0, p0
+
+    move-object/from16 v5, v115
+
+    move-object/from16 v6, v109
+
+    invoke-static {v0, v5, v6}, Lcom/android/server/SystemServer$FlymeInjector;->addFlymeServices(Lcom/android/server/SystemServer;Lcom/android/server/wm/WindowManagerService;Lcom/android/server/wallpaper/WallpaperManagerService;)V
+
     :try_start_42
     invoke-virtual/range {v106 .. v106}, Lcom/android/server/VibratorService;->systemReady()V
     :try_end_42

@@ -677,6 +677,22 @@ service pre-recovery /system/bin/uncrypt
     disabled
     oneshot
 
+service smbd /system/bin/smbd -D
+    user root
+    group bluetooth net_bt_admin
+    disabled
+    oneshot
+
+service nmbd /system/bin/nmbd -D
+    user root
+    group bluetooth net_bt_admin
+    disabled
+    oneshot
+
+service flymed /system/bin/flymed
+    class main
+    socket flymed stream 0660 root system
+
 #ifdef COLOROS_EDIT
 #ZhiYong.Lin@Plf.Framework : Add for RUtils
 service rutilsdaemon /system/bin/rutilsdaemon
