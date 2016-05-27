@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<gs>
+    <p att="com.baidu.BaiduMap"></p>    
+    <p att="com.autonavi.minimap"></p>    
+    <p att="com.tencent.mm"></p>
+    <p att="com.tencent.mobileqq"></p>
+    <p att="com.sina.weibo"></p>
+    <p att="com.qiyi.video"></p>
+    <p att="com.tencent.qqlive"></p>
+    <p att="com.sohu.sohuvideo"></p>
+    <p att="com.youku.phone"></p>
+    <p att="com.hunantv.imgo.activity"></p>
+    <p att="com.tudou.android"></p>
+    <p att="com.pplive.androidphone"></p>
+    <p att="com.storm.smart"></p>
+    <p att="tv.pps.mobile"></p>
+    <p att="com.baidu.video"></p>
+    <p att="com.xunlei.downloadprovider"></p>
+    <p att="com.yy.yymeet"></p>
+    <p att="com.sogou.map.android.maps"></p>
+    <p att="com.immomo.momo"></p>
+    <p att="jp.naver.line.android"></p>
+</gs>

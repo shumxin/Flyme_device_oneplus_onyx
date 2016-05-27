@@ -1,0 +1,6 @@
+<!-- #ifdef VENDOR_EDIT -->
+<!--Yinqi.Xiong@Swdp.Android.Input.ThreeKey, 2015/12/08, add for oppo.threekey.support -->
+<permissions>
+    <feature name="oppo.threekey.support" />
+</permissions>
+<!-- #endif //VENDOR_EDIT -->

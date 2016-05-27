@@ -1,0 +1,18 @@
+Movies
+Movies/OPPO R7 拍照篇.mp4
+Movies/OPPO R7 闪充篇.mp4
+Music
+Music/You Are Beautiful.lrc
+Music/You Are Beautiful.mp3
+Music/You Belong With Me.lrc
+Music/You Belong With Me.mp3
+Music/李行亮-愿得一人心.flac
+Music/李行亮-愿得一人心.lrc
+Pictures
+Pictures/01 演示图片.jpg
+Pictures/02 演示图片.jpg
+Pictures/03 演示图片.jpg
+Pictures/04 慢速快门.jpg
+Pictures/05 超清画质.jpg
+Pictures/06 微距拍摄.jpg
+Pictures/07 绚彩夜拍.jpg

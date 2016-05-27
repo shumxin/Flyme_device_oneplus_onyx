@@ -1,0 +1,16 @@
+<!-- This file is auto-generated.  DO NOT MODIFY. -->
+<!-- COLOR_EDIT.  add oppo.screen.hovering.support ;remove oppo.narrow.frame -->
+<permissions>
+	<feature name="oppo.hw.manufacturer.qualcomm" />
+	<feature name="oppo.sw.solution.device" />
+	<feature name="oppo.inexact.alarm" />
+	<feature name="oppo.filtrated.app" />
+	<feature name="oppo.multi.touch.camera.support" />
+	<feature name="oppo.double.flinger.volume.support" />
+	<feature name="oppo.support.single.partition" />
+	<feature name="oppo.memory.auto.deep.clean" />
+	<feature name="oppo.memory.auto.clean" />
+	<feature name="oppo.guard.elf.support" />
+    <!-- wangw@swdp.Android.Compile&Config, 2015/10/23, Add for disable full disk encryption -->
+    <feature name="oppo.fulldiskencryption.unsupported" />
+</permissions>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<gs>
+    <p att="com.android.cts.net"></p>
+    <p att="com.android.cts.stub"></p>
+    <p att="com.android.cts.verifier"></p>
+    <p att="com.android.cts.permissiondeclareappcompat"></p>
+    <!-- others -->
+    <p att="com.realtek.airplay.client"></p>
+    <p att="com.jb.gokeyboard.handwrite.zh"></p>
+    <!-- for sony smart wireless headset -->  
+    <p att="com.sonyericsson.extras.smartwirelessheadsetpro"></p>
+    <p att="com.oppo.gatt"></p>
+    <p att="com.oppo.gatt.proximityservice"></p>
+    <p att="com.google.android.voicesearch"></p>
+    <!-- for the backuprestore apk --> 
+    <p att="com.oppo.simplebackup"></p>
+    <!-- add for the AVP RD -->
+    <p att="com.oppo.mediacontrol"></p>
+    <!-- keke application -->  
+    <p att="com.oppo.saus"></p>
+    <p att="com.oppo.pcassistant"></p>
+    <p att="com.android.email"></p>
+    <p att="com.oppo.wearable"></p>
+    <p att="com.oppo.ubeauty"></p>
+    
+</gs>
