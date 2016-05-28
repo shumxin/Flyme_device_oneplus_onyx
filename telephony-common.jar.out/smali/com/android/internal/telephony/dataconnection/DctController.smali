@@ -4736,7 +4736,7 @@
 
     .line 966
     :sswitch_7
-    invoke-direct/range {p0 .. p0}, Lcom/android/internal/telephony/dataconnection/DctController;->onProcessRequest()V
+    #invoke-direct/range {p0 .. p0}, Lcom/android/internal/telephony/dataconnection/DctController;->onProcessRequest()V
 
     goto/16 :goto_0
 
