@@ -1,0 +1,269 @@
+.method public setCallSubstate(Ljava/lang/String;I)V
+    .locals 6
+
+    .prologue
+    const/4 v5, 0x0
+
+    iget-object v0, p0, Lcom/android/server/telecom/ConnectionServiceWrapper$Adapter;->this$0:Lcom/android/server/telecom/ConnectionServiceWrapper;
+
+    const-string v1, "setCallSubstate %s %d"
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    aput-object p1, v2, v5
+
+    const/4 v3, 0x1
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    # invokes: Lcom/android/server/telecom/ConnectionServiceWrapper;->logIncoming(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/android/server/telecom/ConnectionServiceWrapper;->access$400(Lcom/android/server/telecom/ConnectionServiceWrapper;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lcom/android/server/telecom/ConnectionServiceWrapper$Adapter;->this$0:Lcom/android/server/telecom/ConnectionServiceWrapper;
+
+    # getter for: Lcom/android/server/telecom/ConnectionServiceWrapper;->mCallIdMapper:Lcom/android/server/telecom/CallIdMapper;
+    invoke-static {v0}, Lcom/android/server/telecom/ConnectionServiceWrapper;->access$100(Lcom/android/server/telecom/ConnectionServiceWrapper;)Lcom/android/server/telecom/CallIdMapper;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/android/server/telecom/CallIdMapper;->isValidCallId(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/server/telecom/ConnectionServiceWrapper$Adapter;->this$0:Lcom/android/server/telecom/ConnectionServiceWrapper;
+
+    # getter for: Lcom/android/server/telecom/ConnectionServiceWrapper;->mHandler:Landroid/os/Handler;
+    invoke-static {v0}, Lcom/android/server/telecom/ConnectionServiceWrapper;->access$500(Lcom/android/server/telecom/ConnectionServiceWrapper;)Landroid/os/Handler;
+
+    move-result-object v0
+
+    const/16 v1, 0x1a
+
+    invoke-virtual {v0, v1, p2, v5, p1}, Landroid/os/Handler;->obtainMessage(IIILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setDisconnectedWithSsNotification(Ljava/lang/String;ILjava/lang/String;II)V
+    .locals 5
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/telecom/ConnectionServiceWrapper$Adapter;->this$0:Lcom/android/server/telecom/ConnectionServiceWrapper;
+
+    const-string v1, "setDisconnected %s %d %s"
+
+    const/4 v2, 0x3
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    aput-object p1, v2, v3
+
+    const/4 v3, 0x1
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x2
+
+    aput-object p3, v2, v3
+
+    # invokes: Lcom/android/server/telecom/ConnectionServiceWrapper;->logIncoming(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/android/server/telecom/ConnectionServiceWrapper;->access$400(Lcom/android/server/telecom/ConnectionServiceWrapper;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lcom/android/server/telecom/ConnectionServiceWrapper$Adapter;->this$0:Lcom/android/server/telecom/ConnectionServiceWrapper;
+
+    # getter for: Lcom/android/server/telecom/ConnectionServiceWrapper;->mCallIdMapper:Lcom/android/server/telecom/CallIdMapper;
+    invoke-static {v0}, Lcom/android/server/telecom/ConnectionServiceWrapper;->access$100(Lcom/android/server/telecom/ConnectionServiceWrapper;)Lcom/android/server/telecom/CallIdMapper;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/android/server/telecom/CallIdMapper;->isValidCallId(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
+
+    move-result-object v0
+
+    iput-object p1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
+
+    iput-object p3, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
+
+    iput p2, v0, Lcom/android/internal/os/SomeArgs;->argi1:I
+
+    iput p4, v0, Lcom/android/internal/os/SomeArgs;->argi2:I
+
+    iput p5, v0, Lcom/android/internal/os/SomeArgs;->argi3:I
+
+    iget-object v1, p0, Lcom/android/server/telecom/ConnectionServiceWrapper$Adapter;->this$0:Lcom/android/server/telecom/ConnectionServiceWrapper;
+
+    # getter for: Lcom/android/server/telecom/ConnectionServiceWrapper;->mHandler:Landroid/os/Handler;
+    invoke-static {v1}, Lcom/android/server/telecom/ConnectionServiceWrapper;->access$500(Lcom/android/server/telecom/ConnectionServiceWrapper;)Landroid/os/Handler;
+
+    move-result-object v1
+
+    const/16 v2, 0x18
+
+    invoke-virtual {v1, v2, v0}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setExtras(Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 3
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/telecom/ConnectionServiceWrapper$Adapter;->this$0:Lcom/android/server/telecom/ConnectionServiceWrapper;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "setExtras size= "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p2}, Landroid/os/Bundle;->size()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " | callId= "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    # invokes: Lcom/android/server/telecom/ConnectionServiceWrapper;->logIncoming(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/android/server/telecom/ConnectionServiceWrapper;->access$400(Lcom/android/server/telecom/ConnectionServiceWrapper;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
+
+    move-result-object v0
+
+    iput-object p1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
+
+    iput-object p2, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
+
+    iget-object v1, p0, Lcom/android/server/telecom/ConnectionServiceWrapper$Adapter;->this$0:Lcom/android/server/telecom/ConnectionServiceWrapper;
+
+    # getter for: Lcom/android/server/telecom/ConnectionServiceWrapper;->mHandler:Landroid/os/Handler;
+    invoke-static {v1}, Lcom/android/server/telecom/ConnectionServiceWrapper;->access$500(Lcom/android/server/telecom/ConnectionServiceWrapper;)Landroid/os/Handler;
+
+    move-result-object v1
+
+    const/16 v2, 0x17
+
+    invoke-virtual {v1, v2, v0}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
+
+    return-void
+.end method
+
+.method public setPhoneAccountHandle(Ljava/lang/String;Landroid/telecom/PhoneAccountHandle;)V
+    .locals 4
+
+    .prologue
+    iget-object v0, p0, Lcom/android/server/telecom/ConnectionServiceWrapper$Adapter;->this$0:Lcom/android/server/telecom/ConnectionServiceWrapper;
+
+    const-string v1, "setPhoneAccountHandle %s %s"
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    aput-object p1, v2, v3
+
+    const/4 v3, 0x1
+
+    aput-object p2, v2, v3
+
+    # invokes: Lcom/android/server/telecom/ConnectionServiceWrapper;->logIncoming(Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/android/server/telecom/ConnectionServiceWrapper;->access$400(Lcom/android/server/telecom/ConnectionServiceWrapper;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lcom/android/server/telecom/ConnectionServiceWrapper$Adapter;->this$0:Lcom/android/server/telecom/ConnectionServiceWrapper;
+
+    # getter for: Lcom/android/server/telecom/ConnectionServiceWrapper;->mCallIdMapper:Lcom/android/server/telecom/CallIdMapper;
+    invoke-static {v0}, Lcom/android/server/telecom/ConnectionServiceWrapper;->access$100(Lcom/android/server/telecom/ConnectionServiceWrapper;)Lcom/android/server/telecom/CallIdMapper;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/android/server/telecom/CallIdMapper;->isValidCallId(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
+
+    move-result-object v0
+
+    iput-object p1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
+
+    iput-object p2, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
+
+    iget-object v1, p0, Lcom/android/server/telecom/ConnectionServiceWrapper$Adapter;->this$0:Lcom/android/server/telecom/ConnectionServiceWrapper;
+
+    # getter for: Lcom/android/server/telecom/ConnectionServiceWrapper;->mHandler:Landroid/os/Handler;
+    invoke-static {v1}, Lcom/android/server/telecom/ConnectionServiceWrapper;->access$500(Lcom/android/server/telecom/ConnectionServiceWrapper;)Landroid/os/Handler;
+
+    move-result-object v1
+
+    const/16 v2, 0x19
+
+    invoke-virtual {v1, v2, v0}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
+
+    :cond_0
+    return-void
+.end method

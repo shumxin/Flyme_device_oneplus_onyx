@@ -1,0 +1,24 @@
+.method public onSystemReadyForColorOS(Z)V
+    .locals 1
+    .param p1, "keyguardDone"    # Z
+
+    .prologue
+    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardService$1;->this$0:Lcom/android/systemui/keyguard/KeyguardService;
+
+    invoke-virtual {v0}, Lcom/android/systemui/keyguard/KeyguardService;->checkPermission()V
+
+    return-void
+.end method
+
+.method public setColorOSKeyguardService(Lcom/android/internal/policy/IColorOSKeyguardService;)V
+    .locals 1
+    .param p1, "callback"    # Lcom/android/internal/policy/IColorOSKeyguardService;
+
+    .prologue
+    iget-object v0, p0, Lcom/android/systemui/keyguard/KeyguardService$1;->this$0:Lcom/android/systemui/keyguard/KeyguardService;
+
+    invoke-virtual {v0}, Lcom/android/systemui/keyguard/KeyguardService;->checkPermission()V
+
+    return-void
+.end method
+
