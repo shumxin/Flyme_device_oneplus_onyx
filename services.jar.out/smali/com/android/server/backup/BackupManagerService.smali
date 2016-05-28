@@ -14093,26 +14093,28 @@
 
     move-result-object v9
 
-    const-string v10, ", but reset to false"
+    #const-string v10, ", but reset to false"
 
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    #invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v9
+    #move-result-object v9
 
     invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v9
 
-    new-instance v10, Ljava/lang/Throwable;
+    #new-instance v10, Ljava/lang/Throwable;
 
-    const-string v11, "Kevin_DEBUG"
+    #const-string v11, "Kevin_DEBUG"
 
-    invoke-direct {v10, v11}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
+    #invoke-direct {v10, v11}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v8, v9, v10}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    #invoke-static {v8, v9, v10}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    invoke-static {v8, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 8562
-    const/4 p1, 0x0
+    #const/4 p1, 0x0
 
     .line 8565
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J

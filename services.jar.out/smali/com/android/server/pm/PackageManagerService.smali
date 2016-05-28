@@ -32355,6 +32355,8 @@
 
     move-result v16
 
+    const/16 v16, 0x1
+
     .line 4420
     .local v16, "isOppoApp":Z
     invoke-virtual/range {p1 .. p1}, Ljava/io/File;->toString()Ljava/lang/String;
