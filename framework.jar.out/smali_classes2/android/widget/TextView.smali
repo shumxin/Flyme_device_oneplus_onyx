@@ -5208,11 +5208,6 @@
 
 .method private createEditorIfNeeded()V
     .locals 1
-    .annotation build Landroid/annotation/OppoHook;
-        level = .enum Landroid/annotation/OppoHook$OppoHookType;->CHANGE_CODE:Landroid/annotation/OppoHook$OppoHookType;
-        note = "Jianhua.Lin@Plf.SDK : Modify for creating OppoEditor instead of Editor"
-        property = .enum Landroid/annotation/OppoHook$OppoRomType;->ROM:Landroid/annotation/OppoHook$OppoRomType;
-    .end annotation
 
     .prologue
     .line 9249
@@ -5221,9 +5216,9 @@
     if-nez v0, :cond_0
 
     .line 9256
-    new-instance v0, Landroid/widget/OppoEditor;
+    new-instance v0, Landroid/widget/Editor;
 
-    invoke-direct {v0, p0}, Landroid/widget/OppoEditor;-><init>(Landroid/widget/TextView;)V
+    invoke-direct {v0, p0}, Landroid/widget/Editor;-><init>(Landroid/widget/TextView;)V
 
     iput-object v0, p0, Landroid/widget/TextView;->mEditor:Landroid/widget/Editor;
 
@@ -17531,7 +17526,7 @@
     :cond_19
     if-eqz v7, :cond_1b
 
-    new-instance v16, Landroid/text/OppoStaticLayout;
+    new-instance v16, Landroid/text/StaticLayout;
 
     move-object/from16 v0, p0
 
@@ -17606,7 +17601,7 @@
 
     move/from16 v28, p5
 
-    invoke-direct/range {v16 .. v29}, Landroid/text/OppoStaticLayout;-><init>(Ljava/lang/CharSequence;IILandroid/text/TextPaint;ILandroid/text/Layout$Alignment;Landroid/text/TextDirectionHeuristic;FFZLandroid/text/TextUtils$TruncateAt;II)V
+    invoke-direct/range {v16 .. v29}, Landroid/text/StaticLayout;-><init>(Ljava/lang/CharSequence;IILandroid/text/TextPaint;ILandroid/text/Layout$Alignment;Landroid/text/TextDirectionHeuristic;FFZLandroid/text/TextUtils$TruncateAt;II)V
 
     move-object/from16 v0, v16
 
@@ -17622,7 +17617,7 @@
     goto :goto_a
 
     :cond_1b
-    new-instance v16, Landroid/text/OppoStaticLayout;
+    new-instance v16, Landroid/text/StaticLayout;
 
     move-object/from16 v0, p0
 
@@ -17664,7 +17659,7 @@
 
     move-object/from16 v20, v6
 
-    invoke-direct/range {v16 .. v24}, Landroid/text/OppoStaticLayout;-><init>(Ljava/lang/CharSequence;Landroid/text/TextPaint;ILandroid/text/Layout$Alignment;Landroid/text/TextDirectionHeuristic;FFZ)V
+    invoke-direct/range {v16 .. v24}, Landroid/text/StaticLayout;-><init>(Ljava/lang/CharSequence;Landroid/text/TextPaint;ILandroid/text/Layout$Alignment;Landroid/text/TextDirectionHeuristic;FFZ)V
 
     move-object/from16 v0, v16
 
@@ -17677,7 +17672,7 @@
     :cond_1c
     if-eqz v7, :cond_1e
 
-    new-instance v16, Landroid/text/OppoStaticLayout;
+    new-instance v16, Landroid/text/StaticLayout;
 
     move-object/from16 v0, p0
 
@@ -17752,7 +17747,7 @@
 
     move/from16 v28, p5
 
-    invoke-direct/range {v16 .. v29}, Landroid/text/OppoStaticLayout;-><init>(Ljava/lang/CharSequence;IILandroid/text/TextPaint;ILandroid/text/Layout$Alignment;Landroid/text/TextDirectionHeuristic;FFZLandroid/text/TextUtils$TruncateAt;II)V
+    invoke-direct/range {v16 .. v29}, Landroid/text/StaticLayout;-><init>(Ljava/lang/CharSequence;IILandroid/text/TextPaint;ILandroid/text/Layout$Alignment;Landroid/text/TextDirectionHeuristic;FFZLandroid/text/TextUtils$TruncateAt;II)V
 
     move-object/from16 v0, v16
 
@@ -17768,7 +17763,7 @@
     goto :goto_b
 
     :cond_1e
-    new-instance v16, Landroid/text/OppoStaticLayout;
+    new-instance v16, Landroid/text/StaticLayout;
 
     move-object/from16 v0, p0
 
@@ -17810,7 +17805,7 @@
 
     move-object/from16 v20, v6
 
-    invoke-direct/range {v16 .. v24}, Landroid/text/OppoStaticLayout;-><init>(Ljava/lang/CharSequence;Landroid/text/TextPaint;ILandroid/text/Layout$Alignment;Landroid/text/TextDirectionHeuristic;FFZ)V
+    invoke-direct/range {v16 .. v24}, Landroid/text/StaticLayout;-><init>(Ljava/lang/CharSequence;Landroid/text/TextPaint;ILandroid/text/Layout$Alignment;Landroid/text/TextDirectionHeuristic;FFZ)V
 
     move-object/from16 v0, v16
 
@@ -22583,11 +22578,6 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 13
     .param p1, "event"    # Landroid/view/MotionEvent;
-    .annotation build Landroid/annotation/OppoHook;
-        level = .enum Landroid/annotation/OppoHook$OppoHookType;->CHANGE_CODE:Landroid/annotation/OppoHook$OppoHookType;
-        note = "Jianhua.Lin@Plf.SDK : Modify for OppoEditor"
-        property = .enum Landroid/annotation/OppoHook$OppoRomType;->ROM:Landroid/annotation/OppoHook$OppoRomType;
-    .end annotation
 
     .prologue
     const/4 v8, 0x1
@@ -22601,23 +22591,13 @@
     .local v0, "action":I
     iget-object v7, p0, Landroid/widget/TextView;->mEditor:Landroid/widget/Editor;
 
-    if-eqz v7, :cond_1
+    if-eqz v7, :cond_0
 
     iget-object v7, p0, Landroid/widget/TextView;->mEditor:Landroid/widget/Editor;
 
     invoke-virtual {v7, p1}, Landroid/widget/Editor;->onTouchEventMz(Landroid/view/MotionEvent;)Z
 
-    move-result v7
-
-    if-eqz v7, :cond_1
-
-    move v4, v8
-
     :cond_0
-    :goto_0
-    return v4
-
-    :cond_1
     invoke-super {p0, p1}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v4
@@ -22639,44 +22619,31 @@
 
     iput-boolean v9, v7, Landroid/widget/Editor;->mDiscardNextActionUp:Z
 
-    iput-boolean v9, p0, Landroid/widget/TextView;->mTextViewDiscardNextActionUp:Z
+    .end local v4    # "superResult":Z
+    :cond_1
+    :goto_0
+    return v4
 
-    goto :goto_0
-
+    .restart local v4    # "superResult":Z
     :cond_2
+    if-ne v0, v8, :cond_b
+
     iget-object v7, p0, Landroid/widget/TextView;->mEditor:Landroid/widget/Editor;
-
-    if-nez v7, :cond_3
-
-    iget-boolean v7, p0, Landroid/widget/TextView;->mTextViewDiscardNextActionUp:Z
 
     if-eqz v7, :cond_3
-
-    if-ne v0, v8, :cond_3
-
-    iput-boolean v9, p0, Landroid/widget/TextView;->mTextViewDiscardNextActionUp:Z
-
-    goto :goto_0
-
-    :cond_3
-    if-ne v0, v8, :cond_c
-
-    iget-object v7, p0, Landroid/widget/TextView;->mEditor:Landroid/widget/Editor;
-
-    if-eqz v7, :cond_4
 
     iget-object v7, p0, Landroid/widget/TextView;->mEditor:Landroid/widget/Editor;
 
     iget-boolean v7, v7, Landroid/widget/Editor;->mIgnoreActionUpEvent:Z
 
-    if-nez v7, :cond_c
+    if-nez v7, :cond_b
 
-    :cond_4
+    :cond_3
     invoke-virtual {p0}, Landroid/widget/TextView;->isFocused()Z
 
     move-result v7
 
-    if-eqz v7, :cond_c
+    if-eqz v7, :cond_b
 
     move v6, v8
 
@@ -22684,37 +22651,37 @@
     :goto_1
     iget-object v7, p0, Landroid/widget/TextView;->mMovement:Landroid/text/method/MovementMethod;
 
-    if-nez v7, :cond_5
+    if-nez v7, :cond_4
 
     invoke-virtual {p0}, Landroid/widget/TextView;->onCheckIsTextEditor()Z
 
     move-result v7
 
-    if-eqz v7, :cond_0
+    if-eqz v7, :cond_1
 
-    :cond_5
+    :cond_4
     invoke-virtual {p0}, Landroid/widget/TextView;->isEnabled()Z
 
     move-result v7
 
-    if-eqz v7, :cond_0
+    if-eqz v7, :cond_1
 
     iget-object v7, p0, Landroid/widget/TextView;->mText:Ljava/lang/CharSequence;
 
     instance-of v7, v7, Landroid/text/Spannable;
 
-    if-eqz v7, :cond_0
+    if-eqz v7, :cond_1
 
     iget-object v7, p0, Landroid/widget/TextView;->mLayout:Landroid/text/Layout;
 
-    if-eqz v7, :cond_0
+    if-eqz v7, :cond_1
 
     const/4 v1, 0x0
 
     .local v1, "handled":Z
     iget-object v7, p0, Landroid/widget/TextView;->mMovement:Landroid/text/method/MovementMethod;
 
-    if-eqz v7, :cond_6
+    if-eqz v7, :cond_5
 
     iget-object v10, p0, Landroid/widget/TextView;->mMovement:Landroid/text/method/MovementMethod;
 
@@ -22728,23 +22695,23 @@
 
     or-int/2addr v1, v7
 
-    :cond_6
+    :cond_5
     invoke-virtual {p0}, Landroid/widget/TextView;->isTextSelectable()Z
 
     move-result v5
 
     .local v5, "textIsSelectable":Z
-    if-eqz v6, :cond_7
+    if-eqz v6, :cond_6
 
     iget-boolean v7, p0, Landroid/widget/TextView;->mLinksClickable:Z
 
-    if-eqz v7, :cond_7
+    if-eqz v7, :cond_6
 
     iget v7, p0, Landroid/widget/TextView;->mAutoLinkMask:I
 
-    if-eqz v7, :cond_7
+    if-eqz v7, :cond_6
 
-    if-eqz v5, :cond_7
+    if-eqz v5, :cond_6
 
     iget-object v7, p0, Landroid/widget/TextView;->mText:Ljava/lang/CharSequence;
 
@@ -22769,7 +22736,7 @@
     .local v3, "links":[Landroid/text/style/ClickableSpan;
     array-length v7, v3
 
-    if-lez v7, :cond_7
+    if-lez v7, :cond_6
 
     aget-object v7, v3, v9
 
@@ -22778,18 +22745,18 @@
     const/4 v1, 0x1
 
     .end local v3    # "links":[Landroid/text/style/ClickableSpan;
-    :cond_7
-    if-eqz v6, :cond_b
+    :cond_6
+    if-eqz v6, :cond_a
 
     invoke-virtual {p0}, Landroid/widget/TextView;->isTextEditable()Z
 
     move-result v7
 
-    if-nez v7, :cond_8
+    if-nez v7, :cond_7
 
-    if-eqz v5, :cond_b
+    if-eqz v5, :cond_a
 
-    :cond_8
+    :cond_7
     invoke-static/range {p0 .. p1}, Landroid/widget/TextView$FlymeInjector;->onTouchUpEventMz(Landroid/widget/TextView;Landroid/view/MotionEvent;)V
 
     invoke-static {}, Landroid/view/inputmethod/InputMethodManager;->peekInstance()Landroid/view/inputmethod/InputMethodManager;
@@ -22799,28 +22766,28 @@
     .local v2, "imm":Landroid/view/inputmethod/InputMethodManager;
     invoke-virtual {p0, v2}, Landroid/widget/TextView;->viewClicked(Landroid/view/inputmethod/InputMethodManager;)V
 
-    if-nez v5, :cond_a
+    if-nez v5, :cond_9
 
     iget-object v7, p0, Landroid/widget/TextView;->mEditor:Landroid/widget/Editor;
 
     iget-boolean v7, v7, Landroid/widget/Editor;->mShowSoftInputOnFocus:Z
 
-    if-eqz v7, :cond_a
+    if-eqz v7, :cond_9
 
-    if-eqz v2, :cond_9
+    if-eqz v2, :cond_8
 
     invoke-virtual {v2, p0, v9}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
 
     move-result v7
 
-    if-eqz v7, :cond_9
+    if-eqz v7, :cond_8
 
     move v9, v8
 
-    :cond_9
+    :cond_8
     or-int/2addr v1, v9
 
-    :cond_a
+    :cond_9
     iget-object v7, p0, Landroid/widget/TextView;->mEditor:Landroid/widget/Editor;
 
     #invoke-virtual {v7, p1}, Landroid/widget/Editor;->onTouchUpEvent(Landroid/view/MotionEvent;)V
@@ -22828,8 +22795,8 @@
     const/4 v1, 0x1
 
     .end local v2    # "imm":Landroid/view/inputmethod/InputMethodManager;
-    :cond_b
-    if-eqz v1, :cond_0
+    :cond_a
+    if-eqz v1, :cond_1
 
     move v4, v8
 
@@ -22838,7 +22805,7 @@
     .end local v1    # "handled":Z
     .end local v5    # "textIsSelectable":Z
     .end local v6    # "touchIsFinished":Z
-    :cond_c
+    :cond_b
     move v6, v9
 
     goto/16 :goto_1
