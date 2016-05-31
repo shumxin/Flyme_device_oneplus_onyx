@@ -1165,7 +1165,7 @@
 
     aput-object v5, v4, v9
 
-    const-string v5, "Camera"
+    const-string v5, ""
 
     aput-object v5, v4, v10
 
