@@ -96,7 +96,7 @@ board_saved_files := bin/bootanimation bin/shutdownanimation lib/libwebviewchrom
 # The default value is nothing.
 # You can configure the board system apk name in the value.
 #-----------------------------------------------------------------------------
-board_remove_apps := Camera NfcNci LogReport
+board_remove_apps := Camera NfcNci LogReport Tag
 
 ##############################################################################
 # The value decides which apk you want to modify, when the apk is based on the board system apk.
