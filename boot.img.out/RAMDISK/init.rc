@@ -325,12 +325,14 @@ on post-fs-data
     #NFC
     mkdir /data/nfc
 
+    # Flyme kuangqianbo for samba server and client {@
     mkdir /data/misc/samba 0775 system system
     mkdir /data/misc/samba/remote 0775 system system
     mkdir /data/misc/samba/lib 0775 system system
     mkdir /data/misc/samba/private 0775 system system
     mkdir /data/misc/samba/tmp 0775 system system
     mkdir /data/misc/samba/var 0775 system system
+    # @}
 
 on boot
     # basic network init
@@ -553,6 +555,22 @@ service servicemanager /system/bin/servicemanager
     onrestart restart drm
     onrestart restart oemasserttip
 
+# Flyme kuangqianbo add forwifi share
+service smbd /system/bin/smbd -D
+    user root
+    group bluetooth net_bt_admin
+    disabled
+    oneshot
+
+service nmbd /system/bin/nmbd -D
+    user root
+    group bluetooth net_bt_admin
+    disabled
+    oneshot
+
+# Flyme wifi share end
+
+
 service vold /system/bin/vold
     class core
     socket vold stream 0660 root mount
@@ -564,6 +582,12 @@ service netd /system/bin/netd
     socket dnsproxyd stream 0660 root inet
     socket mdns stream 0660 root system
     socket fwmarkd stream 0660 root inet
+
+# Flyme kuangqianbo add for meizu own daemon { @
+service flymed /system/bin/flymed
+    class main
+    socket flymed stream 0660 root system
+# @ }
 
 service debuggerd /system/bin/debuggerd
     class main
@@ -688,19 +712,3 @@ on property:ro.prj_name=14001
 on property:ro.prj_name=15055
      setprop persist.radio.multisim.config dsds
 #endif
-
-service smbd /system/bin/smbd -D
-    user root
-    group bluetooth net_bt_admin
-    disabled
-    oneshot
-
-service nmbd /system/bin/nmbd -D
-    user root
-    group bluetooth net_bt_admin
-    disabled
-    oneshot
-
-service flymed /system/bin/flymed
-    class main
-    socket flymed stream 0660 root system
