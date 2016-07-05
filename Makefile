@@ -56,7 +56,8 @@ vendor_remove_files := media/oneplus_ftm_test.wav
 #-----------------------------------------------------------------------------
 vendor_saved_apps := Bluetooth KeyChain HTMLViewer UserDictionaryProvider BackupRestoreConfirmation \
                      FusedLocation PrintSpooler SharedStorageBackup  ExternalStorageProvider InputDevices \
-                     ProxyHandler Shell DefaultContainerService OnePlusCameraService
+                     ProxyHandler Shell DefaultContainerService OnePlusCameraService TimeService qcrilmsgtunnel \
+                     shutdownlistener 
 
 ##############################################################################
 # The value decides which vendor apk you want to modify.
