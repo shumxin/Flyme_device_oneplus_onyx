@@ -82,6 +82,8 @@
 
 .field mFlymeDecoViewDrawFlag:Z
 
+.field mFlymeDecoViewPostCount:I
+
 .field mFlymeDecorViewPaddingTop:I
 
 .field mFlymeDensity:F

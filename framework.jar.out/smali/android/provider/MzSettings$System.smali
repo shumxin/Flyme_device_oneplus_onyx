@@ -33,6 +33,24 @@
 
 .field public static final CHOOSE_NETWORK_PROVIDER_MODE:Ljava/lang/String; = "choose_network_provider_mode"
 
+.field public static final CLASSIC_MODE:Ljava/lang/String; = "classic_mode"
+
+.field public static final CLASSIC_MODE_BROWSER:Ljava/lang/String; = "classic_mode_browser"
+
+.field public static final CLASSIC_MODE_CALENDAR:Ljava/lang/String; = "classic_mode_calendar"
+
+.field public static final CLASSIC_MODE_CLOCK:Ljava/lang/String; = "classic_mode_clock"
+
+.field public static final CLASSIC_MODE_EMAIL:Ljava/lang/String; = "classic_mode_email"
+
+.field public static final CLASSIC_MODE_LAUNCHER_ICON:Ljava/lang/String; = "classic_mode_launcher_icon"
+
+.field public static final CLASSIC_MODE_MEMOS:Ljava/lang/String; = "classic_mode_memos"
+
+.field public static final CLASSIC_MODE_PAINTER:Ljava/lang/String; = "classic_mode_painter"
+
+.field public static final CLASSIC_MODE_SMS:Ljava/lang/String; = "classic_mode_sms"
+
 .field public static final CPU_L:Ljava/lang/String; = "cpu_l"
 
 .field public static final EMAIL_SOUND:Ljava/lang/String; = "email_sound"
@@ -66,6 +84,42 @@
 .field public static final INTERNET_CALL_SIP_ENABLE:Ljava/lang/String; = "internet_call_switch"
 
 .field public static final KEYBOARD_EXIT_DIRECTLY:Ljava/lang/String; = "keyboard_exit_directly"
+
+.field public static final KEY_SECOND_SCREEN_CARD_REMIND:Ljava/lang/String; = "second_screen_card_remind"
+
+.field public static final KEY_SECOND_SCREEN_CARD_REMIND_CALENDAR:Ljava/lang/String; = "second_screen_card_remind_calendar"
+
+.field public static final KEY_SECOND_SCREEN_CARD_REMIND_CAMERA:Ljava/lang/String; = "second_screen_card_remind_camera"
+
+.field public static final KEY_SECOND_SCREEN_CARD_REMIND_CLOCK:Ljava/lang/String; = "second_screen_card_remind_clock"
+
+.field public static final KEY_SECOND_SCREEN_CARD_REMIND_COUNT_DOWN:Ljava/lang/String; = "second_screen_card_remind_count_down"
+
+.field public static final KEY_SECOND_SCREEN_CARD_REMIND_INCOMING_CALL:Ljava/lang/String; = "second_screen_card_remind_incoming_call"
+
+.field public static final KEY_SECOND_SCREEN_CARD_REMIND_WEATHER:Ljava/lang/String; = "second_screen_card_remind_weather"
+
+.field public static final KEY_SECOND_SCREEN_NOTIFICATION:Ljava/lang/String; = "second_screen_notification"
+
+.field public static final KEY_SECOND_SCREEN_NOTIFICATION_PREFIX:Ljava/lang/String; = "second_screen_notify_"
+
+.field public static final KEY_SECOND_SCREEN_SCREENOFF_AIRMODE:Ljava/lang/String; = "second_screen_screenoff_airmode"
+
+.field public static final KEY_SECOND_SCREEN_SCREENOFF_ANIM:Ljava/lang/String; = "second_screen_screenoff_anim"
+
+.field public static final KEY_SECOND_SCREEN_SCREENOFF_CHARGING:Ljava/lang/String; = "second_screen_screenoff_charging"
+
+.field public static final KEY_SECOND_SCREEN_SCREENOFF_DND:Ljava/lang/String; = "second_screen_screenoff_dnd"
+
+.field public static final KEY_SECOND_SCREEN_SCREENOFF_INPUT_TEXT:Ljava/lang/String; = "second_screen_screenoff_input_text"
+
+.field public static final KEY_SECOND_SCREEN_SCREENOFF_MUSIC:Ljava/lang/String; = "second_screen_screenoff_music"
+
+.field public static final KEY_SECOND_SCREEN_SCREENOFF_VOICE_ASSIS:Ljava/lang/String; = "second_screen_screenoff_voice_assis"
+
+.field public static final KEY_SECOND_SCREEN_SCREENOFF_WIRELESS:Ljava/lang/String; = "second_screen_screenoff_wireless"
+
+.field public static final KEY_SECOND_SCREEN_SWITCH:Ljava/lang/String; = "second_screen_switch"
 
 .field public static final KEY_SOUND:Ljava/lang/String; = "key_sound"
 
@@ -167,6 +221,8 @@
 
 .field public static final MZ_GUARD_MODE:Ljava/lang/String; = "mz_guard_mode"
 
+.field public static final MZ_HOLSTER_HALL_MODE:Ljava/lang/String; = "mz_holster_hall_mode"
+
 .field public static final MZ_HOME_KEY_TOUCH_BEHAVIOR:Ljava/lang/String; = "mz_home_key_touch_behavior"
 
 .field public static final MZ_INTELLIGENT_VOICE:Ljava/lang/String; = "mz_intelligent_voice"
@@ -176,6 +232,8 @@
 .field public static final MZ_INTELLIGENT_VOICE_HOME_WAKEUP:Ljava/lang/String; = "mz_intelligent_voice_home_wakeup"
 
 .field public static final MZ_KEYGUARD_PALM_REJECTION_ENABLED:Ljava/lang/String; = "keyguard_palm_rejection"
+
+.field public static final MZ_LARGE_LAUNCHER_ICON:Ljava/lang/String; = "flyme_boss_icon"
 
 .field public static final MZ_MTP_UNLOCKED:Ljava/lang/String; = "mz_mtp_unlocked"
 
