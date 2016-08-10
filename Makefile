@@ -144,6 +144,7 @@ board_modify_apps := FlymeLauncher MzCallSetting SystemUI TeleService Telecom Vo
 override_property += \
     ro.product.device=OnePlus \
     ro.flyme.romer=shumxin \
+    ro.product.model=ONE E1001 \
     ro.product.model_romer=ONE E1001_shumxin
 
 ##############################################################################
