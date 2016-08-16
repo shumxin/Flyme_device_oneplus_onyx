@@ -14,10 +14,6 @@ elif [ "$apkBaseName" = "SystemUI" ];then
   find $tempSmaliDir -name "*.smali" | xargs sed -i 's/"com.meizu.media.camera.CameraLauncher"/"com.meizu.media.camera.OPCameraActivity"/g'
   find $tempSmaliDir -name "*.smali" | xargs sed -i 's/"com.meizu.media.camera.SecureCameraActivity"/"com.meizu.media.camera.OPCameraActivity"/g'
 
-elif [ "$apkBaseName" = "Settings" ];then
-  echo ">>> in custom_app for $apkBaseName to fix java.lang.ClassCastException about Accessibility"
-  sed -i 's/SwitchPreference/com.meizu.common.preference.SwitchPreference/g' $tempSmaliDir/res/xml/accessibility_settings.xml
-
 elif [ "$apkBaseName" = "VoiceAssistant" ];then
   echo ">>> in custom_app for $apkBaseName to open opcamera"
   find $tempSmaliDir -name "*.smali" | xargs sed -i 's/"com.meizu.media.camera.CameraLauncher"/"com.meizu.media.camera.OPCameraActivity"/g'
